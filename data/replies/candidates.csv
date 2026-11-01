@@ -1,0 +1,636 @@
+reply_id,scenario_group,outreach_context,reply_text,reply_intent,is_synthetic
+reply-001,interest-001,A first-touch introduction to a fictional B2B procurement service.,This looks relevant to our current plans.,interested,true
+reply-002,meeting-001,A first-touch introduction to a fictional B2B procurement service.,Can we schedule 30 minutes next week to discuss this?,meeting_requested,true
+reply-003,information-001,A first-touch introduction to a fictional B2B procurement service.,Please send pricing and implementation details.,more_information,true
+reply-004,referral-001,A first-touch introduction to a fictional B2B procurement service.,Our procurement director owns this. I can introduce you.,referral,true
+reply-005,later-001,A first-touch introduction to a fictional B2B procurement service.,We are reviewing our systems this quarter. Please try again in Q3.,not_now,true
+reply-006,objection-001,A first-touch introduction to a fictional B2B procurement service.,"We already use another platform, and migration would be difficult.",objection,true
+reply-007,wrong-person-001,A first-touch introduction to a fictional B2B procurement service.,I do not manage procurement systems. This belongs to another team.,wrong_person,true
+reply-008,ooo-001,A first-touch introduction to a fictional B2B procurement service.,I am out of the office until 18 November.,out_of_office,true
+reply-009,decline-001,A first-touch introduction to a fictional B2B procurement service.,We are not interested. Please close this conversation.,not_interested,true
+reply-010,optout-001,A first-touch introduction to a fictional B2B procurement service.,Please unsubscribe me from all future marketing emails.,opt_out,true
+reply-011,ambiguous-001,A first-touch introduction to a fictional B2B procurement service.,Thanks. I will take a look.,ambiguous,true
+generated_0001,interest-002,A first-touch introduction to a fictional B2B procurement service.,"Good timing, we have been talking about this exact problem internally.",interested,true
+generated_0002,interest-002,A first-touch introduction to a fictional B2B procurement service.,"Funny you reached out, this came up in our ops review last week.",interested,true
+generated_0003,interest-002,A first-touch introduction to a fictional B2B procurement service.,This lands at the right moment for us.,interested,true
+generated_0004,interest-002,A first-touch introduction to a fictional B2B procurement service.,We were just discussing how messy our purchase approvals are. Relevant.,interested,true
+generated_0005,interest-002,A first-touch introduction to a fictional B2B procurement service.,timely! approvals are a pain point for us right now,interested,true
+generated_0006,interest-002,A first-touch introduction to a fictional B2B procurement service.,Your note arrived the same week we flagged purchasing as a problem area.,interested,true
+generated_0007,interest-003,A first-touch introduction to a fictional B2B procurement service.,This fits what we have planned for next year's finance roadmap.,interested,true
+generated_0008,interest-003,A first-touch introduction to a fictional B2B procurement service.,"Procurement automation is on our roadmap, so this is relevant.",interested,true
+generated_0009,interest-003,A first-touch introduction to a fictional B2B procurement service.,We have this on the plan for H2. Glad to see options like yours.,interested,true
+generated_0010,interest-003,A first-touch introduction to a fictional B2B procurement service.,"Automating purchase orders is one of our goals this year, so I'm interested.",interested,true
+generated_0011,interest-003,A first-touch introduction to a fictional B2B procurement service.,This aligns with a project we are scoping.,interested,true
+generated_0012,interest-003,A first-touch introduction to a fictional B2B procurement service.,Fixing our buying process is a stated objective for us this year. Good fit.,interested,true
+generated_0013,interest-004,A first-touch introduction to a fictional B2B procurement service.,"We still run purchasing on spreadsheets, so this caught my eye.",interested,true
+generated_0014,interest-004,A first-touch introduction to a fictional B2B procurement service.,Our PO process lives in Excel. Anything that fixes that interests me.,interested,true
+generated_0015,interest-004,A first-touch introduction to a fictional B2B procurement service.,Honestly our approvals are all email and spreadsheets. Interested.,interested,true
+generated_0016,interest-004,A first-touch introduction to a fictional B2B procurement service.,We track spend in shared sheets and it is chaos. This looks promising.,interested,true
+generated_0017,interest-004,A first-touch introduction to a fictional B2B procurement service.,spreadsheets everywhere here. definitely interested,interested,true
+generated_0018,interest-004,A first-touch introduction to a fictional B2B procurement service.,Our purchase requests are still paper forms in one plant. This appeals to me.,interested,true
+generated_0019,interest-005,A first-touch introduction to a fictional B2B procurement service.,I like the sound of this.,interested,true
+generated_0020,interest-005,A first-touch introduction to a fictional B2B procurement service.,This is genuinely appealing to us.,interested,true
+generated_0021,interest-005,A first-touch introduction to a fictional B2B procurement service.,You've got my attention.,interested,true
+generated_0022,interest-005,A first-touch introduction to a fictional B2B procurement service.,This is something we'd consider seriously.,interested,true
+generated_0023,interest-005,A first-touch introduction to a fictional B2B procurement service.,"Very relevant to my job, thanks for reaching out.",interested,true
+generated_0024,interest-005,A first-touch introduction to a fictional B2B procurement service.,"I'm intrigued, this is close to what we need.",interested,true
+generated_0025,interest-006,A first-touch introduction to a fictional B2B procurement service.,Sounds promising.,interested,true
+generated_0026,interest-006,A first-touch introduction to a fictional B2B procurement service.,I'm interested.,interested,true
+generated_0027,interest-006,A first-touch introduction to a fictional B2B procurement service.,"Yes, this is relevant to us.",interested,true
+generated_0028,interest-006,A first-touch introduction to a fictional B2B procurement service.,Count me in as interested.,interested,true
+generated_0029,interest-006,A first-touch introduction to a fictional B2B procurement service.,This could work for us.,interested,true
+generated_0030,interest-006,A first-touch introduction to a fictional B2B procurement service.,Definitely interested on our side.,interested,true
+generated_0031,interest-007,A first-touch introduction to a fictional B2B procurement service.,Cutting approval time in half would be a big win for us. Interested.,interested,true
+generated_0032,interest-007,A first-touch introduction to a fictional B2B procurement service.,The supplier onboarding part is exactly what we need.,interested,true
+generated_0033,interest-007,A first-touch introduction to a fictional B2B procurement service.,Three-way matching on invoices is something we badly want. This looks good.,interested,true
+generated_0034,interest-007,A first-touch introduction to a fictional B2B procurement service.,"If it really catches duplicate invoices, we're interested.",interested,true
+generated_0035,interest-007,A first-touch introduction to a fictional B2B procurement service.,Automatic budget checks before approval would help us a lot.,interested,true
+generated_0036,interest-007,A first-touch introduction to a fictional B2B procurement service.,Spend visibility by department is the feature we have been missing. Promising.,interested,true
+generated_0037,interest-008,A first-touch introduction to a fictional B2B procurement service.,"We tried a tool last year and it didn't stick, but your approach looks better.",interested,true
+generated_0038,interest-008,A first-touch introduction to a fictional B2B procurement service.,Our last procurement system was too heavy. Something lighter is appealing.,interested,true
+generated_0039,interest-008,A first-touch introduction to a fictional B2B procurement service.,We gave up on our old purchasing software. This looks more practical.,interested,true
+generated_0040,interest-008,A first-touch introduction to a fictional B2B procurement service.,"After a bad experience with another vendor, this is refreshing to see.",interested,true
+generated_0041,interest-008,A first-touch introduction to a fictional B2B procurement service.,"We outgrew our current tool, so yes, this is of interest.",interested,true
+generated_0042,interest-008,A first-touch introduction to a fictional B2B procurement service.,The previous system we used was clunky. Yours looks like a real improvement.,interested,true
+generated_0043,interest-009,A first-touch introduction to a fictional B2B procurement service.,"We're opening two new sites this year, so purchasing control matters. Interested.",interested,true
+generated_0044,interest-009,A first-touch introduction to a fictional B2B procurement service.,"With our headcount doubling, we need something like this.",interested,true
+generated_0045,interest-009,A first-touch introduction to a fictional B2B procurement service.,We're scaling fast and approvals are breaking. Relevant for us.,interested,true
+generated_0046,interest-009,A first-touch introduction to a fictional B2B procurement service.,Expansion into the UK means more suppliers. This is interesting.,interested,true
+generated_0047,interest-009,A first-touch introduction to a fictional B2B procurement service.,"Growing quickly here, this would help.",interested,true
+generated_0048,interest-009,A first-touch introduction to a fictional B2B procurement service.,Adding a third warehouse next spring makes this very relevant.,interested,true
+generated_0049,interest-010,A first-touch introduction to a fictional B2B procurement service.,As CFO I've wanted to fix our purchasing controls for a while. This is relevant.,interested,true
+generated_0050,interest-010,A first-touch introduction to a fictional B2B procurement service.,Our procurement lead and I both like this.,interested,true
+generated_0051,interest-010,A first-touch introduction to a fictional B2B procurement service.,"Speaking for the ops side, we're interested.",interested,true
+generated_0052,interest-010,A first-touch introduction to a fictional B2B procurement service.,This is the kind of thing our COO asked us to look into.,interested,true
+generated_0053,interest-010,A first-touch introduction to a fictional B2B procurement service.,Our finance director will like this. I certainly do.,interested,true
+generated_0054,interest-010,A first-touch introduction to a fictional B2B procurement service.,"As the person who signs off on spend, I find this compelling.",interested,true
+generated_0055,interest-011,A first-touch introduction to a fictional B2B procurement service.,This looks simpler than what we've seen from bigger vendors.,interested,true
+generated_0056,interest-011,A first-touch introduction to a fictional B2B procurement service.,Nicer than the enterprise suites we looked at.,interested,true
+generated_0057,interest-011,A first-touch introduction to a fictional B2B procurement service.,Seems more focused than the platforms we evaluated before. I'm interested.,interested,true
+generated_0058,interest-011,A first-touch introduction to a fictional B2B procurement service.,Refreshing compared to the ERP add-ons we've tried.,interested,true
+generated_0059,interest-011,A first-touch introduction to a fictional B2B procurement service.,Better fit for a company our size than most tools out there.,interested,true
+generated_0060,interest-011,A first-touch introduction to a fictional B2B procurement service.,More approachable than the procurement suites I have seen. I like it.,interested,true
+generated_0061,meeting-002,A first-touch introduction to a fictional B2B procurement service.,Can we set up a call next week?,meeting_requested,true
+generated_0062,meeting-002,A first-touch introduction to a fictional B2B procurement service.,Let's talk. Does Tuesday afternoon work for a quick call?,meeting_requested,true
+generated_0063,meeting-002,A first-touch introduction to a fictional B2B procurement service.,I'd like a 20-minute call sometime next week.,meeting_requested,true
+generated_0064,meeting-002,A first-touch introduction to a fictional B2B procurement service.,Happy to jump on a call. What's your availability Thursday?,meeting_requested,true
+generated_0065,meeting-002,A first-touch introduction to a fictional B2B procurement service.,Could we do a short call on Monday?,meeting_requested,true
+generated_0066,meeting-003,A first-touch introduction to a fictional B2B procurement service.,Could you give us a demo?,meeting_requested,true
+generated_0067,meeting-003,A first-touch introduction to a fictional B2B procurement service.,I'd like to see a live demo with my team.,meeting_requested,true
+generated_0068,meeting-003,A first-touch introduction to a fictional B2B procurement service.,Can you walk us through the product in a demo session?,meeting_requested,true
+generated_0069,meeting-003,A first-touch introduction to a fictional B2B procurement service.,Please set up a demo for our procurement team.,meeting_requested,true
+generated_0070,meeting-003,A first-touch introduction to a fictional B2B procurement service.,A demo would be great. When can you do it?,meeting_requested,true
+generated_0071,meeting-004,A first-touch introduction to a fictional B2B procurement service.,Would you be able to visit our office in Leeds for a meeting?,meeting_requested,true
+generated_0072,meeting-004,A first-touch introduction to a fictional B2B procurement service.,"If you're in Chicago next month, let's meet in person.",meeting_requested,true
+generated_0073,meeting-004,A first-touch introduction to a fictional B2B procurement service.,We prefer to meet face to face. Can you come by our site?,meeting_requested,true
+generated_0074,meeting-004,A first-touch introduction to a fictional B2B procurement service.,Can we arrange an onsite meeting with our finance lead?,meeting_requested,true
+generated_0075,meeting-004,A first-touch introduction to a fictional B2B procurement service.,Let's meet at our Manchester office if possible.,meeting_requested,true
+generated_0076,meeting-005,A first-touch introduction to a fictional B2B procurement service.,Let's schedule a meeting with me and our controller.,meeting_requested,true
+generated_0077,meeting-005,A first-touch introduction to a fictional B2B procurement service.,Please set up a call with our CFO and me.,meeting_requested,true
+generated_0078,meeting-005,A first-touch introduction to a fictional B2B procurement service.,I'd like our IT lead on a call with you before we go further.,meeting_requested,true
+generated_0079,meeting-005,A first-touch introduction to a fictional B2B procurement service.,Can we get 45 minutes with our procurement and finance teams?,meeting_requested,true
+generated_0080,meeting-005,A first-touch introduction to a fictional B2B procurement service.,"Set up a meeting with our ops director and me, please.",meeting_requested,true
+generated_0081,meeting-006,A first-touch introduction to a fictional B2B procurement service.,Send me a calendar invite for Wednesday at 10am Eastern.,meeting_requested,true
+generated_0082,meeting-006,A first-touch introduction to a fictional B2B procurement service.,Feel free to book time through my scheduling link.,meeting_requested,true
+generated_0083,meeting-006,A first-touch introduction to a fictional B2B procurement service.,Drop an invite for Friday morning UK time.,meeting_requested,true
+generated_0084,meeting-006,A first-touch introduction to a fictional B2B procurement service.,Use my booking page to find a slot this week.,meeting_requested,true
+generated_0085,meeting-006,A first-touch introduction to a fictional B2B procurement service.,"Invite me to a call on the 14th, any time after 2pm.",meeting_requested,true
+generated_0086,meeting-007,A first-touch introduction to a fictional B2B procurement service.,Call?,meeting_requested,true
+generated_0087,meeting-007,A first-touch introduction to a fictional B2B procurement service.,Let's meet.,meeting_requested,true
+generated_0088,meeting-007,A first-touch introduction to a fictional B2B procurement service.,"Happy to chat, when?",meeting_requested,true
+generated_0089,meeting-007,A first-touch introduction to a fictional B2B procurement service.,Let's set up time.,meeting_requested,true
+generated_0090,meeting-007,A first-touch introduction to a fictional B2B procurement service.,"Sure, let's schedule a call.",meeting_requested,true
+generated_0091,meeting-008,A first-touch introduction to a fictional B2B procurement service.,Can we schedule a technical session to go through integrations with our ERP?,meeting_requested,true
+generated_0092,meeting-008,A first-touch introduction to a fictional B2B procurement service.,I'd like a deep-dive meeting on how approvals are configured.,meeting_requested,true
+generated_0093,meeting-008,A first-touch introduction to a fictional B2B procurement service.,Let's set up a working session with our systems team.,meeting_requested,true
+generated_0094,meeting-008,A first-touch introduction to a fictional B2B procurement service.,Could we book a call to review the security setup?,meeting_requested,true
+generated_0095,meeting-008,A first-touch introduction to a fictional B2B procurement service.,We need a technical walkthrough call before deciding.,meeting_requested,true
+generated_0096,meeting-009,A first-touch introduction to a fictional B2B procurement service.,"I'm in London, so anything before 4pm GMT works for a call.",meeting_requested,true
+generated_0097,meeting-009,A first-touch introduction to a fictional B2B procurement service.,Mornings Pacific time are best for a meeting.,meeting_requested,true
+generated_0098,meeting-009,A first-touch introduction to a fictional B2B procurement service.,Let's find a time that works across UK and US hours for a call.,meeting_requested,true
+generated_0099,meeting-009,A first-touch introduction to a fictional B2B procurement service.,I can do a call at 9am Central on Thursday.,meeting_requested,true
+generated_0100,meeting-009,A first-touch introduction to a fictional B2B procurement service.,Late afternoon UK time is ideal for a meeting next week.,meeting_requested,true
+generated_0101,meeting-010,A first-touch introduction to a fictional B2B procurement service.,We met briefly at a trade show last year. Let's set up a proper call.,meeting_requested,true
+generated_0102,meeting-010,A first-touch introduction to a fictional B2B procurement service.,Good to hear from you again. Can we book a meeting this month?,meeting_requested,true
+generated_0103,meeting-010,A first-touch introduction to a fictional B2B procurement service.,"Following our chat at the conference, let's schedule a follow-up call.",meeting_requested,true
+generated_0104,meeting-010,A first-touch introduction to a fictional B2B procurement service.,Let's pick up where we left off and book a meeting.,meeting_requested,true
+generated_0105,meeting-010,A first-touch introduction to a fictional B2B procurement service.,Great to reconnect. Can we get a call on the calendar?,meeting_requested,true
+generated_0106,meeting-011,A first-touch introduction to a fictional B2B procurement service.,Let's meet to discuss a pilot at one of our sites.,meeting_requested,true
+generated_0107,meeting-011,A first-touch introduction to a fictional B2B procurement service.,Can we schedule a call to talk about a trial?,meeting_requested,true
+generated_0108,meeting-011,A first-touch introduction to a fictional B2B procurement service.,I'd like to discuss a proof of concept on a call.,meeting_requested,true
+generated_0109,meeting-011,A first-touch introduction to a fictional B2B procurement service.,Set up a meeting so we can scope a pilot.,meeting_requested,true
+generated_0110,meeting-011,A first-touch introduction to a fictional B2B procurement service.,Let's book a call to plan a small rollout.,meeting_requested,true
+generated_0111,information-002,A first-touch introduction to a fictional B2B procurement service.,What does it cost?,more_information,true
+generated_0112,information-002,A first-touch introduction to a fictional B2B procurement service.,Please send your pricing.,more_information,true
+generated_0113,information-002,A first-touch introduction to a fictional B2B procurement service.,Can you share pricing for around 200 users?,more_information,true
+generated_0114,information-002,A first-touch introduction to a fictional B2B procurement service.,Do you have a price list?,more_information,true
+generated_0115,information-002,A first-touch introduction to a fictional B2B procurement service.,"How is it priced, per user or per site?",more_information,true
+generated_0116,information-002,A first-touch introduction to a fictional B2B procurement service.,What's the annual cost for a company our size?,more_information,true
+generated_0117,information-003,A first-touch introduction to a fictional B2B procurement service.,Do you have case studies from manufacturers?,more_information,true
+generated_0118,information-003,A first-touch introduction to a fictional B2B procurement service.,Can you send examples of customers in logistics?,more_information,true
+generated_0119,information-003,A first-touch introduction to a fictional B2B procurement service.,I'd like to read a case study before going further.,more_information,true
+generated_0120,information-003,A first-touch introduction to a fictional B2B procurement service.,Any references from professional services firms?,more_information,true
+generated_0121,information-003,A first-touch introduction to a fictional B2B procurement service.,"Send me a customer story or two, please.",more_information,true
+generated_0122,information-004,A first-touch introduction to a fictional B2B procurement service.,Does it integrate with our ERP? Please send details.,more_information,true
+generated_0123,information-004,A first-touch introduction to a fictional B2B procurement service.,Which accounting systems do you connect to?,more_information,true
+generated_0124,information-004,A first-touch introduction to a fictional B2B procurement service.,Can you share your list of integrations?,more_information,true
+generated_0125,information-004,A first-touch introduction to a fictional B2B procurement service.,How does it work with our existing finance software? Send documentation.,more_information,true
+generated_0126,information-004,A first-touch introduction to a fictional B2B procurement service.,Do you have an API? Please send the docs.,more_information,true
+generated_0127,information-005,A first-touch introduction to a fictional B2B procurement service.,Please send your security documentation.,more_information,true
+generated_0128,information-005,A first-touch introduction to a fictional B2B procurement service.,Do you have a SOC 2 report you can share?,more_information,true
+generated_0129,information-005,A first-touch introduction to a fictional B2B procurement service.,Can you send details on data hosting and GDPR?,more_information,true
+generated_0130,information-005,A first-touch introduction to a fictional B2B procurement service.,We need your security questionnaire answers before anything else.,more_information,true
+generated_0131,information-005,A first-touch introduction to a fictional B2B procurement service.,Where is customer data stored? Please share the details.,more_information,true
+generated_0132,information-006,A first-touch introduction to a fictional B2B procurement service.,Could you send a one-pager?,more_information,true
+generated_0133,information-006,A first-touch introduction to a fictional B2B procurement service.,Please email a brochure I can forward.,more_information,true
+generated_0134,information-006,A first-touch introduction to a fictional B2B procurement service.,Do you have a short overview deck?,more_information,true
+generated_0135,information-006,A first-touch introduction to a fictional B2B procurement service.,Send me something written I can read later.,more_information,true
+generated_0136,information-006,A first-touch introduction to a fictional B2B procurement service.,Can I get a product sheet?,more_information,true
+generated_0137,information-007,A first-touch introduction to a fictional B2B procurement service.,How long does implementation usually take?,more_information,true
+generated_0138,information-007,A first-touch introduction to a fictional B2B procurement service.,What does onboarding look like? Please send details.,more_information,true
+generated_0139,information-007,A first-touch introduction to a fictional B2B procurement service.,Can you outline the setup process for us?,more_information,true
+generated_0140,information-007,A first-touch introduction to a fictional B2B procurement service.,How much work is needed from our IT team to get started?,more_information,true
+generated_0141,information-007,A first-touch introduction to a fictional B2B procurement service.,Please share an implementation timeline.,more_information,true
+generated_0142,information-008,A first-touch introduction to a fictional B2B procurement service.,Does it support multi-level approvals?,more_information,true
+generated_0143,information-008,A first-touch introduction to a fictional B2B procurement service.,Can it handle multiple currencies?,more_information,true
+generated_0144,information-008,A first-touch introduction to a fictional B2B procurement service.,Does the tool support budget tracking by department?,more_information,true
+generated_0145,information-008,A first-touch introduction to a fictional B2B procurement service.,Is there a mobile app for approvers?,more_information,true
+generated_0146,information-008,A first-touch introduction to a fictional B2B procurement service.,Can it manage supplier onboarding too?,more_information,true
+generated_0147,information-009,A first-touch introduction to a fictional B2B procurement service.,"What are your contract terms, monthly or annual?",more_information,true
+generated_0148,information-009,A first-touch introduction to a fictional B2B procurement service.,Is there a minimum commitment?,more_information,true
+generated_0149,information-009,A first-touch introduction to a fictional B2B procurement service.,Can you send your standard contract terms?,more_information,true
+generated_0150,information-009,A first-touch introduction to a fictional B2B procurement service.,Do you offer a free trial? What are the terms?,more_information,true
+generated_0151,information-009,A first-touch introduction to a fictional B2B procurement service.,What's the notice period if we cancel?,more_information,true
+generated_0152,information-010,A first-touch introduction to a fictional B2B procurement service.,How are you different from the big ERP vendors? Send some details.,more_information,true
+generated_0153,information-010,A first-touch introduction to a fictional B2B procurement service.,Can you send a comparison against the other tools on the market?,more_information,true
+generated_0154,information-010,A first-touch introduction to a fictional B2B procurement service.,What makes you different from the procurement module we already have?,more_information,true
+generated_0155,information-010,A first-touch introduction to a fictional B2B procurement service.,Please share why customers switch to you.,more_information,true
+generated_0156,information-010,A first-touch introduction to a fictional B2B procurement service.,Send me a summary of how you compare.,more_information,true
+generated_0157,information-011,A first-touch introduction to a fictional B2B procurement service.,Tell me more.,more_information,true
+generated_0158,information-011,A first-touch introduction to a fictional B2B procurement service.,Can you send more information?,more_information,true
+generated_0159,information-011,A first-touch introduction to a fictional B2B procurement service.,I'd like more details please.,more_information,true
+generated_0160,information-011,A first-touch introduction to a fictional B2B procurement service.,More info would be helpful.,more_information,true
+generated_0161,information-011,A first-touch introduction to a fictional B2B procurement service.,Please send over some more detail on what you do.,more_information,true
+generated_0162,information-011,A first-touch introduction to a fictional B2B procurement service.,Could you explain a bit more about how it works?,more_information,true
+generated_0163,referral-002,A first-touch introduction to a fictional B2B procurement service.,"You should speak with our head of procurement, Maria. I've copied her.",referral,true
+generated_0164,referral-002,A first-touch introduction to a fictional B2B procurement service.,Our procurement director handles this. Adding her here.,referral,true
+generated_0165,referral-002,A first-touch introduction to a fictional B2B procurement service.,"I'm cc'ing our purchasing manager, who owns this area.",referral,true
+generated_0166,referral-002,A first-touch introduction to a fictional B2B procurement service.,"Best person is our procurement lead, I've looped him in.",referral,true
+generated_0167,referral-002,A first-touch introduction to a fictional B2B procurement service.,"Copying our head of purchasing, she makes these calls.",referral,true
+generated_0168,referral-002,A first-touch introduction to a fictional B2B procurement service.,Our category manager for indirect spend is the right person. Adding him to this thread.,referral,true
+generated_0169,referral-003,A first-touch introduction to a fictional B2B procurement service.,This is our CFO's decision. I'll introduce you.,referral,true
+generated_0170,referral-003,A first-touch introduction to a fictional B2B procurement service.,"Please reach out to our finance director, she owns budget for this.",referral,true
+generated_0171,referral-003,A first-touch introduction to a fictional B2B procurement service.,"Talk to our CFO, he's the one evaluating tools like this.",referral,true
+generated_0172,referral-003,A first-touch introduction to a fictional B2B procurement service.,Our finance chief decides on this. Let me connect you.,referral,true
+generated_0173,referral-003,A first-touch introduction to a fictional B2B procurement service.,You'll want our VP Finance. I'll make an intro.,referral,true
+generated_0174,referral-003,A first-touch introduction to a fictional B2B procurement service.,Our group financial controller signs off on systems like this. Introducing you now.,referral,true
+generated_0175,referral-004,A first-touch introduction to a fictional B2B procurement service.,Our operations manager runs purchasing. I've copied him so you can talk directly.,referral,true
+generated_0176,referral-004,A first-touch introduction to a fictional B2B procurement service.,"Speak to our COO about this, I've added her to the thread.",referral,true
+generated_0177,referral-004,A first-touch introduction to a fictional B2B procurement service.,"Our ops director is the right contact, introducing you two now.",referral,true
+generated_0178,referral-004,A first-touch introduction to a fictional B2B procurement service.,Head of operations handles supplier processes. I'll connect you.,referral,true
+generated_0179,referral-004,A first-touch introduction to a fictional B2B procurement service.,Our plant operations lead owns this. Adding him.,referral,true
+generated_0180,referral-004,A first-touch introduction to a fictional B2B procurement service.,Our supply chain director looks after purchasing. I've put you in touch.,referral,true
+generated_0181,referral-005,A first-touch introduction to a fictional B2B procurement service.,Systems decisions go through our IT director. Introducing you.,referral,true
+generated_0182,referral-005,A first-touch introduction to a fictional B2B procurement service.,"Please contact our IT manager, he evaluates new software.",referral,true
+generated_0183,referral-005,A first-touch introduction to a fictional B2B procurement service.,"Our head of IT will want to see this first, I've copied him in.",referral,true
+generated_0184,referral-005,A first-touch introduction to a fictional B2B procurement service.,"Loop in our systems lead, copying her now.",referral,true
+generated_0185,referral-005,A first-touch introduction to a fictional B2B procurement service.,Talk to our CTO about tools like this. I'll introduce you.,referral,true
+generated_0186,referral-005,A first-touch introduction to a fictional B2B procurement service.,Our applications manager handles new tools. Adding her here.,referral,true
+generated_0187,referral-006,A first-touch introduction to a fictional B2B procurement service.,Our US team handles procurement tools. I'll introduce you to their lead.,referral,true
+generated_0188,referral-006,A first-touch introduction to a fictional B2B procurement service.,Purchasing for the UK is run by our London office. Copying their manager.,referral,true
+generated_0189,referral-006,A first-touch introduction to a fictional B2B procurement service.,"That's handled at group level by our central procurement team, I'll connect you with its head.",referral,true
+generated_0190,referral-006,A first-touch introduction to a fictional B2B procurement service.,Our head office in Ohio makes these decisions. Introducing you to their purchasing head.,referral,true
+generated_0191,referral-006,A first-touch introduction to a fictional B2B procurement service.,"Contact our European finance team, I've cc'd their director.",referral,true
+generated_0192,referral-006,A first-touch introduction to a fictional B2B procurement service.,Our shared services centre runs purchasing. Copying the manager there.,referral,true
+generated_0193,referral-007,A first-touch introduction to a fictional B2B procurement service.,"Email Sam in our finance team, he's the right person.",referral,true
+generated_0194,referral-007,A first-touch introduction to a fictional B2B procurement service.,"Reach out to Priya, our procurement analyst, she's expecting you.",referral,true
+generated_0195,referral-007,A first-touch introduction to a fictional B2B procurement service.,"Please contact Jordan, our purchasing lead. Same email format as mine.",referral,true
+generated_0196,referral-007,A first-touch introduction to a fictional B2B procurement service.,"Try Alex on our ops team, they own vendor tools.",referral,true
+generated_0197,referral-007,A first-touch introduction to a fictional B2B procurement service.,"Get in touch with Leah, who manages our approvals process.",referral,true
+generated_0198,referral-007,A first-touch introduction to a fictional B2B procurement service.,"Speak to Tom in purchasing, he looks after supplier tools.",referral,true
+generated_0199,referral-008,A first-touch introduction to a fictional B2B procurement service.,We just hired a procurement manager who starts Monday. I'll introduce you to her.,referral,true
+generated_0200,referral-008,A first-touch introduction to a fictional B2B procurement service.,"Our new head of purchasing joined last month, I've forwarded this to him and copied you.",referral,true
+generated_0201,referral-008,A first-touch introduction to a fictional B2B procurement service.,There's a new finance lead taking this over. Copying her.,referral,true
+generated_0202,referral-008,A first-touch introduction to a fictional B2B procurement service.,Our incoming procurement director will own this. I'll make the intro.,referral,true
+generated_0203,referral-008,A first-touch introduction to a fictional B2B procurement service.,A new ops manager handles purchasing now. Adding him.,referral,true
+generated_0204,referral-008,A first-touch introduction to a fictional B2B procurement service.,Our recently appointed buying manager is the one to talk to. Introducing you.,referral,true
+generated_0205,referral-009,A first-touch introduction to a fictional B2B procurement service.,Tools like this go to our procurement committee chair. I've copied him.,referral,true
+generated_0206,referral-009,A first-touch introduction to a fictional B2B procurement service.,Our software review board lead decides. Introducing you.,referral,true
+generated_0207,referral-009,A first-touch introduction to a fictional B2B procurement service.,"The chair of our finance committee is the right contact, I'll connect you.",referral,true
+generated_0208,referral-009,A first-touch introduction to a fictional B2B procurement service.,"Decisions sit with our steering group lead, copying her.",referral,true
+generated_0209,referral-009,A first-touch introduction to a fictional B2B procurement service.,Our evaluation panel is run by the controller. I'll introduce you.,referral,true
+generated_0210,referral-009,A first-touch introduction to a fictional B2B procurement service.,Our vendor selection group is led by our finance manager. Adding her.,referral,true
+generated_0211,referral-010,A first-touch introduction to a fictional B2B procurement service.,Copying the right person.,referral,true
+generated_0212,referral-010,A first-touch introduction to a fictional B2B procurement service.,Adding our procurement lead.,referral,true
+generated_0213,referral-010,A first-touch introduction to a fictional B2B procurement service.,Looping in my colleague who owns this.,referral,true
+generated_0214,referral-010,A first-touch introduction to a fictional B2B procurement service.,Introducing you to our purchasing manager.,referral,true
+generated_0215,referral-010,A first-touch introduction to a fictional B2B procurement service.,cc'ing the person you want.,referral,true
+generated_0216,referral-010,A first-touch introduction to a fictional B2B procurement service.,Adding our buyer who handles this.,referral,true
+generated_0217,referral-011,A first-touch introduction to a fictional B2B procurement service.,"I've forwarded this to our controller, who will get in touch if relevant.",referral,true
+generated_0218,referral-011,A first-touch introduction to a fictional B2B procurement service.,"Passed to our procurement head, expect to hear from her.",referral,true
+generated_0219,referral-011,A first-touch introduction to a fictional B2B procurement service.,"Sent this to our finance director, he'll reply directly.",referral,true
+generated_0220,referral-011,A first-touch introduction to a fictional B2B procurement service.,"Forwarded to our ops lead, she'll follow up with you.",referral,true
+generated_0221,referral-011,A first-touch introduction to a fictional B2B procurement service.,I've handed this to our purchasing manager to respond.,referral,true
+generated_0222,referral-011,A first-touch introduction to a fictional B2B procurement service.,"Shared with our head of finance, who owns this decision. She'll be in touch.",referral,true
+generated_0223,later-002,A first-touch introduction to a fictional B2B procurement service.,Not this quarter. Try us again in Q3.,not_now,true
+generated_0224,later-002,A first-touch introduction to a fictional B2B procurement service.,We're locked until next quarter. Reach out in April.,not_now,true
+generated_0225,later-002,A first-touch introduction to a fictional B2B procurement service.,Check back with me after Q2.,not_now,true
+generated_0226,later-002,A first-touch introduction to a fictional B2B procurement service.,Timing isn't right. Let's revisit in the new quarter.,not_now,true
+generated_0227,later-002,A first-touch introduction to a fictional B2B procurement service.,Busy quarter here. Please follow up in three months.,not_now,true
+generated_0228,later-003,A first-touch introduction to a fictional B2B procurement service.,Our budget is set for this year. Get in touch in January.,not_now,true
+generated_0229,later-003,A first-touch introduction to a fictional B2B procurement service.,We plan budgets in the autumn. Contact me in September.,not_now,true
+generated_0230,later-003,A first-touch introduction to a fictional B2B procurement service.,"No budget until the next fiscal year, which starts in July. Try then.",not_now,true
+generated_0231,later-003,A first-touch introduction to a fictional B2B procurement service.,Revisit with us when next year's budget opens.,not_now,true
+generated_0232,later-003,A first-touch introduction to a fictional B2B procurement service.,Budget freeze until spring. Let's talk after that.,not_now,true
+generated_0233,later-004,A first-touch introduction to a fictional B2B procurement service.,We're in the middle of an ERP migration. Ping me once that's done in the summer.,not_now,true
+generated_0234,later-004,A first-touch introduction to a fictional B2B procurement service.,We have a systems rollout until year end. Come back to me after.,not_now,true
+generated_0235,later-004,A first-touch introduction to a fictional B2B procurement service.,Too much on our plate with a reorganisation. Reach out in six months.,not_now,true
+generated_0236,later-004,A first-touch introduction to a fictional B2B procurement service.,We're busy with an audit right now. Follow up next month.,not_now,true
+generated_0237,later-004,A first-touch introduction to a fictional B2B procurement service.,Mid-implementation of another system. Let's talk in Q4.,not_now,true
+generated_0238,later-005,A first-touch introduction to a fictional B2B procurement service.,Our current contract renews in March. Contact me in February.,not_now,true
+generated_0239,later-005,A first-touch introduction to a fictional B2B procurement service.,We're tied to our current vendor until next year. Reach out before renewal in October.,not_now,true
+generated_0240,later-005,A first-touch introduction to a fictional B2B procurement service.,Our supplier contract ends next summer. Get back to me in the spring.,not_now,true
+generated_0241,later-005,A first-touch introduction to a fictional B2B procurement service.,Locked in for another 9 months. Try me then.,not_now,true
+generated_0242,later-005,A first-touch introduction to a fictional B2B procurement service.,"Renewal is in November, let's speak in September.",not_now,true
+generated_0243,later-006,A first-touch introduction to a fictional B2B procurement service.,I just started in this role. Give me a couple of months and reach out again.,not_now,true
+generated_0244,later-006,A first-touch introduction to a fictional B2B procurement service.,I'm still settling in here. Try me in the new year.,not_now,true
+generated_0245,later-006,A first-touch introduction to a fictional B2B procurement service.,"New in the job, follow up in about 60 days.",not_now,true
+generated_0246,later-006,A first-touch introduction to a fictional B2B procurement service.,"Ask me again once I've finished onboarding, maybe in March.",not_now,true
+generated_0247,later-006,A first-touch introduction to a fictional B2B procurement service.,Let me get my feet under the table first. Reach out in a few months.,not_now,true
+generated_0248,later-007,A first-touch introduction to a fictional B2B procurement service.,"Not now, maybe later.",not_now,true
+generated_0249,later-007,A first-touch introduction to a fictional B2B procurement service.,Bad timing. Try again in a few months.,not_now,true
+generated_0250,later-007,A first-touch introduction to a fictional B2B procurement service.,"Later in the year, please.",not_now,true
+generated_0251,later-007,A first-touch introduction to a fictional B2B procurement service.,Ask me again next year.,not_now,true
+generated_0252,later-007,A first-touch introduction to a fictional B2B procurement service.,Not right now. Follow up after the summer.,not_now,true
+generated_0253,later-008,A first-touch introduction to a fictional B2B procurement service.,It's our peak season. Contact me after the holidays.,not_now,true
+generated_0254,later-008,A first-touch introduction to a fictional B2B procurement service.,We're slammed until the end of December. Try in January.,not_now,true
+generated_0255,later-008,A first-touch introduction to a fictional B2B procurement service.,Peak shipping season here. Reach out in February.,not_now,true
+generated_0256,later-008,A first-touch introduction to a fictional B2B procurement service.,Year-end close is taking all our time. Let's revisit in February.,not_now,true
+generated_0257,later-008,A first-touch introduction to a fictional B2B procurement service.,Busy period until March. Get in touch then.,not_now,true
+generated_0258,later-009,A first-touch introduction to a fictional B2B procurement service.,We're deciding our priorities next month. Check back after that.,not_now,true
+generated_0259,later-009,A first-touch introduction to a fictional B2B procurement service.,Leadership sets the roadmap in May. Follow up in June.,not_now,true
+generated_0260,later-009,A first-touch introduction to a fictional B2B procurement service.,We'll know more after our strategy offsite. Try me in a month.,not_now,true
+generated_0261,later-009,A first-touch introduction to a fictional B2B procurement service.,Let me revisit after our planning cycle ends in October.,not_now,true
+generated_0262,later-009,A first-touch introduction to a fictional B2B procurement service.,Our priorities get reset next quarter. Reach out then.,not_now,true
+generated_0263,later-010,A first-touch introduction to a fictional B2B procurement service.,Please contact me again on the 15th of next month.,not_now,true
+generated_0264,later-010,A first-touch introduction to a fictional B2B procurement service.,Reach out after 1 March.,not_now,true
+generated_0265,later-010,A first-touch introduction to a fictional B2B procurement service.,Try me again in the first week of September.,not_now,true
+generated_0266,later-010,A first-touch introduction to a fictional B2B procurement service.,"Follow up on Monday the 20th, not before.",not_now,true
+generated_0267,later-010,A first-touch introduction to a fictional B2B procurement service.,Get back to me in mid-January.,not_now,true
+generated_0268,later-011,A first-touch introduction to a fictional B2B procurement service.,We're going through an acquisition. Ask again once it closes next quarter.,not_now,true
+generated_0269,later-011,A first-touch introduction to a fictional B2B procurement service.,"There's a merger underway, so decisions are paused until the summer. Try then.",not_now,true
+generated_0270,later-011,A first-touch introduction to a fictional B2B procurement service.,Pending a change in ownership. Please follow up in six months.,not_now,true
+generated_0271,later-011,A first-touch introduction to a fictional B2B procurement service.,"Hold off until our restructuring completes later this year, then reach out.",not_now,true
+generated_0272,later-011,A first-touch introduction to a fictional B2B procurement service.,Our company is being merged. Revisit in the new year.,not_now,true
+generated_0273,objection-002,A first-touch introduction to a fictional B2B procurement service.,We already use another procurement platform and switching would be painful.,objection,true
+generated_0274,objection-002,A first-touch introduction to a fictional B2B procurement service.,We're happy with our current tool. Why would we change?,objection,true
+generated_0275,objection-002,A first-touch introduction to a fictional B2B procurement service.,We have a system for this already.,objection,true
+generated_0276,objection-002,A first-touch introduction to a fictional B2B procurement service.,"Our ERP already covers purchasing, so I don't see the need to add another tool.",objection,true
+generated_0277,objection-002,A first-touch introduction to a fictional B2B procurement service.,We've invested a lot in our current setup.,objection,true
+generated_0278,objection-002,A first-touch introduction to a fictional B2B procurement service.,"Our existing vendor does most of this, so a second system is hard to justify.",objection,true
+generated_0279,objection-003,A first-touch introduction to a fictional B2B procurement service.,This sounds expensive for a company our size.,objection,true
+generated_0280,objection-003,A first-touch introduction to a fictional B2B procurement service.,Budget is tight and tools like this usually cost too much.,objection,true
+generated_0281,objection-003,A first-touch introduction to a fictional B2B procurement service.,I doubt we could justify the cost.,objection,true
+generated_0282,objection-003,A first-touch introduction to a fictional B2B procurement service.,The price would have to be very low for us to consider it.,objection,true
+generated_0283,objection-003,A first-touch introduction to a fictional B2B procurement service.,Last quote we got for something similar was way over budget.,objection,true
+generated_0284,objection-003,A first-touch introduction to a fictional B2B procurement service.,"These platforms tend to be priced for enterprises, not for us.",objection,true
+generated_0285,objection-004,A first-touch introduction to a fictional B2B procurement service.,We don't have IT capacity for another implementation.,objection,true
+generated_0286,objection-004,A first-touch introduction to a fictional B2B procurement service.,Rolling out new software takes too long for us.,objection,true
+generated_0287,objection-004,A first-touch introduction to a fictional B2B procurement service.,Our team doesn't have the bandwidth to learn another system.,objection,true
+generated_0288,objection-004,A first-touch introduction to a fictional B2B procurement service.,Change management is the problem. People won't adopt it.,objection,true
+generated_0289,objection-004,A first-touch introduction to a fictional B2B procurement service.,Migrations like this always drag on for us.,objection,true
+generated_0290,objection-004,A first-touch introduction to a fictional B2B procurement service.,"Every new tool means retraining forty approvers, which is a big ask.",objection,true
+generated_0291,objection-005,A first-touch introduction to a fictional B2B procurement service.,We're cautious about putting supplier data in the cloud.,objection,true
+generated_0292,objection-005,A first-touch introduction to a fictional B2B procurement service.,Our security team rarely approves new SaaS vendors.,objection,true
+generated_0293,objection-005,A first-touch introduction to a fictional B2B procurement service.,Data residency is a concern for us in the UK.,objection,true
+generated_0294,objection-005,A first-touch introduction to a fictional B2B procurement service.,"We've had a vendor breach before, so we're wary of new tools.",objection,true
+generated_0295,objection-005,A first-touch introduction to a fictional B2B procurement service.,Our policy restricts third-party access to finance data.,objection,true
+generated_0296,objection-005,A first-touch introduction to a fictional B2B procurement service.,Giving an outside platform access to our bank details worries me.,objection,true
+generated_0297,objection-006,A first-touch introduction to a fictional B2B procurement service.,I'm not convinced automation saves much time for us.,objection,true
+generated_0298,objection-006,A first-touch introduction to a fictional B2B procurement service.,Our process is small enough that a tool feels like overkill.,objection,true
+generated_0299,objection-006,A first-touch introduction to a fictional B2B procurement service.,Every vendor promises time savings. I'm skeptical.,objection,true
+generated_0300,objection-006,A first-touch introduction to a fictional B2B procurement service.,"Our volume of purchase orders is low, not sure this pays off.",objection,true
+generated_0301,objection-006,A first-touch introduction to a fictional B2B procurement service.,I don't see the ROI for a team of our size.,objection,true
+generated_0302,objection-006,A first-touch introduction to a fictional B2B procurement service.,The time savings in your email seem optimistic for a business like ours.,objection,true
+generated_0303,objection-007,A first-touch introduction to a fictional B2B procurement service.,We tried procurement software before and nobody used it.,objection,true
+generated_0304,objection-007,A first-touch introduction to a fictional B2B procurement service.,"Our last automation project failed, so there's resistance here.",objection,true
+generated_0305,objection-007,A first-touch introduction to a fictional B2B procurement service.,Burned by a similar tool two years ago.,objection,true
+generated_0306,objection-007,A first-touch introduction to a fictional B2B procurement service.,Past vendors overpromised. Hard to trust another one.,objection,true
+generated_0307,objection-007,A first-touch introduction to a fictional B2B procurement service.,We had a messy rollout last time and the team is wary.,objection,true
+generated_0308,objection-007,A first-touch introduction to a fictional B2B procurement service.,The last system we bought ended up as shelfware.,objection,true
+generated_0309,objection-008,A first-touch introduction to a fictional B2B procurement service.,"We avoid long contracts, and most vendors require multi-year deals.",objection,true
+generated_0310,objection-008,A first-touch introduction to a fictional B2B procurement service.,Lock-in is a concern for us with tools like this.,objection,true
+generated_0311,objection-008,A first-touch introduction to a fictional B2B procurement service.,We don't want to be tied to another vendor.,objection,true
+generated_0312,objection-008,A first-touch introduction to a fictional B2B procurement service.,Multi-year commitments are a non-starter for us.,objection,true
+generated_0313,objection-008,A first-touch introduction to a fictional B2B procurement service.,It's hard to get out of these contracts once you sign.,objection,true
+generated_0314,objection-008,A first-touch introduction to a fictional B2B procurement service.,Getting our data back out of these platforms is usually a nightmare.,objection,true
+generated_0315,objection-009,A first-touch introduction to a fictional B2B procurement service.,We're probably too small for something like this.,objection,true
+generated_0316,objection-009,A first-touch introduction to a fictional B2B procurement service.,I think we're too large and complex for an off-the-shelf tool.,objection,true
+generated_0317,objection-009,A first-touch introduction to a fictional B2B procurement service.,"Our purchasing is very specialised, a generic tool won't fit.",objection,true
+generated_0318,objection-009,A first-touch introduction to a fictional B2B procurement service.,Our approvals are unique. Not sure software handles them.,objection,true
+generated_0319,objection-009,A first-touch introduction to a fictional B2B procurement service.,Most of our buying is ad hoc and doesn't fit a system.,objection,true
+generated_0320,objection-009,A first-touch introduction to a fictional B2B procurement service.,Our project-based buying doesn't map well onto standard purchase orders.,objection,true
+generated_0321,objection-010,A first-touch introduction to a fictional B2B procurement service.,"Finance and operations can't agree on tools, so this would be hard to push.",objection,true
+generated_0322,objection-010,A first-touch introduction to a fictional B2B procurement service.,Our procurement team likes their manual process.,objection,true
+generated_0323,objection-010,A first-touch introduction to a fictional B2B procurement service.,Getting buy-in from leadership on new software is tough here.,objection,true
+generated_0324,objection-010,A first-touch introduction to a fictional B2B procurement service.,IT will push back on anything not from our main vendor.,objection,true
+generated_0325,objection-010,A first-touch introduction to a fictional B2B procurement service.,Our controller is against adding more systems.,objection,true
+generated_0326,objection-010,A first-touch introduction to a fictional B2B procurement service.,"The board wants fewer vendors, not more, so this would face resistance.",objection,true
+generated_0327,objection-011,A first-touch introduction to a fictional B2B procurement service.,"We need UK-based support, and most of these tools don't offer it.",objection,true
+generated_0328,objection-011,A first-touch introduction to a fictional B2B procurement service.,Support across time zones has been a problem with vendors.,objection,true
+generated_0329,objection-011,A first-touch introduction to a fictional B2B procurement service.,"We'd want a local partner, and you don't seem to have one.",objection,true
+generated_0330,objection-011,A first-touch introduction to a fictional B2B procurement service.,Our sites are in rural areas with poor internet. Cloud tools struggle there.,objection,true
+generated_0331,objection-011,A first-touch introduction to a fictional B2B procurement service.,"We need on-premise hosting, and cloud is a problem for us.",objection,true
+generated_0332,objection-011,A first-touch introduction to a fictional B2B procurement service.,"Our approvers work offline in the field, which most tools can't handle.",objection,true
+generated_0333,wrong-person-002,A first-touch introduction to a fictional B2B procurement service.,I'm not the right person for this.,wrong_person,true
+generated_0334,wrong-person-002,A first-touch introduction to a fictional B2B procurement service.,"This isn't my area, sorry.",wrong_person,true
+generated_0335,wrong-person-002,A first-touch introduction to a fictional B2B procurement service.,"Wrong contact, I don't deal with purchasing.",wrong_person,true
+generated_0336,wrong-person-002,A first-touch introduction to a fictional B2B procurement service.,I have nothing to do with procurement.,wrong_person,true
+generated_0337,wrong-person-002,A first-touch introduction to a fictional B2B procurement service.,"Not my responsibility, I'm afraid.",wrong_person,true
+generated_0338,wrong-person-002,A first-touch introduction to a fictional B2B procurement service.,I don't look after anything to do with buying.,wrong_person,true
+generated_0339,wrong-person-003,A first-touch introduction to a fictional B2B procurement service.,"I work in marketing, so this doesn't apply to me.",wrong_person,true
+generated_0340,wrong-person-003,A first-touch introduction to a fictional B2B procurement service.,"I'm in sales, not procurement.",wrong_person,true
+generated_0341,wrong-person-003,A first-touch introduction to a fictional B2B procurement service.,I run HR. Purchasing tools aren't something I handle.,wrong_person,true
+generated_0342,wrong-person-003,A first-touch introduction to a fictional B2B procurement service.,"I'm an engineer, I don't buy software for the company.",wrong_person,true
+generated_0343,wrong-person-003,A first-touch introduction to a fictional B2B procurement service.,My job is customer support. This isn't my decision.,wrong_person,true
+generated_0344,wrong-person-003,A first-touch introduction to a fictional B2B procurement service.,I'm in product design and have no role in purchasing.,wrong_person,true
+generated_0345,wrong-person-004,A first-touch introduction to a fictional B2B procurement service.,I moved to a different role and no longer handle this.,wrong_person,true
+generated_0346,wrong-person-004,A first-touch introduction to a fictional B2B procurement service.,I changed departments last year. Not my area anymore.,wrong_person,true
+generated_0347,wrong-person-004,A first-touch introduction to a fictional B2B procurement service.,I'm no longer in procurement.,wrong_person,true
+generated_0348,wrong-person-004,A first-touch introduction to a fictional B2B procurement service.,I used to manage this but my responsibilities changed.,wrong_person,true
+generated_0349,wrong-person-004,A first-touch introduction to a fictional B2B procurement service.,I left the purchasing team a while ago.,wrong_person,true
+generated_0350,wrong-person-004,A first-touch introduction to a fictional B2B procurement service.,Supplier tools stopped being part of my job after the reorganisation.,wrong_person,true
+generated_0351,wrong-person-005,A first-touch introduction to a fictional B2B procurement service.,"I just approve small orders, I don't choose tools.",wrong_person,true
+generated_0352,wrong-person-005,A first-touch introduction to a fictional B2B procurement service.,"I'm a junior buyer, I don't have any say in systems.",wrong_person,true
+generated_0353,wrong-person-005,A first-touch introduction to a fictional B2B procurement service.,I only process invoices. Tool choices happen elsewhere.,wrong_person,true
+generated_0354,wrong-person-005,A first-touch introduction to a fictional B2B procurement service.,I'm not a decision maker for software.,wrong_person,true
+generated_0355,wrong-person-005,A first-touch introduction to a fictional B2B procurement service.,I place orders but I don't pick the software.,wrong_person,true
+generated_0356,wrong-person-005,A first-touch introduction to a fictional B2B procurement service.,"I just enter requisitions, I have no input on which system we use.",wrong_person,true
+generated_0357,wrong-person-006,A first-touch introduction to a fictional B2B procurement service.,"Another team handles this, I'm not sure who exactly.",wrong_person,true
+generated_0358,wrong-person-006,A first-touch introduction to a fictional B2B procurement service.,"That's somewhere else in the business, not with me.",wrong_person,true
+generated_0359,wrong-person-006,A first-touch introduction to a fictional B2B procurement service.,Purchasing is handled by a different department.,wrong_person,true
+generated_0360,wrong-person-006,A first-touch introduction to a fictional B2B procurement service.,"You'd need someone in another group, not me.",wrong_person,true
+generated_0361,wrong-person-006,A first-touch introduction to a fictional B2B procurement service.,This belongs elsewhere in the company.,wrong_person,true
+generated_0362,wrong-person-006,A first-touch introduction to a fictional B2B procurement service.,"Some other part of the organisation deals with suppliers, not my team.",wrong_person,true
+generated_0363,wrong-person-007,A first-touch introduction to a fictional B2B procurement service.,"Our procurement is outsourced, so I can't help.",wrong_person,true
+generated_0364,wrong-person-007,A first-touch introduction to a fictional B2B procurement service.,"We use an external agency for purchasing, it's not me.",wrong_person,true
+generated_0365,wrong-person-007,A first-touch introduction to a fictional B2B procurement service.,"Our parent company handles all of that, not our office.",wrong_person,true
+generated_0366,wrong-person-007,A first-touch introduction to a fictional B2B procurement service.,A third party runs our procurement.,wrong_person,true
+generated_0367,wrong-person-007,A first-touch introduction to a fictional B2B procurement service.,"Purchasing is done centrally by our group, not by me.",wrong_person,true
+generated_0368,wrong-person-007,A first-touch introduction to a fictional B2B procurement service.,"An outside firm manages our buying, so I'm not involved.",wrong_person,true
+generated_0369,wrong-person-008,A first-touch introduction to a fictional B2B procurement service.,Wrong person.,wrong_person,true
+generated_0370,wrong-person-008,A first-touch introduction to a fictional B2B procurement service.,Not me.,wrong_person,true
+generated_0371,wrong-person-008,A first-touch introduction to a fictional B2B procurement service.,"Nope, not my department.",wrong_person,true
+generated_0372,wrong-person-008,A first-touch introduction to a fictional B2B procurement service.,Not my call.,wrong_person,true
+generated_0373,wrong-person-008,A first-touch introduction to a fictional B2B procurement service.,Wrong inbox.,wrong_person,true
+generated_0374,wrong-person-008,A first-touch introduction to a fictional B2B procurement service.,"Not my department, sorry.",wrong_person,true
+generated_0375,wrong-person-009,A first-touch introduction to a fictional B2B procurement service.,"This is a general mailbox, nobody here handles procurement.",wrong_person,true
+generated_0376,wrong-person-009,A first-touch introduction to a fictional B2B procurement service.,I manage the front desk. I can't help with this.,wrong_person,true
+generated_0377,wrong-person-009,A first-touch introduction to a fictional B2B procurement service.,I'm an assistant and don't handle software decisions.,wrong_person,true
+generated_0378,wrong-person-009,A first-touch introduction to a fictional B2B procurement service.,This inbox is for customer enquiries only.,wrong_person,true
+generated_0379,wrong-person-009,A first-touch introduction to a fictional B2B procurement service.,"I'm in admin, not purchasing.",wrong_person,true
+generated_0380,wrong-person-009,A first-touch introduction to a fictional B2B procurement service.,"I look after reception, so I'm not the person for purchasing tools.",wrong_person,true
+generated_0381,wrong-person-010,A first-touch introduction to a fictional B2B procurement service.,You've got my title wrong. I'm not in procurement.,wrong_person,true
+generated_0382,wrong-person-010,A first-touch introduction to a fictional B2B procurement service.,"Your data is outdated, I'm not responsible for this.",wrong_person,true
+generated_0383,wrong-person-010,A first-touch introduction to a fictional B2B procurement service.,"I think you have the wrong person, I work in legal.",wrong_person,true
+generated_0384,wrong-person-010,A first-touch introduction to a fictional B2B procurement service.,"Not sure where you got my name, but I don't handle buying.",wrong_person,true
+generated_0385,wrong-person-010,A first-touch introduction to a fictional B2B procurement service.,I'm not involved in purchasing at all.,wrong_person,true
+generated_0386,wrong-person-010,A first-touch introduction to a fictional B2B procurement service.,Whatever list you used has me in the wrong role. I don't buy anything.,wrong_person,true
+generated_0387,wrong-person-011,A first-touch introduction to a fictional B2B procurement service.,"Thanks, but this isn't something I can help with.",wrong_person,true
+generated_0388,wrong-person-011,A first-touch introduction to a fictional B2B procurement service.,"Appreciate the note, but I'm the wrong contact.",wrong_person,true
+generated_0389,wrong-person-011,A first-touch introduction to a fictional B2B procurement service.,"Sorry, you'll need to find someone else for this.",wrong_person,true
+generated_0390,wrong-person-011,A first-touch introduction to a fictional B2B procurement service.,I'm not the person who looks at these.,wrong_person,true
+generated_0391,wrong-person-011,A first-touch introduction to a fictional B2B procurement service.,"Kind of you to reach out, but it's outside my remit.",wrong_person,true
+generated_0392,wrong-person-011,A first-touch introduction to a fictional B2B procurement service.,"Thanks for thinking of me, but purchasing isn't my area.",wrong_person,true
+generated_0393,ooo-002,A first-touch introduction to a fictional B2B procurement service.,I'm out of the office until Monday 12 January with limited access to email.,out_of_office,true
+generated_0394,ooo-002,A first-touch introduction to a fictional B2B procurement service.,Out of office until the 3rd. I'll reply when I'm back.,out_of_office,true
+generated_0395,ooo-002,A first-touch introduction to a fictional B2B procurement service.,I am away until Friday and will respond on my return.,out_of_office,true
+generated_0396,ooo-002,A first-touch introduction to a fictional B2B procurement service.,"Currently out, returning on 22 August.",out_of_office,true
+generated_0397,ooo-002,A first-touch introduction to a fictional B2B procurement service.,Away from my desk until next Tuesday.,out_of_office,true
+generated_0398,ooo-003,A first-touch introduction to a fictional B2B procurement service.,I'm on annual leave until 5 May.,out_of_office,true
+generated_0399,ooo-003,A first-touch introduction to a fictional B2B procurement service.,On vacation until the end of the month. Responses will be delayed.,out_of_office,true
+generated_0400,ooo-003,A first-touch introduction to a fictional B2B procurement service.,Thanks for your email. I'm on holiday and back on 2 September.,out_of_office,true
+generated_0401,ooo-003,A first-touch introduction to a fictional B2B procurement service.,Taking some time off until after New Year.,out_of_office,true
+generated_0402,ooo-003,A first-touch introduction to a fictional B2B procurement service.,On leave until 18 April with no access to email.,out_of_office,true
+generated_0403,ooo-004,A first-touch introduction to a fictional B2B procurement service.,"I'm out until 14 June. For urgent matters, please contact the office reception.",out_of_office,true
+generated_0404,ooo-004,A first-touch introduction to a fictional B2B procurement service.,Out of office until Thursday. Urgent requests can go to my team mailbox.,out_of_office,true
+generated_0405,ooo-004,A first-touch introduction to a fictional B2B procurement service.,"On leave until the 30th. If urgent, call the main office line.",out_of_office,true
+generated_0406,ooo-004,A first-touch introduction to a fictional B2B procurement service.,Away until Monday. Please contact my colleague for anything time-sensitive.,out_of_office,true
+generated_0407,ooo-004,A first-touch introduction to a fictional B2B procurement service.,I am away until next week. For urgent issues contact the support desk.,out_of_office,true
+generated_0408,ooo-005,A first-touch introduction to a fictional B2B procurement service.,I'm travelling for a trade fair until Wednesday and will reply then.,out_of_office,true
+generated_0409,ooo-005,A first-touch introduction to a fictional B2B procurement service.,At a conference all week. I'll get back to you next Monday.,out_of_office,true
+generated_0410,ooo-005,A first-touch introduction to a fictional B2B procurement service.,On a business trip until the 9th with limited email.,out_of_office,true
+generated_0411,ooo-005,A first-touch introduction to a fictional B2B procurement service.,"Visiting our sites abroad until the 20th, replies will be slow.",out_of_office,true
+generated_0412,ooo-005,A first-touch introduction to a fictional B2B procurement service.,"Travelling this week, back in the office on Friday.",out_of_office,true
+generated_0413,ooo-006,A first-touch introduction to a fictional B2B procurement service.,I'm on parental leave until March.,out_of_office,true
+generated_0414,ooo-006,A first-touch introduction to a fictional B2B procurement service.,I'm currently on medical leave and will return in two weeks.,out_of_office,true
+generated_0415,ooo-006,A first-touch introduction to a fictional B2B procurement service.,On extended leave until the end of the year.,out_of_office,true
+generated_0416,ooo-006,A first-touch introduction to a fictional B2B procurement service.,I'm away on family leave until 1 October.,out_of_office,true
+generated_0417,ooo-006,A first-touch introduction to a fictional B2B procurement service.,Out on leave for the next six weeks.,out_of_office,true
+generated_0418,ooo-007,A first-touch introduction to a fictional B2B procurement service.,Automatic reply: I am out of the office until 27 November.,out_of_office,true
+generated_0419,ooo-007,A first-touch introduction to a fictional B2B procurement service.,Auto-reply: away until Monday.,out_of_office,true
+generated_0420,ooo-007,A first-touch introduction to a fictional B2B procurement service.,This is an automated response. I'm out until the 4th.,out_of_office,true
+generated_0421,ooo-007,A first-touch introduction to a fictional B2B procurement service.,Automatic reply: Thank you for your message. I'm currently away until 15 July.,out_of_office,true
+generated_0422,ooo-007,A first-touch introduction to a fictional B2B procurement service.,Auto: OOO until next week.,out_of_office,true
+generated_0423,ooo-008,A first-touch introduction to a fictional B2B procurement service.,Our office is closed for the bank holiday and reopens on Tuesday.,out_of_office,true
+generated_0424,ooo-008,A first-touch introduction to a fictional B2B procurement service.,Closed for the holidays until 2 January.,out_of_office,true
+generated_0425,ooo-008,A first-touch introduction to a fictional B2B procurement service.,"The office is shut this week for the summer break, back on the 12th.",out_of_office,true
+generated_0426,ooo-008,A first-touch introduction to a fictional B2B procurement service.,We're closed for Thanksgiving and will reply on Monday.,out_of_office,true
+generated_0427,ooo-008,A first-touch introduction to a fictional B2B procurement service.,Our offices are closed until after Easter.,out_of_office,true
+generated_0428,ooo-009,A first-touch introduction to a fictional B2B procurement service.,I'm working remotely with very limited access until Thursday.,out_of_office,true
+generated_0429,ooo-009,A first-touch introduction to a fictional B2B procurement service.,I have limited connectivity until the 10th and will reply after.,out_of_office,true
+generated_0430,ooo-009,A first-touch introduction to a fictional B2B procurement service.,Checking email only occasionally until next Monday.,out_of_office,true
+generated_0431,ooo-009,A first-touch introduction to a fictional B2B procurement service.,Limited access to messages until the end of the week.,out_of_office,true
+generated_0432,ooo-009,A first-touch introduction to a fictional B2B procurement service.,Offline at a site visit until tomorrow afternoon.,out_of_office,true
+generated_0433,ooo-010,A first-touch introduction to a fictional B2B procurement service.,I'm on sabbatical until next spring.,out_of_office,true
+generated_0434,ooo-010,A first-touch introduction to a fictional B2B procurement service.,Away on a career break until June.,out_of_office,true
+generated_0435,ooo-010,A first-touch introduction to a fictional B2B procurement service.,"On secondment elsewhere until the summer, replies will be delayed.",out_of_office,true
+generated_0436,ooo-010,A first-touch introduction to a fictional B2B procurement service.,I'm away from the business until April.,out_of_office,true
+generated_0437,ooo-010,A first-touch introduction to a fictional B2B procurement service.,Taking an extended break until February.,out_of_office,true
+generated_0438,ooo-011,A first-touch introduction to a fictional B2B procurement service.,OOO till Monday.,out_of_office,true
+generated_0439,ooo-011,A first-touch introduction to a fictional B2B procurement service.,"Away, back on the 8th.",out_of_office,true
+generated_0440,ooo-011,A first-touch introduction to a fictional B2B procurement service.,Out today and tomorrow.,out_of_office,true
+generated_0441,ooo-011,A first-touch introduction to a fictional B2B procurement service.,On leave this week.,out_of_office,true
+generated_0442,ooo-011,A first-touch introduction to a fictional B2B procurement service.,Back next Wednesday.,out_of_office,true
+generated_0443,decline-002,A first-touch introduction to a fictional B2B procurement service.,No thanks.,not_interested,true
+generated_0444,decline-002,A first-touch introduction to a fictional B2B procurement service.,We're not interested.,not_interested,true
+generated_0445,decline-002,A first-touch introduction to a fictional B2B procurement service.,Not for us.,not_interested,true
+generated_0446,decline-002,A first-touch introduction to a fictional B2B procurement service.,"Thanks, but we'll pass.",not_interested,true
+generated_0447,decline-002,A first-touch introduction to a fictional B2B procurement service.,This isn't something we need.,not_interested,true
+generated_0448,decline-002,A first-touch introduction to a fictional B2B procurement service.,We'll give this one a miss.,not_interested,true
+generated_0449,decline-003,A first-touch introduction to a fictional B2B procurement service.,We've already chosen another provider.,not_interested,true
+generated_0450,decline-003,A first-touch introduction to a fictional B2B procurement service.,We signed with a different vendor last month.,not_interested,true
+generated_0451,decline-003,A first-touch introduction to a fictional B2B procurement service.,"We picked a solution already, thanks.",not_interested,true
+generated_0452,decline-003,A first-touch introduction to a fictional B2B procurement service.,Decision's been made and it went another way.,not_interested,true
+generated_0453,decline-003,A first-touch introduction to a fictional B2B procurement service.,We went with a competitor.,not_interested,true
+generated_0454,decline-003,A first-touch introduction to a fictional B2B procurement service.,"We selected another platform in our last review, so no.",not_interested,true
+generated_0455,decline-004,A first-touch introduction to a fictional B2B procurement service.,We don't have this problem.,not_interested,true
+generated_0456,decline-004,A first-touch introduction to a fictional B2B procurement service.,Our process works fine as it is.,not_interested,true
+generated_0457,decline-004,A first-touch introduction to a fictional B2B procurement service.,We have no need for procurement software.,not_interested,true
+generated_0458,decline-004,A first-touch introduction to a fictional B2B procurement service.,Purchasing isn't a pain point for us.,not_interested,true
+generated_0459,decline-004,A first-touch introduction to a fictional B2B procurement service.,We're all set on this front.,not_interested,true
+generated_0460,decline-004,A first-touch introduction to a fictional B2B procurement service.,"Our buying process runs smoothly, so there's nothing to solve here.",not_interested,true
+generated_0461,decline-005,A first-touch introduction to a fictional B2B procurement service.,"I appreciate the outreach, but we won't be moving forward.",not_interested,true
+generated_0462,decline-005,A first-touch introduction to a fictional B2B procurement service.,"Thank you, but this won't be a fit for us.",not_interested,true
+generated_0463,decline-005,A first-touch introduction to a fictional B2B procurement service.,"We'll decline, but best of luck.",not_interested,true
+generated_0464,decline-005,A first-touch introduction to a fictional B2B procurement service.,Not something we'll pursue. Thanks anyway.,not_interested,true
+generated_0465,decline-005,A first-touch introduction to a fictional B2B procurement service.,I'm going to pass on this one.,not_interested,true
+generated_0466,decline-005,A first-touch introduction to a fictional B2B procurement service.,"Kind of you to write, but we're not going ahead with this.",not_interested,true
+generated_0467,decline-006,A first-touch introduction to a fictional B2B procurement service.,Not interested.,not_interested,true
+generated_0468,decline-006,A first-touch introduction to a fictional B2B procurement service.,No.,not_interested,true
+generated_0469,decline-006,A first-touch introduction to a fictional B2B procurement service.,Pass.,not_interested,true
+generated_0470,decline-006,A first-touch introduction to a fictional B2B procurement service.,Hard no.,not_interested,true
+generated_0471,decline-006,A first-touch introduction to a fictional B2B procurement service.,Nope.,not_interested,true
+generated_0472,decline-006,A first-touch introduction to a fictional B2B procurement service.,No interest here.,not_interested,true
+generated_0473,decline-007,A first-touch introduction to a fictional B2B procurement service.,Please consider this closed.,not_interested,true
+generated_0474,decline-007,A first-touch introduction to a fictional B2B procurement service.,"We won't need anything here, so you can close this out.",not_interested,true
+generated_0475,decline-007,A first-touch introduction to a fictional B2B procurement service.,"No interest, so feel free to close your file.",not_interested,true
+generated_0476,decline-007,A first-touch introduction to a fictional B2B procurement service.,You can mark us as not interested.,not_interested,true
+generated_0477,decline-007,A first-touch introduction to a fictional B2B procurement service.,Let's leave it there.,not_interested,true
+generated_0478,decline-007,A first-touch introduction to a fictional B2B procurement service.,"There's nothing to follow up on, so consider the matter closed.",not_interested,true
+generated_0479,decline-008,A first-touch introduction to a fictional B2B procurement service.,We don't buy from vendors that reach out cold.,not_interested,true
+generated_0480,decline-008,A first-touch introduction to a fictional B2B procurement service.,"Company policy is to only work with approved suppliers, so no.",not_interested,true
+generated_0481,decline-008,A first-touch introduction to a fictional B2B procurement service.,"We only evaluate tools through our formal tender process, so we'll pass.",not_interested,true
+generated_0482,decline-008,A first-touch introduction to a fictional B2B procurement service.,"Our group dictates our software, so this is a no.",not_interested,true
+generated_0483,decline-008,A first-touch introduction to a fictional B2B procurement service.,We aren't taking on new suppliers this way.,not_interested,true
+generated_0484,decline-008,A first-touch introduction to a fictional B2B procurement service.,"We never sign up for tools from unsolicited emails, so it's a no.",not_interested,true
+generated_0485,decline-009,A first-touch introduction to a fictional B2B procurement service.,"We're building our own tool in-house, so no thanks.",not_interested,true
+generated_0486,decline-009,A first-touch introduction to a fictional B2B procurement service.,Our IT team builds these things internally. Not interested.,not_interested,true
+generated_0487,decline-009,A first-touch introduction to a fictional B2B procurement service.,"We prefer custom solutions, so we'll pass.",not_interested,true
+generated_0488,decline-009,A first-touch introduction to a fictional B2B procurement service.,"We have developers working on our own approach, so no.",not_interested,true
+generated_0489,decline-009,A first-touch introduction to a fictional B2B procurement service.,"We'll handle this internally, thanks.",not_interested,true
+generated_0490,decline-009,A first-touch introduction to a fictional B2B procurement service.,"Our engineers are already writing an internal system for this, so we'll decline.",not_interested,true
+generated_0491,decline-010,A first-touch introduction to a fictional B2B procurement service.,We're cutting costs and not buying new software. No thanks.,not_interested,true
+generated_0492,decline-010,A first-touch introduction to a fictional B2B procurement service.,"We're shrinking, not adding tools.",not_interested,true
+generated_0493,decline-010,A first-touch introduction to a fictional B2B procurement service.,"With layoffs here, this is a no.",not_interested,true
+generated_0494,decline-010,A first-touch introduction to a fictional B2B procurement service.,"Our spending is frozen indefinitely, so we'll decline.",not_interested,true
+generated_0495,decline-010,A first-touch introduction to a fictional B2B procurement service.,"We're winding down this part of the business, so no.",not_interested,true
+generated_0496,decline-010,A first-touch introduction to a fictional B2B procurement service.,We're consolidating systems and won't add anything new.,not_interested,true
+generated_0497,decline-011,A first-touch introduction to a fictional B2B procurement service.,We don't buy enough to need this.,not_interested,true
+generated_0498,decline-011,A first-touch introduction to a fictional B2B procurement service.,Our purchasing is tiny. Not relevant.,not_interested,true
+generated_0499,decline-011,A first-touch introduction to a fictional B2B procurement service.,Doesn't apply to our business.,not_interested,true
+generated_0500,decline-011,A first-touch introduction to a fictional B2B procurement service.,Not relevant to us at all.,not_interested,true
+generated_0501,decline-011,A first-touch introduction to a fictional B2B procurement service.,This doesn't match what we do.,not_interested,true
+generated_0502,decline-011,A first-touch introduction to a fictional B2B procurement service.,"We're a three-person office, so this isn't relevant.",not_interested,true
+generated_0503,optout-002,A first-touch introduction to a fictional B2B procurement service.,Unsubscribe.,opt_out,true
+generated_0504,optout-002,A first-touch introduction to a fictional B2B procurement service.,Please unsubscribe me.,opt_out,true
+generated_0505,optout-002,A first-touch introduction to a fictional B2B procurement service.,Unsubscribe me from this list.,opt_out,true
+generated_0506,optout-002,A first-touch introduction to a fictional B2B procurement service.,Unsubscribe me from all of your emails.,opt_out,true
+generated_0507,optout-002,A first-touch introduction to a fictional B2B procurement service.,I'd like to unsubscribe.,opt_out,true
+generated_0508,optout-003,A first-touch introduction to a fictional B2B procurement service.,Remove me from your mailing list.,opt_out,true
+generated_0509,optout-003,A first-touch introduction to a fictional B2B procurement service.,Please remove my email address.,opt_out,true
+generated_0510,optout-003,A first-touch introduction to a fictional B2B procurement service.,Take me off your list.,opt_out,true
+generated_0511,optout-003,A first-touch introduction to a fictional B2B procurement service.,Remove us from your database.,opt_out,true
+generated_0512,optout-003,A first-touch introduction to a fictional B2B procurement service.,"Delete my details from your list, please.",opt_out,true
+generated_0513,optout-004,A first-touch introduction to a fictional B2B procurement service.,Stop emailing me.,opt_out,true
+generated_0514,optout-004,A first-touch introduction to a fictional B2B procurement service.,Please stop sending me these emails.,opt_out,true
+generated_0515,optout-004,A first-touch introduction to a fictional B2B procurement service.,Don't email me again.,opt_out,true
+generated_0516,optout-004,A first-touch introduction to a fictional B2B procurement service.,"No more emails, please.",opt_out,true
+generated_0517,optout-004,A first-touch introduction to a fictional B2B procurement service.,Cease all emails to this address.,opt_out,true
+generated_0518,optout-005,A first-touch introduction to a fictional B2B procurement service.,Do not contact me again.,opt_out,true
+generated_0519,optout-005,A first-touch introduction to a fictional B2B procurement service.,Please don't contact anyone at our company again.,opt_out,true
+generated_0520,optout-005,A first-touch introduction to a fictional B2B procurement service.,Don't reach out to me in the future.,opt_out,true
+generated_0521,optout-005,A first-touch introduction to a fictional B2B procurement service.,Never contact me again.,opt_out,true
+generated_0522,optout-005,A first-touch introduction to a fictional B2B procurement service.,We ask that you not contact us again.,opt_out,true
+generated_0523,optout-006,A first-touch introduction to a fictional B2B procurement service.,"Under GDPR, please erase my data and stop contacting me.",opt_out,true
+generated_0524,optout-006,A first-touch introduction to a fictional B2B procurement service.,I did not consent to this. Remove my data and stop contacting me.,opt_out,true
+generated_0525,optout-006,A first-touch introduction to a fictional B2B procurement service.,Please confirm you've deleted my personal data and won't email again.,opt_out,true
+generated_0526,optout-006,A first-touch introduction to a fictional B2B procurement service.,I object to direct marketing. Stop processing my details.,opt_out,true
+generated_0527,optout-006,A first-touch introduction to a fictional B2B procurement service.,"Exercising my right to object: no further marketing, please.",opt_out,true
+generated_0528,optout-007,A first-touch introduction to a fictional B2B procurement service.,How did you get my email? Stop spamming me.,opt_out,true
+generated_0529,optout-007,A first-touch introduction to a fictional B2B procurement service.,This is spam. Take me off whatever list this is.,opt_out,true
+generated_0530,optout-007,A first-touch introduction to a fictional B2B procurement service.,Stop. I never signed up for this.,opt_out,true
+generated_0531,optout-007,A first-touch introduction to a fictional B2B procurement service.,Enough emails. Remove me now.,opt_out,true
+generated_0532,optout-007,A first-touch introduction to a fictional B2B procurement service.,Quit emailing me.,opt_out,true
+generated_0533,optout-008,A first-touch introduction to a fictional B2B procurement service.,Kindly remove me from future mailings.,opt_out,true
+generated_0534,optout-008,A first-touch introduction to a fictional B2B procurement service.,I'd appreciate it if you could stop contacting me.,opt_out,true
+generated_0535,optout-008,A first-touch introduction to a fictional B2B procurement service.,Please could you take me off your list? Thank you.,opt_out,true
+generated_0536,optout-008,A first-touch introduction to a fictional B2B procurement service.,"Thanks, but please don't email me going forward.",opt_out,true
+generated_0537,optout-008,A first-touch introduction to a fictional B2B procurement service.,Would you mind removing my address? Many thanks.,opt_out,true
+generated_0538,optout-009,A first-touch introduction to a fictional B2B procurement service.,Opt out.,opt_out,true
+generated_0539,optout-009,A first-touch introduction to a fictional B2B procurement service.,Opt me out of all marketing.,opt_out,true
+generated_0540,optout-009,A first-touch introduction to a fictional B2B procurement service.,I'm opting out of these messages.,opt_out,true
+generated_0541,optout-009,A first-touch introduction to a fictional B2B procurement service.,Please opt me out.,opt_out,true
+generated_0542,optout-009,A first-touch introduction to a fictional B2B procurement service.,"Opt out of everything, please.",opt_out,true
+generated_0543,optout-010,A first-touch introduction to a fictional B2B procurement service.,Please remove everyone at our company from your lists.,opt_out,true
+generated_0544,optout-010,A first-touch introduction to a fictional B2B procurement service.,Our company does not want to receive these emails. Remove all of us.,opt_out,true
+generated_0545,optout-010,A first-touch introduction to a fictional B2B procurement service.,Stop contacting our staff.,opt_out,true
+generated_0546,optout-010,A first-touch introduction to a fictional B2B procurement service.,Take our domain off your mailing list.,opt_out,true
+generated_0547,optout-010,A first-touch introduction to a fictional B2B procurement service.,No one here wants these. Remove our addresses.,opt_out,true
+generated_0548,optout-011,A first-touch introduction to a fictional B2B procurement service.,Stop messaging me here.,opt_out,true
+generated_0549,optout-011,A first-touch introduction to a fictional B2B procurement service.,Please don't send me any more messages.,opt_out,true
+generated_0550,optout-011,A first-touch introduction to a fictional B2B procurement service.,"No further outreach, please.",opt_out,true
+generated_0551,optout-011,A first-touch introduction to a fictional B2B procurement service.,I don't want any more of these messages.,opt_out,true
+generated_0552,optout-011,A first-touch introduction to a fictional B2B procurement service.,Please end all communication with me.,opt_out,true
+generated_0553,ambiguous-002,A first-touch introduction to a fictional B2B procurement service.,Thanks.,ambiguous,true
+generated_0554,ambiguous-002,A first-touch introduction to a fictional B2B procurement service.,Noted.,ambiguous,true
+generated_0555,ambiguous-002,A first-touch introduction to a fictional B2B procurement service.,Received.,ambiguous,true
+generated_0556,ambiguous-002,A first-touch introduction to a fictional B2B procurement service.,Ok.,ambiguous,true
+generated_0557,ambiguous-002,A first-touch introduction to a fictional B2B procurement service.,Got it.,ambiguous,true
+generated_0558,ambiguous-002,A first-touch introduction to a fictional B2B procurement service.,"Okay, thanks.",ambiguous,true
+generated_0559,ambiguous-003,A first-touch introduction to a fictional B2B procurement service.,I'll take a look when I can.,ambiguous,true
+generated_0560,ambiguous-003,A first-touch introduction to a fictional B2B procurement service.,Will review.,ambiguous,true
+generated_0561,ambiguous-003,A first-touch introduction to a fictional B2B procurement service.,I'll have a look.,ambiguous,true
+generated_0562,ambiguous-003,A first-touch introduction to a fictional B2B procurement service.,Let me look at this.,ambiguous,true
+generated_0563,ambiguous-003,A first-touch introduction to a fictional B2B procurement service.,I'll check it out.,ambiguous,true
+generated_0564,ambiguous-003,A first-touch introduction to a fictional B2B procurement service.,I'll read it properly later.,ambiguous,true
+generated_0565,ambiguous-004,A first-touch introduction to a fictional B2B procurement service.,?,ambiguous,true
+generated_0566,ambiguous-004,A first-touch introduction to a fictional B2B procurement service.,Who is this?,ambiguous,true
+generated_0567,ambiguous-004,A first-touch introduction to a fictional B2B procurement service.,What is this regarding?,ambiguous,true
+generated_0568,ambiguous-004,A first-touch introduction to a fictional B2B procurement service.,"Sorry, which company are you from?",ambiguous,true
+generated_0569,ambiguous-004,A first-touch introduction to a fictional B2B procurement service.,Is this about the invoice?,ambiguous,true
+generated_0570,ambiguous-004,A first-touch introduction to a fictional B2B procurement service.,Do I know you?,ambiguous,true
+generated_0571,ambiguous-005,A first-touch introduction to a fictional B2B procurement service.,Maybe.,ambiguous,true
+generated_0572,ambiguous-005,A first-touch introduction to a fictional B2B procurement service.,Possibly.,ambiguous,true
+generated_0573,ambiguous-005,A first-touch introduction to a fictional B2B procurement service.,Could be.,ambiguous,true
+generated_0574,ambiguous-005,A first-touch introduction to a fictional B2B procurement service.,"Perhaps, not sure yet.",ambiguous,true
+generated_0575,ambiguous-005,A first-touch introduction to a fictional B2B procurement service.,Hard to say.,ambiguous,true
+generated_0576,ambiguous-005,A first-touch introduction to a fictional B2B procurement service.,"Might be, might not.",ambiguous,true
+generated_0577,ambiguous-006,A first-touch introduction to a fictional B2B procurement service.,👍,ambiguous,true
+generated_0578,ambiguous-006,A first-touch introduction to a fictional B2B procurement service.,Hm.,ambiguous,true
+generated_0579,ambiguous-006,A first-touch introduction to a fictional B2B procurement service.,"Hmm, ok.",ambiguous,true
+generated_0580,ambiguous-006,A first-touch introduction to a fictional B2B procurement service.,Sure.,ambiguous,true
+generated_0581,ambiguous-006,A first-touch introduction to a fictional B2B procurement service.,Right.,ambiguous,true
+generated_0582,ambiguous-006,A first-touch introduction to a fictional B2B procurement service.,k,ambiguous,true
+generated_0583,ambiguous-007,A first-touch introduction to a fictional B2B procurement service.,Depends on a lot of things.,ambiguous,true
+generated_0584,ambiguous-007,A first-touch introduction to a fictional B2B procurement service.,Not sure what to say to this.,ambiguous,true
+generated_0585,ambiguous-007,A first-touch introduction to a fictional B2B procurement service.,We'll see.,ambiguous,true
+generated_0586,ambiguous-007,A first-touch introduction to a fictional B2B procurement service.,"Possibly relevant, possibly not.",ambiguous,true
+generated_0587,ambiguous-007,A first-touch introduction to a fictional B2B procurement service.,Let me think about it.,ambiguous,true
+generated_0588,ambiguous-007,A first-touch introduction to a fictional B2B procurement service.,Too early to tell.,ambiguous,true
+generated_0589,ambiguous-008,A first-touch introduction to a fictional B2B procurement service.,Can you resend the attachment?,ambiguous,true
+generated_0590,ambiguous-008,A first-touch introduction to a fictional B2B procurement service.,Wrong thread I think.,ambiguous,true
+generated_0591,ambiguous-008,A first-touch introduction to a fictional B2B procurement service.,This came through blank on my end.,ambiguous,true
+generated_0592,ambiguous-008,A first-touch introduction to a fictional B2B procurement service.,Did you mean to send this to me?,ambiguous,true
+generated_0593,ambiguous-008,A first-touch introduction to a fictional B2B procurement service.,Your message got cut off.,ambiguous,true
+generated_0594,ambiguous-008,A first-touch introduction to a fictional B2B procurement service.,The link in your email doesn't open for me.,ambiguous,true
+generated_0595,ambiguous-009,A first-touch introduction to a fictional B2B procurement service.,Thanks for reaching out.,ambiguous,true
+generated_0596,ambiguous-009,A first-touch introduction to a fictional B2B procurement service.,Thank you for the email.,ambiguous,true
+generated_0597,ambiguous-009,A first-touch introduction to a fictional B2B procurement service.,Appreciate it.,ambiguous,true
+generated_0598,ambiguous-009,A first-touch introduction to a fictional B2B procurement service.,Thanks for the info.,ambiguous,true
+generated_0599,ambiguous-009,A first-touch introduction to a fictional B2B procurement service.,Cheers.,ambiguous,true
+generated_0600,ambiguous-009,A first-touch introduction to a fictional B2B procurement service.,Thanks for the note.,ambiguous,true
+generated_0601,ambiguous-010,A first-touch introduction to a fictional B2B procurement service.,Your message has been received.,ambiguous,true
+generated_0602,ambiguous-010,A first-touch introduction to a fictional B2B procurement service.,This mailbox is monitored. We will reply if needed.,ambiguous,true
+generated_0603,ambiguous-010,A first-touch introduction to a fictional B2B procurement service.,"Thank you, your email has been logged.",ambiguous,true
+generated_0604,ambiguous-010,A first-touch introduction to a fictional B2B procurement service.,Message received by our team.,ambiguous,true
+generated_0605,ambiguous-010,A first-touch introduction to a fictional B2B procurement service.,We have received your email.,ambiguous,true
+generated_0606,ambiguous-010,A first-touch introduction to a fictional B2B procurement service.,Your enquiry is in our queue.,ambiguous,true
+generated_0607,ambiguous-011,A first-touch introduction to a fictional B2B procurement service.,Keep me posted I suppose.,ambiguous,true
+generated_0608,ambiguous-011,A first-touch introduction to a fictional B2B procurement service.,Fine.,ambiguous,true
+generated_0609,ambiguous-011,A first-touch introduction to a fictional B2B procurement service.,If you say so.,ambiguous,true
+generated_0610,ambiguous-011,A first-touch introduction to a fictional B2B procurement service.,Alright then.,ambiguous,true
+generated_0611,ambiguous-011,A first-touch introduction to a fictional B2B procurement service.,"Interesting, maybe.",ambiguous,true
+generated_0612,ambiguous-011,A first-touch introduction to a fictional B2B procurement service.,"Okay, noted for now.",ambiguous,true
+generated_0613,decline-012,A first-touch introduction to a fictional B2B procurement service.,"Had a look, and it's a no from us.",not_interested,true
+generated_0614,decline-012,A first-touch introduction to a fictional B2B procurement service.,"Read your note. We'll pass, thanks.",not_interested,true
+generated_0615,decline-012,A first-touch introduction to a fictional B2B procurement service.,"Thanks for the overview, but we're not moving ahead.",not_interested,true
+generated_0616,decline-012,A first-touch introduction to a fictional B2B procurement service.,Took a look and it's not something we'll take forward.,not_interested,true
+generated_0617,decline-012,A first-touch introduction to a fictional B2B procurement service.,"Appreciate it, but the answer is no.",not_interested,true
+generated_0618,decline-012,A first-touch introduction to a fictional B2B procurement service.,We've considered it and we're declining.,not_interested,true
+generated_0619,decline-013,A first-touch introduction to a fictional B2B procurement service.,"Not interested, but good luck with it.",not_interested,true
+generated_0620,decline-013,A first-touch introduction to a fictional B2B procurement service.,We'll pass. All the best with the product.,not_interested,true
+generated_0621,decline-013,A first-touch introduction to a fictional B2B procurement service.,"No thank you, wishing you success.",not_interested,true
+generated_0622,decline-013,A first-touch introduction to a fictional B2B procurement service.,"Not for us, though I hope it goes well for you.",not_interested,true
+generated_0623,decline-013,A first-touch introduction to a fictional B2B procurement service.,"We're a no, but thanks for thinking of us.",not_interested,true
+generated_0624,decline-013,A first-touch introduction to a fictional B2B procurement service.,"Thanks, but no. Best of luck.",not_interested,true

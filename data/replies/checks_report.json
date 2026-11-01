@@ -1,0 +1,124 @@
+{
+  "rows_in": 635,
+  "rows_kept": 617,
+  "agreement_rate": 0.9717,
+  "per_intent_rows": {
+    "interested": 61,
+    "meeting_requested": 51,
+    "more_information": 53,
+    "referral": 61,
+    "not_now": 51,
+    "objection": 61,
+    "wrong_person": 61,
+    "out_of_office": 51,
+    "not_interested": 56,
+    "opt_out": 51,
+    "ambiguous": 60
+  },
+  "per_intent_groups": {
+    "interested": 11,
+    "meeting_requested": 11,
+    "more_information": 11,
+    "referral": 11,
+    "not_now": 11,
+    "objection": 11,
+    "wrong_person": 11,
+    "out_of_office": 11,
+    "not_interested": 13,
+    "opt_out": 11,
+    "ambiguous": 11
+  },
+  "dropped": [
+    {
+      "reply_id": "generated_0449",
+      "intended": "not_interested",
+      "relabel": "objection"
+    },
+    {
+      "reply_id": "generated_0450",
+      "intended": "not_interested",
+      "relabel": "objection"
+    },
+    {
+      "reply_id": "generated_0451",
+      "intended": "not_interested",
+      "relabel": "objection"
+    },
+    {
+      "reply_id": "generated_0452",
+      "intended": "not_interested",
+      "relabel": "objection"
+    },
+    {
+      "reply_id": "generated_0453",
+      "intended": "not_interested",
+      "relabel": "objection"
+    },
+    {
+      "reply_id": "generated_0455",
+      "intended": "not_interested",
+      "relabel": "objection"
+    },
+    {
+      "reply_id": "generated_0456",
+      "intended": "not_interested",
+      "relabel": "objection"
+    },
+    {
+      "reply_id": "generated_0458",
+      "intended": "not_interested",
+      "relabel": "objection"
+    },
+    {
+      "reply_id": "generated_0460",
+      "intended": "not_interested",
+      "relabel": "objection"
+    },
+    {
+      "reply_id": "generated_0479",
+      "intended": "not_interested",
+      "relabel": "objection"
+    },
+    {
+      "reply_id": "generated_0483",
+      "intended": "not_interested",
+      "relabel": "objection"
+    },
+    {
+      "reply_id": "generated_0492",
+      "intended": "not_interested",
+      "relabel": "objection"
+    },
+    {
+      "reply_id": "generated_0496",
+      "intended": "not_interested",
+      "relabel": "objection"
+    },
+    {
+      "reply_id": "generated_0497",
+      "intended": "not_interested",
+      "relabel": "objection"
+    },
+    {
+      "reply_id": "generated_0498",
+      "intended": "not_interested",
+      "relabel": "objection"
+    },
+    {
+      "reply_id": "generated_0501",
+      "intended": "not_interested",
+      "relabel": "objection"
+    },
+    {
+      "reply_id": "generated_0502",
+      "intended": "not_interested",
+      "relabel": "objection"
+    },
+    {
+      "reply_id": "generated_0590",
+      "intended": "ambiguous",
+      "relabel": "wrong_person"
+    }
+  ],
+  "problems": []
+}
