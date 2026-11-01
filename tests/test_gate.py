@@ -8,13 +8,14 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "integration"))
 
 from gate import (
     build_lead_request,
+    build_reply_request,
     explicit_opt_out_in_text,
     gate_lead,
     gate_reply,
     main,
     normalize_domain,
 )
-from policy import LEAD_QUESTIONS
+from policy import LEAD_QUESTIONS, REPLY_QUESTIONS
 
 FIT_ANSWERS = {
     "icp_fit": {"answer": "fit", "probabilities": {"fit": 0.9, "not_fit": 0.08, "insufficient_evidence": 0.02}},
@@ -120,6 +121,22 @@ def test_build_lead_request_uses_the_training_state_format():
     assert state["task"] == "B2B lead qualification"
     assert state["features"]["industry"] == "manufacturing"
     assert state["features"]["touch_count"] is None
+
+
+def test_build_reply_request_uses_the_training_state_format():
+    request = build_reply_request("Can we talk next week?")
+    state = json.loads(request["state"])
+    assert request["questions"] == REPLY_QUESTIONS
+    assert state == {
+        "task": "B2B sales reply assessment",
+        "outreach_context": "A first-touch introduction to a fictional B2B procurement service.",
+        "recipient_reply": "Can we talk next week?",
+    }
+
+
+def test_build_reply_request_rejects_empty_text():
+    with pytest.raises(ValueError):
+        build_reply_request("  ")
 
 
 def test_cli_lead_request_prints_the_request(tmp_path, capsys):

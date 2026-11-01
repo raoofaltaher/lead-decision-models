@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "lead-decisions": {
+      "type": "http",
+      "url": "http://127.0.0.1:8888/mcp/decisions/"
+    },
+    "reply-decisions": {
+      "type": "http",
+      "url": "http://127.0.0.1:8889/mcp/decisions/"
+    },
+    "firecrawl": {
+      "type": "http",
+      "url": "https://mcp.firecrawl.dev/v2/mcp-oauth"
+    }
+  }
+}

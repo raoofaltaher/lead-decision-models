@@ -1,0 +1,10 @@
+[
+  {"reply_id": "case-01", "reply_text": "Thanks for the note about Tillbrook. Could we set up 30 minutes next Thursday to see how the approval workflow works?", "contact_is_suppressed": false, "explicit_opt_out_event": false},
+  {"reply_id": "case-02", "reply_text": "What would this cost for roughly 300 requesters across two plants?", "contact_is_suppressed": false, "explicit_opt_out_event": false},
+  {"reply_id": "case-03", "reply_text": "We're mid-way through an ERP upgrade. Please come back to me in early March.", "contact_is_suppressed": false, "explicit_opt_out_event": false},
+  {"reply_id": "case-04", "reply_text": "I'm out of the office until 24 November with limited access to email.", "contact_is_suppressed": false, "explicit_opt_out_event": false},
+  {"reply_id": "case-05", "reply_text": "I look after facilities, not purchasing systems, so I'm the wrong person for this.", "contact_is_suppressed": false, "explicit_opt_out_event": false},
+  {"reply_id": "case-06", "reply_text": "Thanks, but we're not going to take this forward.", "contact_is_suppressed": false, "explicit_opt_out_event": false},
+  {"reply_id": "case-07", "reply_text": "Please unsubscribe me from these emails.", "contact_is_suppressed": false, "explicit_opt_out_event": false},
+  {"reply_id": "case-08", "reply_text": "Sounds genuinely useful for our buyers, but please take me off your mailing list.", "contact_is_suppressed": false, "explicit_opt_out_event": false}
+]

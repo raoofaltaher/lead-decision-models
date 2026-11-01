@@ -34,6 +34,7 @@ OPT_OUT_PHRASES = (
     "don't contact",
 )
 HOSTNAME = re.compile(r"[a-z0-9-]+(\.[a-z0-9-]+)+")
+OUTREACH_CONTEXT = "A first-touch introduction to a fictional B2B procurement service."
 
 
 def normalize_domain(url: str) -> str | None:
@@ -68,6 +69,17 @@ def build_lead_request(features: dict) -> dict:
     if problems:
         raise ValueError("; ".join(problems))
     return {"state": make_lead_state(features), "questions": LEAD_QUESTIONS}
+
+
+def build_reply_request(reply_text: str, outreach_context: str = OUTREACH_CONTEXT) -> dict:
+    if not isinstance(reply_text, str) or not reply_text.strip():
+        raise ValueError("reply_text is empty")
+    state = {
+        "task": "B2B sales reply assessment",
+        "outreach_context": outreach_context,
+        "recipient_reply": reply_text,
+    }
+    return {"state": json.dumps(state, sort_keys=True, ensure_ascii=False), "questions": REPLY_QUESTIONS}
 
 
 def explicit_opt_out_in_text(text: str) -> bool:
@@ -171,6 +183,9 @@ def main(argv: list[str] | None = None) -> int:
     request = commands.add_parser("lead-request")
     request.add_argument("--features", required=True, type=Path)
 
+    reply_request = commands.add_parser("reply-request")
+    reply_request.add_argument("--reply-text", required=True)
+
     lead = commands.add_parser("lead")
     lead.add_argument("--domain", required=True)
     lead.add_argument("--answers", required=True, type=Path)
@@ -195,6 +210,14 @@ def main(argv: list[str] | None = None) -> int:
             print(json.dumps(build_lead_request(features), ensure_ascii=False))
         except ValueError as error:
             print(json.dumps({"error": str(error), "next_action": "research_missing_account_evidence", "send": False}))
+            return 2
+        return 0
+
+    if args.command == "reply-request":
+        try:
+            print(json.dumps(build_reply_request(args.reply_text), ensure_ascii=False))
+        except ValueError as error:
+            print(json.dumps({"error": str(error), "send": False}))
             return 2
         return 0
 

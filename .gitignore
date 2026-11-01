@@ -7,3 +7,4 @@ data/leadforge-intermediate/
 __pycache__/
 .pytest_cache/
 unsloth_compiled_cache/
+outputs/logs/
