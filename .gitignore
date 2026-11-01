@@ -1,0 +1,8 @@
+unsloth_env/
+outputs/*-adapter/
+outputs/*-merged/
+outputs/checkpoints/
+data/leadforge-intermediate/
+.ipynb_checkpoints/
+__pycache__/
+.pytest_cache/
