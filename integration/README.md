@@ -8,7 +8,14 @@ Unsloth Studio 2026.10.11 serves decision models through its Decision API and an
 
 ## 2. The decision server
 
-Both notebooks must have run, so that `outputs/lead-decision-merged/` and `outputs/reply-decision-merged/` exist. `decision_server.py` serves one merged folder over stdio:
+Both notebooks must have run, so that `outputs/lead-decision-merged/` and `outputs/reply-decision-merged/` exist. Without a training run, download the merged models of the recorded run from the Hugging Face Hub into the same folders:
+
+```bash
+hf download raoofaltaher/lead-decision-models-lead-qualifier-merged --local-dir outputs/lead-decision-merged
+hf download raoofaltaher/lead-decision-models-reply-router-merged --local-dir outputs/reply-decision-merged
+```
+
+`decision_server.py` serves one merged folder over stdio:
 
 - It loads the model on the first `decide` call, with `trust_remote_code=True` in 4-bit, the same call the notebooks use to reload it. On the test machine the first call takes about half a minute.
 - It serves only a local folder that holds a `config.json`. The LFM3 code in that folder is the code of the pinned revision that the notebooks downloaded.

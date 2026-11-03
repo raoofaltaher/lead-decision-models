@@ -47,6 +47,12 @@ The intermediate tier of the LeadForge synthetic CRM release v0.1.0-alpha (MIT),
 
 Peak training VRAM: 2.73 GB.
 
+## Links
+
+- Companion repository with the notebook, the data, the plots and the tests: https://github.com/raoofaltaher/lead-decision-models
+- The adapter and decision head of the same run: [raoofaltaher/lead-decision-models-lead-qualifier](https://huggingface.co/raoofaltaher/lead-decision-models-lead-qualifier)
+- The tutorial that trains and uses it: https://raoofaltaher.com/tutorials/fine-tune-decision-models-lead-qualification
+
 ## How to load
 
 ```python

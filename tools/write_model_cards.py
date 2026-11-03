@@ -42,8 +42,18 @@ def card(
     license_id: str,
     tutorial_url: str,
     trust_remote_code: bool = False,
+    repository_url: str | None = None,
+    sibling_repo_id: str | None = None,
+    sibling_kind: str | None = None,
 ) -> str:
     info = TASKS[task]
+    links = []
+    if repository_url:
+        links.append(f"- Companion repository with the notebook, the data, the plots and the tests: {repository_url}")
+    if sibling_repo_id:
+        links.append(f"- The {sibling_kind} of the same run: [{sibling_repo_id}](https://huggingface.co/{sibling_repo_id})")
+    links.append(f"- The tutorial that trains and uses it: {tutorial_url}")
+    link_section = "## Links\n\n" + "\n".join(links) + "\n"
     load_arguments = f'"{repo_id}", trust_remote_code=True, load_in_4bit=True' if trust_remote_code else f'"{repo_id}", load_in_4bit=True'
     remote_code_note = (
         f"\n`{base_model}` ships custom modeling code, so loading needs `trust_remote_code=True`. "
@@ -100,6 +110,7 @@ A decision model ({info['title']}) fine-tuned from `{base_model}` (revision `{ba
 
 Peak training VRAM: {metrics.get('peak_vram_gb')} GB.
 
+{link_section}
 ## How to load
 
 ```python
@@ -125,6 +136,9 @@ def main(argv=None) -> int:
     parser.add_argument("--license", dest="license_id", default="apache-2.0")
     parser.add_argument("--tutorial-url", required=True)
     parser.add_argument("--trust-remote-code", action="store_true")
+    parser.add_argument("--repository-url")
+    parser.add_argument("--sibling-repo-id")
+    parser.add_argument("--sibling-kind")
     parser.add_argument("--out", required=True, type=Path)
     args = parser.parse_args(argv)
 
@@ -139,6 +153,9 @@ def main(argv=None) -> int:
             license_id=args.license_id,
             tutorial_url=args.tutorial_url,
             trust_remote_code=args.trust_remote_code,
+            repository_url=args.repository_url,
+            sibling_repo_id=args.sibling_repo_id,
+            sibling_kind=args.sibling_kind,
         ),
         encoding="utf-8",
     )

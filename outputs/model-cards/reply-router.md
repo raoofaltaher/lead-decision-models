@@ -44,6 +44,12 @@ Classifies a prospect's reply to a first-touch sales email into one of 11 intent
 
 Peak training VRAM: 4.6 GB.
 
+## Links
+
+- Companion repository with the notebook, the data, the plots and the tests: https://github.com/raoofaltaher/lead-decision-models
+- The merged 16-bit model of the same run: [raoofaltaher/lead-decision-models-reply-router-merged](https://huggingface.co/raoofaltaher/lead-decision-models-reply-router-merged)
+- The tutorial that trains and uses it: https://raoofaltaher.com/tutorials/fine-tune-decision-models-reply-routing
+
 ## How to load
 
 ```python

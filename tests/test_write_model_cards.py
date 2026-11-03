@@ -87,3 +87,14 @@ def test_lfm3_card_carries_license_threshold_note():
     assert "license_name: lfm1.0" in text
     assert "license_link: https://huggingface.co/LiquidAI/LFM3-1.7B/blob/3764fa359b90/LICENSE" in text
     assert "revenue threshold" in text
+
+
+def test_card_links_the_repository_and_the_sibling_model():
+    text = make_card(
+        repository_url="https://github.com/raoofaltaher/lead-decision-models",
+        sibling_repo_id="raoofaltaher/lead-decision-models-lead-qualifier-merged",
+        sibling_kind="merged 16-bit model",
+    )
+    assert "https://github.com/raoofaltaher/lead-decision-models" in text
+    assert "[raoofaltaher/lead-decision-models-lead-qualifier-merged](https://huggingface.co/raoofaltaher/lead-decision-models-lead-qualifier-merged)" in text
+    assert "merged 16-bit model" in text
