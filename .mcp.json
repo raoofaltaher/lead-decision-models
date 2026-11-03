@@ -1,12 +1,14 @@
 {
   "mcpServers": {
     "lead-decisions": {
-      "type": "http",
-      "url": "http://127.0.0.1:8888/mcp/decisions/"
+      "type": "stdio",
+      "command": "unsloth_env/bin/python",
+      "args": ["integration/decision_server.py", "--model", "outputs/lead-decision-merged"]
     },
     "reply-decisions": {
-      "type": "http",
-      "url": "http://127.0.0.1:8889/mcp/decisions/"
+      "type": "stdio",
+      "command": "unsloth_env/bin/python",
+      "args": ["integration/decision_server.py", "--model", "outputs/reply-decision-merged"]
     },
     "firecrawl": {
       "type": "http",

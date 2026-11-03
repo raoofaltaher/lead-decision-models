@@ -1,41 +1,33 @@
 # Integration: Claude Code and the decision models
 
-Part 3 of the tutorial. Claude Code researches prospects with Firecrawl and hands two bounded decisions to the fine-tuned models, served by Unsloth Studio's Decision API. A deterministic gate turns every decision into a queue entry for a person to approve. Nothing here can send a message.
+Part 3 of the tutorial. Claude Code researches prospects with Firecrawl and hands two bounded decisions to the fine-tuned models, served by a small MCP server in this repository. A deterministic gate turns every decision into a queue entry for a person to approve. Nothing here can send a message.
 
-## 1. Serve the two models
+## 1. Why not Unsloth Studio's Decision API
 
-Both notebooks must have run, so that `outputs/lead-decision-merged/` and `outputs/reply-decision-merged/` exist.
+Unsloth Studio 2026.10.11 serves decision models through its Decision API and an MCP endpoint, but it cannot load LFM3. Its runtime loads a model without `trust_remote_code`, and its own environment pins transformers 5.5.0, below the 5.22.1 that LFM3's code needs. The fix, [unslothai/unsloth#16096](https://github.com/unslothai/unsloth/pull/16096), is merged on `main` and waits for a release ([#15588](https://github.com/unslothai/unsloth/issues/15588)). Until then, `integration/decision_server.py` exposes the same `decide` tool with the same request shape and the same limits.
 
-```bash
-./integration/serve.sh
-```
+## 2. The decision server
 
-The script starts two Unsloth Studio processes on the loopback address only:
+Both notebooks must have run, so that `outputs/lead-decision-merged/` and `outputs/reply-decision-merged/` exist. `decision_server.py` serves one merged folder over stdio:
 
-| Model | Address | Studio data folder |
-|---|---|---|
-| Lead qualification | `http://127.0.0.1:8888` | `~/.studio-lead` |
-| Reply routing | `http://127.0.0.1:8889` | `~/.studio-reply` |
+- It loads the model on the first `decide` call, with `trust_remote_code=True` in 4-bit, the same call the notebooks use to reload it. On the test machine the first call takes about half a minute.
+- It serves only a local folder that holds a `config.json`. The LFM3 code in that folder is the code of the pinned revision that the notebooks downloaded.
+- It refuses every request that Studio's Decision API refuses, with Studio's messages, before the model runs.
+- Unsloth's console output goes to stderr, so it cannot break the MCP stream.
 
-`UNSLOTH_SYSTEMONE_MODEL` points each process at its merged folder. Studio loads the model on the first request, which can take a minute.
-
-## 2. Turn on the Decision API (once per process)
-
-Open each address in a browser and:
-
-1. Complete Studio's first-run setup.
-2. Open Settings → API → Decision API and turn on **Serve requests**.
-3. Turn on **Keyless API access** for localhost, or create an API key under Access tokens.
-
-With a key, add an `Authorization` header to the matching `.mcp.json` entry and keep the key in an environment variable, never in a file:
-
-```json
-"headers": { "Authorization": "Bearer ${LEAD_DECISIONS_KEY}" }
-```
+Claude Code starts one server process per model. Nothing listens on a network port.
 
 ## 3. Connect Claude Code
 
-`.mcp.json` in the repository root registers three servers: `lead-decisions` and `reply-decisions` (Studio's built-in MCP endpoint, tool `decide`) and `firecrawl` (sign in once in the browser). Start Claude Code in the repository folder, with the virtual environment active, and check:
+`.mcp.json` in the repository root registers three servers:
+
+| Server | Transport | What it runs |
+|---|---|---|
+| `lead-decisions` | stdio | `decision_server.py` on `outputs/lead-decision-merged` |
+| `reply-decisions` | stdio | `decision_server.py` on `outputs/reply-decision-merged` |
+| `firecrawl` | HTTP with OAuth | Firecrawl's hosted MCP server |
+
+Start `claude` in the repository folder. Approve the three project servers when Claude Code asks, then run `/mcp` and sign in to Firecrawl in the browser. Check the result:
 
 ```bash
 claude mcp list
@@ -59,7 +51,7 @@ Every result carries `"send": false`. A person reviews `outputs/approval-queue.j
 `case_study_prompt.md` is the prompt of the recorded session. It ran headless:
 
 ```bash
-claude -p "$(cat integration/case_study_prompt.md)" --mcp-config .mcp.json --output-format stream-json --verbose > outputs/case-study-session.jsonl
+claude -p "$(cat integration/case_study_prompt.md)" --mcp-config .mcp.json --strict-mcp-config --output-format stream-json --verbose > outputs/case-study-session.jsonl
 ```
 
 The lead model learned from synthetic LeadForge records. Its answers about real companies demonstrate the integration; they are not validated predictions.
