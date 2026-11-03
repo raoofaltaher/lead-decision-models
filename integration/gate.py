@@ -64,7 +64,9 @@ def build_lead_request(features: dict) -> dict:
     problems = [f"unknown fields {unknown_fields}"] if unknown_fields else []
     for field, allowed in TRAINED_VALUES.items():
         value = features.get(field)
-        if value is not None and value not in allowed:
+        if value is None:
+            problems.append(f"missing ICP evidence: {field}")
+        elif value not in allowed:
             problems.append(f"{field}={value!r} is outside the training categories {sorted(allowed)}")
     if problems:
         raise ValueError("; ".join(problems))

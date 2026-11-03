@@ -146,3 +146,27 @@ def test_cli_lead_request_prints_the_request(tmp_path, capsys):
     assert main(["lead-request", "--features", str(features)]) == 0
     printed = json.loads(capsys.readouterr().out)
     assert printed["questions"] == LEAD_QUESTIONS
+
+
+@pytest.mark.parametrize(
+    ("features", "missing"),
+    [
+        ({"industry": "manufacturing", "region": "UK"}, "employee_band"),
+        ({"industry": "manufacturing", "employee_band": "500-999"}, "region"),
+        ({"region": "US", "employee_band": "200-499", "industry": None}, "industry"),
+    ],
+)
+def test_incomplete_icp_evidence_blocks_model_call(features, missing):
+    with pytest.raises(ValueError, match=f"missing ICP evidence: {missing}"):
+        build_lead_request(features)
+
+
+def test_cli_sends_an_incomplete_record_to_research(tmp_path, capsys):
+    features = tmp_path / "f.json"
+    features.write_text(json.dumps({"industry": "logistics", "region": "US"}), encoding="utf-8")
+
+    assert main(["lead-request", "--features", str(features)]) == 2
+    printed = json.loads(capsys.readouterr().out)
+    assert printed["next_action"] == "research_missing_account_evidence"
+    assert "employee_band" in printed["error"]
+    assert printed["send"] is False
