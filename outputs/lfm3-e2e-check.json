@@ -1,0 +1,84 @@
+{
+  "model": "LiquidAI/LFM3-1.7B",
+  "revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+  "steps": {
+    "load": {
+      "ok": true,
+      "result": "loaded 4-bit with LoRA r=16"
+    },
+    "build_dataset": {
+      "ok": true,
+      "result": {
+        "total": 192,
+        "skipped": 0,
+        "reason": null,
+        "truncated": 0
+      }
+    },
+    "train": {
+      "ok": true,
+      "result": [
+        0.8958463668823242,
+        0.5340976715087891,
+        0.20621874332427978,
+        0.07898825407028198
+      ]
+    },
+    "calibrate": {
+      "ok": true,
+      "result": {
+        "accuracy": 1.0,
+        "ece": 4.66903050666545e-08,
+        "loss": 4.669029654754316e-08,
+        "record_accuracy": 1.0,
+        "fitted_types": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "evaluate": {
+      "ok": true,
+      "result": {
+        "accuracy": 1.0,
+        "ece": 3.973642970223068e-09,
+        "loss": 3.973642748178463e-09,
+        "record_accuracy": 1.0
+      }
+    },
+    "predict": {
+      "ok": true,
+      "result": {
+        "team": "billing",
+        "refund": true,
+        "urgency": 2
+      }
+    },
+    "save_adapter": {
+      "ok": true,
+      "result": "saved"
+    },
+    "save_merged": {
+      "ok": true,
+      "result": "saved"
+    },
+    "reload_adapter_predict": {
+      "ok": true,
+      "result": {
+        "team": "billing",
+        "refund": true,
+        "urgency": 2
+      }
+    },
+    "reload_merged_predict": {
+      "ok": true,
+      "result": {
+        "team": "billing",
+        "refund": true,
+        "urgency": 2
+      }
+    }
+  },
+  "peak_vram_gb": 2.37
+}

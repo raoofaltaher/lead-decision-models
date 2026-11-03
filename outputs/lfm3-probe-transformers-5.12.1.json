@@ -1,0 +1,39 @@
+{
+  "model_id": "LiquidAI/LFM3-1.7B",
+  "revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+  "mode_4bit": {
+    "loaded": false,
+    "trained": false,
+    "loss_first": null,
+    "loss_last": null,
+    "error": "ImportError: cannot import name 'use_kernel_func_from_hub_with_fallback' from 'transformers.integrations' (/home/dev/work/lead-decision-models/lfm3_env/lib/python3.13/site-packages/transformers/integrations/__init__.py)",
+    "traceback_tail": [
+      "  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed",
+      "  File \"/home/dev/.cache/huggingface/modules/transformers_modules/LiquidAI/LFM3_hyphen_1_dot_7B/ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7/modeling_lfm3.py\", line 26, in <module>",
+      "    from transformers.integrations import (",
+      "    ...<3 lines>...",
+      "    )",
+      "ImportError: cannot import name 'use_kernel_func_from_hub_with_fallback' from 'transformers.integrations' (/home/dev/work/lead-decision-models/lfm3_env/lib/python3.13/site-packages/transformers/integrations/__init__.py)"
+    ]
+  },
+  "mode_16bit": {
+    "loaded": false,
+    "trained": false,
+    "loss_first": null,
+    "loss_last": null,
+    "error": "ImportError: cannot import name 'use_kernel_func_from_hub_with_fallback' from 'transformers.integrations' (/home/dev/work/lead-decision-models/lfm3_env/lib/python3.13/site-packages/transformers/integrations/__init__.py)",
+    "traceback_tail": [
+      "  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed",
+      "  File \"/home/dev/.cache/huggingface/modules/transformers_modules/LiquidAI/LFM3_hyphen_1_dot_7B/ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7/modeling_lfm3.py\", line 26, in <module>",
+      "    from transformers.integrations import (",
+      "    ...<3 lines>...",
+      "    )",
+      "ImportError: cannot import name 'use_kernel_func_from_hub_with_fallback' from 'transformers.integrations' (/home/dev/work/lead-decision-models/lfm3_env/lib/python3.13/site-packages/transformers/integrations/__init__.py)"
+    ]
+  },
+  "unsloth": "2026.10.11",
+  "unsloth_zoo": "2026.10.11",
+  "transformers": "5.12.1",
+  "huggingface_hub": "1.33.0",
+  "verdict": "not_supported"
+}

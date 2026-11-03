@@ -1,0 +1,23 @@
+{
+  "model_id": "LiquidAI/LFM3-1.7B",
+  "revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+  "mode_4bit": {
+    "loaded": true,
+    "trained": true,
+    "loss_first": 0.9742990732192993,
+    "loss_last": 0.8857361674308777,
+    "error": null
+  },
+  "mode_16bit": {
+    "loaded": true,
+    "trained": true,
+    "loss_first": 0.9690677523612976,
+    "loss_last": 0.8881637454032898,
+    "error": null
+  },
+  "unsloth": "2026.10.11",
+  "unsloth_zoo": "2026.10.11",
+  "transformers": "5.22.1",
+  "huggingface_hub": "1.33.0",
+  "verdict": "supported"
+}

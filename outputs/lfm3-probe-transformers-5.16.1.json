@@ -1,0 +1,39 @@
+{
+  "model_id": "LiquidAI/LFM3-1.7B",
+  "revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+  "mode_4bit": {
+    "loaded": true,
+    "trained": false,
+    "loss_first": null,
+    "loss_last": null,
+    "error": "KeyError: 'linear_attention'",
+    "traceback_tail": [
+      "  File \"/home/dev/work/lead-decision-models/lfm3_env/lib/python3.13/site-packages/transformers/utils/output_capturing.py\", line 262, in wrapper",
+      "    outputs = func(self, *args, **kwargs)",
+      "  File \"/home/dev/.cache/huggingface/modules/transformers_modules/LiquidAI/LFM3_hyphen_1_dot_7B/ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7/modeling_lfm3.py\", line 752, in forward",
+      "    attention_mask=causal_mask_mapping[layer_type],",
+      "                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^",
+      "KeyError: 'linear_attention'"
+    ]
+  },
+  "mode_16bit": {
+    "loaded": true,
+    "trained": false,
+    "loss_first": null,
+    "loss_last": null,
+    "error": "KeyError: 'linear_attention'",
+    "traceback_tail": [
+      "  File \"/home/dev/work/lead-decision-models/lfm3_env/lib/python3.13/site-packages/transformers/utils/output_capturing.py\", line 262, in wrapper",
+      "    outputs = func(self, *args, **kwargs)",
+      "  File \"/home/dev/.cache/huggingface/modules/transformers_modules/LiquidAI/LFM3_hyphen_1_dot_7B/ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7/modeling_lfm3.py\", line 752, in forward",
+      "    attention_mask=causal_mask_mapping[layer_type],",
+      "                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^",
+      "KeyError: 'linear_attention'"
+    ]
+  },
+  "unsloth": "2026.10.11",
+  "unsloth_zoo": "2026.10.11",
+  "transformers": "5.16.1",
+  "huggingface_hub": "1.33.0",
+  "verdict": "not_supported"
+}
