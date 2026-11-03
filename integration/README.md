@@ -39,7 +39,7 @@ claude mcp list
 
 | Command | What it does |
 |---|---|
-| `lead-request --features f.json` | Validates a lead record against the categories the model was trained on and prints the exact `decide` request. Exit code 2 means a value is outside those categories: research the lead instead of calling the model. |
+| `lead-request --features f.json` | Validates a lead record against the categories the model was trained on and prints the exact `decide` request. Exit code 2 means a field is missing or a value is outside those categories: research the lead instead of calling the model. |
 | `reply-request --reply-text "..."` | Prints the exact `decide` request for a reply. |
 | `lead --domain d --answers a.json ...` | Applies the outreach policy (suppression, persona fit, eligibility, ICP fit) and appends one queue entry per domain. |
 | `reply --reply-text "..." --answers a.json ...` | Applies the routing policy. An explicit opt-out phrase in the text always suppresses marketing, whatever the model answered. |
@@ -54,7 +54,7 @@ Every result carries `"send": false`. A person reviews `outputs/approval-queue.j
 ./integration/record_case_study.sh
 ```
 
-The script loads only the three servers of `.mcp.json` (`--strict-mcp-config`) and no user settings (`--setting-sources project`), and it allows only the Firecrawl search and scrape tools, the two `decide` tools, the gate command, writes under `outputs/case-study/` and reads of the case-study files. Claude Code refuses every other call, and the transcript shows each refusal. The raw stream stays in `outputs/logs/`; `tools/render_session.py` writes `outputs/case-study-session.jsonl` and `.md`, which keep only known-safe fields and cut scraped page text to 600 characters. `tools/serving_check.py` then times both servers over MCP stdio and checks their answers against the session (`outputs/serving-check.json`).
+The script loads only the three servers of `.mcp.json` (`--strict-mcp-config`) and no user settings (`--setting-sources project`), and it allows only the Firecrawl search and scrape tools, the two `decide` tools, the gate command, writes under `outputs/case-study/` and reads of the case-study files. In its default permission mode Claude Code also runs read-only commands and file reads inside the repository without a rule; both recordings show `ls`, `cat`, `grep` and a `Read` of `integration/gate.py`. It refuses every other write and command, and the transcript shows each refusal. The raw stream stays in `outputs/logs/`; `tools/render_session.py` writes `outputs/case-study-session.jsonl` and `.md`, which keep only known-safe fields and cut scraped page text to 600 characters. `tools/serving_check.py` then times both servers over MCP stdio and checks their answers against the session (`outputs/serving-check.json`).
 
 The first recording, in `outputs/case-study-first-run/`, found that the lead model answered `fit` for companies with missing fields. The gate now refuses such records, and `outputs/case-study-session.md` is the recording after that fix.
 
