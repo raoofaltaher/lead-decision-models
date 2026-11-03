@@ -1,0 +1,8 @@
+{
+  "domain": "schneiderdowns.com",
+  "url": "https://schneiderdowns.com/about-us/",
+  "evidence": [
+    {"field": "industry", "value": "professional_services", "sentence": "Since 1956, Schneider Downs & Co., Inc. has been providing accounting, tax, consulting and business advisory services through innovative thought leaders who deliver their expertise to meet the individual needs of each client."}
+  ],
+  "omitted": {"region": "Only the page title mentions 'Pittsburgh CPA'; no sentence on the page states where the firm is based.", "employee_band": "The page states no headcount."}
+}

@@ -1,0 +1,1 @@
+{"answers":{"icp_fit":{"type":"choice","choice":"fit","confidence":0.9999,"probabilities":{"fit":0.9999,"not_fit":0.0001,"insufficient_evidence":0},"answer":"fit"},"conversion_outcome_90d":{"type":"noul","noul":0.0165,"answer":false,"probabilities":{"true":0.0165,"false":0.9835}}}}

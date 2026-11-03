@@ -1,0 +1,9 @@
+{
+  "domain": "denholmgoodlogistics.com",
+  "url": "https://denholmgoodlogistics.com/some-exciting-news-for-good-logistics/",
+  "evidence": [
+    {"field": "industry", "value": "logistics", "sentence": "Trading as Good Logistics and operating from strategic locations around the UK, the multi-award winning business provides global logistics, warehousing and distribution services."},
+    {"field": "region", "value": "UK", "sentence": "Trading as Good Logistics and operating from strategic locations around the UK, the multi-award winning business provides global logistics, warehousing and distribution services."}
+  ],
+  "omitted": {"employee_band": "The only figure ('The Group employs over 1,200 people') is for the parent J. & J. Denholm Group, not for Denholm Good Logistics."}
+}

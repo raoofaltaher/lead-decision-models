@@ -1,0 +1,8 @@
+{
+  "domain": "xtrac.com",
+  "url": "https://www.xtrac.com/about/",
+  "evidence": [
+    {"field": "industry", "value": "manufacturing", "sentence": "Established in 1984, Xtrac has become recognised as the worldwide leader in the design and manufacture of transmission systems supporting a wide client base covering top level Motorsport and High Performance Automotive."}
+  ],
+  "omitted": {"region": "The page states no location.", "employee_band": "The page states no headcount."}
+}

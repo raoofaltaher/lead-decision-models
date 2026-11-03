@@ -1,0 +1,9 @@
+{
+  "domain": "streets.uk",
+  "url": "https://www.streets.uk/about-us/accountancy-firm-merger/",
+  "evidence": [
+    {"field": "industry", "value": "professional_services", "sentence": "At Streets, we’re not just expanding, we’re building something meaningful – a truly UK-wide, multidisciplinary professional services firm that puts people, clients and communities first."},
+    {"field": "region", "value": "UK", "sentence": "At Streets, we’re not just expanding, we’re building something meaningful – a truly UK-wide, multidisciplinary professional services firm that puts people, clients and communities first."},
+    {"field": "employee_band", "value": "500-999", "sentence": "Over 500 staff and 70 partners/directors", "caveat": "'Over 500' is a lower bound, not an exact figure."}
+  ]
+}

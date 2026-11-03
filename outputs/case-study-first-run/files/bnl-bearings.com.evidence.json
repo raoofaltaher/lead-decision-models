@@ -1,0 +1,10 @@
+{
+  "domain": "bnl-bearings.com",
+  "url": "https://bnl-bearings.com/",
+  "requested_url": "https://bnl-bearings.com/about-us/",
+  "evidence": [
+    {"field": "industry", "value": "manufacturing", "sentence": "Plastic bearing design & manufacture combining product features and adding value, to give our customers a competitive advantage."},
+    {"field": "region", "value": "UK", "sentence": "Registered Office (England & Wales): Manse Lane, Knaresborough, North Yorkshire, UK"}
+  ],
+  "omitted": {"employee_band": "The page states no headcount."}
+}

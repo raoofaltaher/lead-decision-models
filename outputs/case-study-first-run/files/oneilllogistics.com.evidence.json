@@ -1,0 +1,9 @@
+{
+  "domain": "oneilllogistics.com",
+  "url": "https://www.oneilllogistics.com/about-us/",
+  "evidence": [
+    {"field": "industry", "value": "logistics", "sentence": "As a leading third party logistics provider (3PL), we offer transportation, warehousing, and distribution services."},
+    {"field": "region", "value": "US", "sentence": "[O'Neill Logistics] was founded in New Jersey as a family-owned business providing third party logistics and transportation services throughout Southern California and New Jersey."}
+  ],
+  "omitted": {"employee_band": "The page states no headcount."}
+}

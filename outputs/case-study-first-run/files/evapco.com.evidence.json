@@ -1,0 +1,10 @@
+{
+  "domain": "evapco.com",
+  "url": "https://www.evapco.com/evapco-life",
+  "requested_url": "https://www.evapco.com/about-us",
+  "evidence": [
+    {"field": "industry", "value": "manufacturing", "sentence": "EVAPCO, Inc. is an industry leading manufacturing company with global resources and solutions for worldwide heat transfer applications."},
+    {"field": "region", "value": "US", "sentence": "Headquartered in Taneytown, Maryland, EVAPCO products are engineered and manufactured in 36 locations in 14 countries and supplied through a sales network of more than 200 offices."}
+  ],
+  "omitted": {"employee_band": "The page states no headcount."}
+}

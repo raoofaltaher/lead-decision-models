@@ -1,0 +1,9 @@
+{
+  "domain": "ksmcpa.com",
+  "url": "https://www.ksmcpa.com/about",
+  "evidence": [
+    {"field": "industry", "value": "professional_services", "sentence": "Founded by entrepreneurs more than 80 years ago, KSM has grown into a leading employee-owned accounting and advisory firm providing our clients with the inspiration, insight, and technical expertise they need to achieve great things."},
+    {"field": "region", "value": "US", "sentence": "Headquartered in Indianapolis, KSM also has offices in Chicago, Cincinnati, Evansville, Fort Wayne, Grand Rapids, and New York, and continues to grow nationally."},
+    {"field": "employee_band", "value": "500-999", "sentence": "KSM’s team of 800-plus CPAs and advisors serves an impressive roster of clients across the United States who count on us to be their trusted advisors.", "caveat": "'800-plus' is a lower bound, not an exact figure."}
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "domain": "arrivelogistics.com",
+  "url": "https://www.arrivelogistics.com/about/",
+  "evidence": [
+    {"field": "industry", "value": "logistics", "sentence": "In just over a decade, Arrive grew into North America’s 4th-largest truckload brokerage, moving 8k+ loads daily."},
+    {"field": "region", "value": "US", "sentence": "HQ: Austin, TX"}
+  ],
+  "omitted": {"employee_band": "The page states no headcount."}
+}

@@ -11,8 +11,8 @@ You have these tools:
 Part A, prospects. Work through these steps for each company:
 
 1. With Firecrawl search, find 8 to 12 real companies that may match the profile. Spread the searches across the three industries and both regions.
-2. Scrape one page per company that states what it does, where it is based and how many people it employs (usually the About page).
-3. Write `outputs/case-study/<domain>.features.json` with only the fields `industry`, `region` and `employee_band`. Use only these values, and only when the page supports them: industry `manufacturing`, `logistics`, `professional_services` or `healthcare_non_clinical`; region `US` or `UK`; employee_band `200-499`, `500-999`, `1000-1999` or `2000+`. When the page does not support a value, leave that field out. Do not guess.
+2. Scrape up to three pages per company, the About page first, to learn what it does, where it is based and how many people it employs.
+3. Write `outputs/case-study/<domain>.features.json` with only the fields `industry`, `region` and `employee_band`. Use only these values, and only when the pages support them: industry `manufacturing`, `logistics`, `professional_services` or `healthcare_non_clinical`; region `US` or `UK`; employee_band `200-499`, `500-999`, `1000-1999` or `2000+`. A headcount stated only as a lower bound supports a band only when the bound guarantees it: "over 2,000" supports `2000+`, but "over 500" or "800-plus" supports no band. A figure for a parent group is not the company's own headcount. When the pages do not support a value, leave that field out. Do not guess. The gate refuses a record that lacks any of the three fields and sends that company to research.
 4. Write `outputs/case-study/<domain>.evidence.json` with each value you set, the sentence that supports it, and the page URL.
 5. Run `python integration/gate.py lead-request --features outputs/case-study/<domain>.features.json`. If it exits with code 2, record the error and do not call the model for that company.
 6. Call `lead-decisions` `decide` with exactly the `state` and `questions` that command printed. Save the full answer as `outputs/case-study/<domain>.answers.json`.
