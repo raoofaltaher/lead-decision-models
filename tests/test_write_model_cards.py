@@ -12,17 +12,18 @@ METRICS = {
 }
 
 
+ARGUMENTS = {
+    "repo_id": "raoofaltaher/lead-decision-models-lead-qualifier",
+    "base_model": "unsloth/Qwen3.5-4B",
+    "base_revision": "3764fa359b90",
+    "task": "lead",
+    "license_id": "apache-2.0",
+    "tutorial_url": "https://raoofaltaher.com/tutorials/fine-tune-decision-models-lead-qualification",
+}
+
+
 def make_card(**overrides):
-    arguments = {
-        "repo_id": "raoofaltaher/lead-decision-models-lead-qualifier",
-        "base_model": "unsloth/Qwen3.5-4B",
-        "base_revision": "3764fa359b90",
-        "task": "lead",
-        "license_id": "apache-2.0",
-        "tutorial_url": "https://raoofaltaher.com/tutorials/fine-tune-decision-models-lead-qualification",
-    }
-    arguments.update(overrides)
-    return card(METRICS, **arguments)
+    return card(METRICS, **{**ARGUMENTS, **overrides})
 
 
 def test_card_has_license_and_base_model():
@@ -45,6 +46,23 @@ def test_card_shows_how_to_load_the_model():
     assert 'FastDecisionModel.from_pretrained("raoofaltaher/lead-decision-models-lead-qualifier"' in text
 
 
+def test_lead_card_shows_the_logistic_baseline_beside_the_model():
+    metrics = {**METRICS, "logistic": {"test": {"roc_auc": 0.8758, "brier": 0.1105}}}
+    text = card(metrics, **{**ARGUMENTS})
+    assert "| Metric | This model | Logistic regression |" in text
+    assert "| roc_auc | 0.8644 | 0.8758 |" in text
+    assert "| accuracy | 0.8312 | — |" in text
+    assert "`roc_auc`, `average_precision`, `brier` and `precision_at_100` score the 90-day conversion question only" in text
+
+
+def test_reply_card_shows_the_tfidf_baseline_beside_the_model():
+    metrics = {"test": {"macro_f1": 0.7782}, "splits": {}, "tfidf": {"validation_macro_f1": 0.5652, "test_macro_f1": 0.7049}}
+    text = card(metrics, **{**ARGUMENTS, "task": "reply"})
+    assert "| Metric | This model | TF-IDF + logistic regression |" in text
+    assert "| macro_f1 | 0.7782 | 0.7049 |" in text
+    assert "`macro_f1` scores the 11-intent question only" in text
+
+
 def test_card_without_remote_code_loads_plainly():
     text = make_card()
     assert "trust_remote_code" not in text
@@ -57,6 +75,7 @@ def test_lfm3_card_loads_with_remote_code_and_says_why():
         "trust_remote_code=True, load_in_4bit=True)"
     ) in text
     assert "custom modeling code" in text
+    assert "Read the Python files of `LiquidAI/LFM3-1.7B` at revision `3764fa359b90`" in text
 
 
 def test_lfm3_card_carries_license_threshold_note():
@@ -66,4 +85,5 @@ def test_lfm3_card_carries_license_threshold_note():
         license_id="other",
     )
     assert "license_name: lfm1.0" in text
+    assert "license_link: https://huggingface.co/LiquidAI/LFM3-1.7B/blob/3764fa359b90/LICENSE" in text
     assert "revenue threshold" in text

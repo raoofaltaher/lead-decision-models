@@ -8,18 +8,28 @@ TASKS = {
         "tag": "lead-qualification",
         "use": "Scores a B2B lead record against an example Ideal Customer Profile (fit, not_fit, insufficient_evidence) and classifies LeadForge's 90-day conversion label.",
         "data": "The intermediate tier of the LeadForge synthetic CRM release v0.1.0-alpha (MIT), split by account so no company appears in two partitions.",
+        "scope": "`accuracy`, `ece`, `loss` and `record_accuracy` cover both questions; `roc_auc`, `average_precision`, `brier` and `precision_at_100` score the 90-day conversion question only.",
     },
     "reply": {
         "title": "reply router",
         "tag": "reply-routing",
         "use": "Classifies a prospect's reply to a first-touch sales email into one of 11 intents and predicts whether a next step is called for.",
         "data": "617 LLM-generated synthetic replies, checked automatically with a blind relabel and not reviewed by a person (see data/replies/DATASET_CARD.md in the companion repository).",
+        "scope": "`accuracy`, `ece`, `loss` and `record_accuracy` cover both questions; `macro_f1` scores the 11-intent question only.",
     },
 }
 LFM_NOTE = (
     "LFM3-1.7B is released under the LFM Open License v1.0. Commercial use of the model and of derivatives "
     "such as this one is licensed only below the revenue threshold that license defines; read it before any commercial use."
 )
+
+
+def _baseline(metrics: dict) -> tuple[str | None, dict]:
+    if "logistic" in metrics:
+        return "Logistic regression", metrics["logistic"].get("test", {})
+    if "tfidf" in metrics:
+        return "TF-IDF + logistic regression", {"macro_f1": metrics["tfidf"]["test_macro_f1"]}
+    return None, {}
 
 
 def card(
@@ -37,14 +47,23 @@ def card(
     load_arguments = f'"{repo_id}", trust_remote_code=True, load_in_4bit=True' if trust_remote_code else f'"{repo_id}", load_in_4bit=True'
     remote_code_note = (
         f"\n`{base_model}` ships custom modeling code, so loading needs `trust_remote_code=True`. "
-        "Read the Python files in this repository before you run it.\n"
+        f"Read the Python files of `{base_model}` at revision `{base_revision}` before you run it; "
+        "the merged repository carries copies of them.\n"
         if trust_remote_code
         else ""
     )
     license_lines = f"license: {license_id}\n"
     if license_id == "other":
-        license_lines += "license_name: lfm1.0\nlicense_link: https://huggingface.co/LiquidAI/LFM3-1.7B/blob/main/LICENSE\n"
-    test_rows = "\n".join(f"| {name} | {value:.4f} |" for name, value in metrics.get("test", {}).items() if isinstance(value, (int, float)))
+        license_lines += f"license_name: lfm1.0\nlicense_link: https://huggingface.co/{base_model}/blob/{base_revision}/LICENSE\n"
+    baseline_name, baseline = _baseline(metrics)
+    model_metrics = {name: value for name, value in metrics.get("test", {}).items() if isinstance(value, (int, float))}
+    if baseline_name:
+        metric_table = f"| Metric | This model | {baseline_name} |\n|---|---:|---:|\n" + "\n".join(
+            f"| {name} | {value:.4f} | {baseline[name]:.4f} |" if name in baseline else f"| {name} | {value:.4f} | — |"
+            for name, value in model_metrics.items()
+        )
+    else:
+        metric_table = "| Metric | Value |\n|---|---:|\n" + "\n".join(f"| {name} | {value:.4f} |" for name, value in model_metrics.items())
     split_rows = "\n".join(f"| {name} | {value} |" for name, value in metrics.get("splits", {}).items())
     note = f"\n{LFM_NOTE}\n" if license_id == "other" else ""
     return f"""---
@@ -75,9 +94,9 @@ A decision model ({info['title']}) fine-tuned from `{base_model}` (revision `{ba
 
 ## Test metrics from the recorded run
 
-| Metric | Value |
-|---|---:|
-{test_rows}
+{metric_table}
+
+{info['scope']} Lower is better for `ece`, `loss` and `brier`; higher is better for the others. The baseline column comes from the same run, the same split and the same features.
 
 Peak training VRAM: {metrics.get('peak_vram_gb')} GB.
 
