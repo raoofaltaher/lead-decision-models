@@ -22,6 +22,6 @@ Part B, replies. For each item in `data/case-study/replies.json`:
 
 1. Run `python integration/gate.py reply-request --reply-text "<reply_text>"`.
 2. Call `reply-decisions` `decide` with exactly the printed `state` and `questions`. Save the answer as `outputs/case-study/<reply_id>.answers.json`.
-3. Run `python integration/gate.py reply --reply-text "<reply_text>" --answers outputs/case-study/<reply_id>.answers.json --suppressed <contact_is_suppressed> --opt-out-event <explicit_opt_out_event> --queue outputs/approval-queue.jsonl` and keep its printed action.
+3. Run `python integration/gate.py reply --reply-text "<reply_text>" --answers outputs/case-study/<reply_id>.answers.json --suppressed <contact_is_suppressed> --opt-out-event <explicit_opt_out_event> --queue outputs/approval-queue.jsonl` and keep its printed action. Write the two JSON booleans in lower case, `true` or `false`.
 
 When you finish, print one table for the prospects (domain, ICP answer and its probability, gate action) and one for the replies (reply_id, intent answer and its probability, gate action). End with one sentence stating that no message was sent.
