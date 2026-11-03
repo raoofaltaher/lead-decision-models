@@ -1,0 +1,43 @@
+{
+  "base_model": "LiquidAI/LFM3-1.7B",
+  "base_revision_pinned": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+  "base_main_revision": "875094441ea6517efc0f44a5685f05e381b72b14",
+  "repos": {
+    "raoofaltaher/lead-decision-models-lead-qualifier": {
+      "files_match": true,
+      "reloaded": true,
+      "prediction_matches": true,
+      "hub_classes": {
+        "icp_fit": "fit",
+        "conversion_outcome_90d": false
+      }
+    },
+    "raoofaltaher/lead-decision-models-lead-qualifier-merged": {
+      "files_match": true,
+      "reloaded": true,
+      "prediction_matches": true,
+      "hub_classes": {
+        "icp_fit": "fit",
+        "conversion_outcome_90d": false
+      }
+    },
+    "raoofaltaher/lead-decision-models-reply-router": {
+      "files_match": true,
+      "reloaded": true,
+      "prediction_matches": true,
+      "hub_classes": {
+        "reply_intent": "more_information",
+        "follow_up_recommended": true
+      }
+    },
+    "raoofaltaher/lead-decision-models-reply-router-merged": {
+      "files_match": true,
+      "reloaded": true,
+      "prediction_matches": true,
+      "hub_classes": {
+        "reply_intent": "more_information",
+        "follow_up_recommended": true
+      }
+    }
+  }
+}

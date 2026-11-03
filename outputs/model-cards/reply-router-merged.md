@@ -1,0 +1,62 @@
+---
+license: other
+license_name: lfm1.0
+license_link: https://huggingface.co/LiquidAI/LFM3-1.7B/blob/ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7/LICENSE
+base_model: LiquidAI/LFM3-1.7B
+library_name: unsloth
+tags:
+- decision-model
+- unsloth
+- clef
+- reply-routing
+---
+
+# lead-decision-models-reply-router-merged
+
+A decision model (reply router) fine-tuned from `LiquidAI/LFM3-1.7B` (revision `ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7`) with Unsloth's `FastDecisionModel` and a Clef decision head. It scores the options it is given and returns probabilities; it never generates text and never sends a message.
+
+## Intended use
+
+Classifies a prospect's reply to a first-touch sales email into one of 11 intents and predicts whether a next step is called for. It is a teaching model from the tutorial at https://raoofaltaher.com/tutorials/fine-tune-decision-models-reply-routing. Deterministic policy code and a person must decide every outreach action; a model probability is not permission to contact anyone.
+
+## Training data
+
+617 LLM-generated synthetic replies, checked automatically with a blind relabel and not reviewed by a person (see data/replies/DATASET_CARD.md in the companion repository).
+
+| Partition | Rows |
+|---|---:|
+| optimizer_training | 296 |
+| calibration | 73 |
+| validation | 124 |
+| test | 124 |
+
+## Test metrics from the recorded run
+
+| Metric | This model | TF-IDF + logistic regression |
+|---|---:|---:|
+| accuracy | 0.7944 | — |
+| ece | 0.1609 | — |
+| loss | 0.5607 | — |
+| record_accuracy | 0.6210 | — |
+| macro_f1 | 0.7782 | 0.7049 |
+
+`accuracy`, `ece`, `loss` and `record_accuracy` cover both questions; `macro_f1` scores the 11-intent question only. Lower is better for `ece`, `loss` and `brier`; higher is better for the others. The baseline column comes from the same run, the same split and the same features.
+
+Peak training VRAM: 2.64 GB.
+
+## How to load
+
+```python
+from unsloth import FastDecisionModel
+
+model, tokenizer = FastDecisionModel.from_pretrained("raoofaltaher/lead-decision-models-reply-router-merged", trust_remote_code=True, load_in_4bit=True)
+FastDecisionModel.for_inference(model)
+```
+
+`LiquidAI/LFM3-1.7B` ships custom modeling code, so loading needs `trust_remote_code=True`. Read the Python files of `LiquidAI/LFM3-1.7B` at revision `ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7` before you run it; the merged repository carries copies of them.
+
+## Limitations
+
+The training data is synthetic. These metrics show that the pipeline works; they do not show performance on real CRM records or real sales replies. Probabilities and calibration can shift when the market, the data source or the process changes.
+
+LFM3-1.7B is released under the LFM Open License v1.0. Commercial use of the model and of derivatives such as this one is licensed only below the revenue threshold that license defines; read it before any commercial use.

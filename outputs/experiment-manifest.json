@@ -1,0 +1,91 @@
+{
+  "experiment": "unsloth-b2b-lead-and-reply-decision-models",
+  "dataset": {
+    "leadforge_commit": "39ebe8c9e6cf25fe33a003662e18557b4de55142",
+    "leadforge_release": "v0.1.0-alpha",
+    "leadforge_tier": "intermediate",
+    "leadforge_task": "converted_within_90_days",
+    "lead_target_counts": {
+      "False": 3951,
+      "True": 1049
+    },
+    "reply_dataset": "synthetic-llm-generated-automatically-checked",
+    "reply_dataset_sha256": "c57a26d99d05b29b3ce63c5e627d2a79dd03ed78d3bd35ce1afb1f07fca72439",
+    "reply_intent_counts": {
+      "interested": 61,
+      "referral": 61,
+      "objection": 61,
+      "wrong_person": 61,
+      "ambiguous": 60,
+      "not_interested": 56,
+      "more_information": 53,
+      "meeting_requested": 51,
+      "not_now": 51,
+      "out_of_office": 51,
+      "opt_out": 51
+    }
+  },
+  "base_model": {
+    "id": "LiquidAI/LFM3-1.7B",
+    "revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+    "load_in_4bit": true
+  },
+  "splits": {
+    "lead": {
+      "optimizer_training": 2400,
+      "calibration": 598,
+      "validation": 1000,
+      "test": 1002
+    },
+    "reply": {
+      "optimizer_training": 296,
+      "calibration": 73,
+      "validation": 124,
+      "test": 124
+    }
+  },
+  "seed": 3407,
+  "calibration_split_seed": 3408,
+  "lora": {
+    "rank": 16,
+    "alpha": 16,
+    "dropout": 0.0
+  },
+  "training": {
+    "learning_rate": 0.0002,
+    "head_learning_rate": 0.0001,
+    "epochs": 2,
+    "per_device_train_batch_size": 8,
+    "gradient_accumulation_steps": 4,
+    "max_seq_length": 2048
+  },
+  "timings_seconds": {
+    "lead_training": 969.0,
+    "reply_training": 255.7
+  },
+  "peak_vram_gb": {
+    "lead": 2.73,
+    "reply": 2.64
+  },
+  "runtime": {
+    "python": "3.13.18",
+    "pytorch": "2.14.1+cu132",
+    "cuda_runtime": "13.2",
+    "gpu": "NVIDIA GeForce RTX 5090 Laptop GPU",
+    "packages": {
+      "unsloth": "2026.10.11",
+      "unsloth_zoo": "2026.10.11",
+      "transformers": "5.22.1",
+      "bitsandbytes": "0.50.2",
+      "datasets": "5.1.0",
+      "pandas": "3.1.0",
+      "scikit-learn": "1.9.1",
+      "huggingface-hub": "1.33.0"
+    }
+  },
+  "policy_versions": {
+    "icp_policy": "fictional-procurement-icp-v1",
+    "reply_taxonomy": "b2b-reply-intents-v1",
+    "outreach_policy": "human-approval-and-external-suppression-v1"
+  }
+}

@@ -12,3 +12,4 @@ lfm3_env/
 notebooks/*-debug.ipynb
 outputs/lead-decision/
 outputs/reply-decision/
+outputs/*.log
