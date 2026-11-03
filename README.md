@@ -49,6 +49,17 @@ Test results from this one run, beside a simple baseline trained on the same spl
 
 The fine-tuned lead model ranks conversions below the logistic regression in this run; the reply model beats its baseline. Every number above comes from `outputs/lead-metrics.json`, `outputs/reply-metrics.json` and `outputs/experiment-manifest.json`.
 
+To see how much one run says, the lead model was trained three more times with training seeds 1, 2 and 3 on the same splits (`tools/seed_study.py`; the notebooks and metrics are in `outputs/seed-study/`, the summary in `outputs/seed-study.json`). Over the four runs:
+
+| Lead, 90-day conversion | Mean | Range | Logistic regression |
+|---|---:|---:|---:|
+| ROC-AUC | 0.869 | 0.860 to 0.874 | 0.876 |
+| Average precision | 0.525 | 0.495 to 0.548 | 0.550 |
+| Brier score (lower is better) | 0.1092 | 0.1087 to 0.1099 | 0.1105 |
+| Precision at 100 | 0.515 | 0.45 to 0.55 | 0.54 |
+
+Every run ranks conversions slightly below the logistic regression and has a slightly lower Brier score. The published model, seed 3407, is the weakest of the four on ranking.
+
 The models are on the Hugging Face Hub: [lead qualifier](https://huggingface.co/raoofaltaher/lead-decision-models-lead-qualifier) ([merged](https://huggingface.co/raoofaltaher/lead-decision-models-lead-qualifier-merged)) and [reply router](https://huggingface.co/raoofaltaher/lead-decision-models-reply-router) ([merged](https://huggingface.co/raoofaltaher/lead-decision-models-reply-router-merged)). `outputs/hub-check.json` shows that each Hub copy holds the files of this run and predicts the same classes.
 
 ## Run it
