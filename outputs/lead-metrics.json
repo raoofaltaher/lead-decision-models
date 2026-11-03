@@ -37,8 +37,8 @@
   },
   "calibration": {
     "accuracy": 0.8954849498327759,
-    "ece": 0.00851519022099544,
-    "loss": 0.15697780038205314,
+    "ece": 0.005321504728849912,
+    "loss": 0.1711510666748503,
     "record_accuracy": 0.7909698996655519,
     "fitted_types": [
       0,
@@ -46,24 +46,24 @@
     ]
   },
   "validation": {
-    "accuracy": 0.895,
-    "ece": 0.009118761748075473,
-    "loss": 0.1768190702890835,
-    "record_accuracy": 0.79,
-    "roc_auc": 0.8577305605786618,
-    "average_precision": 0.504131243347345,
-    "brier": 0.12017684686999999,
-    "precision_at_100": 0.49
+    "accuracy": 0.8985,
+    "ece": 0.016541349023580572,
+    "loss": 0.1805455202129442,
+    "record_accuracy": 0.797,
+    "roc_auc": 0.8607142857142857,
+    "average_precision": 0.5331324006774082,
+    "brier": 0.12077270216,
+    "precision_at_100": 0.55
   },
   "test": {
-    "accuracy": 0.8947105788423154,
-    "ece": 0.005664610755657736,
-    "loss": 0.15573090625445243,
-    "record_accuracy": 0.7894211576846307,
-    "roc_auc": 0.8603633291592021,
-    "average_precision": 0.49516830394822975,
-    "brier": 0.10920424804391217,
-    "precision_at_100": 0.45
+    "accuracy": 0.8932135728542914,
+    "ece": 0.0010656011616160988,
+    "loss": 0.15622826673260332,
+    "record_accuracy": 0.7864271457085829,
+    "roc_auc": 0.8691889203779486,
+    "average_precision": 0.5166622361399306,
+    "brier": 0.10905676169660679,
+    "precision_at_100": 0.51
   },
   "icp_report": {
     "validation": {
@@ -122,8 +122,8 @@
     }
   },
   "timings_seconds": {
-    "lead_training": 969.0
+    "lead_training": 1005.0
   },
   "peak_vram_gb": 2.73,
-  "mean_predict_ms": 81.1
+  "mean_predict_ms": 92.1
 }

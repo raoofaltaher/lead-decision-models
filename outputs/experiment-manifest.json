@@ -46,26 +46,33 @@
   },
   "seed": 3407,
   "calibration_split_seed": 3408,
-  "lora": {
-    "rank": 16,
-    "alpha": 16,
-    "dropout": 0.0
-  },
   "training": {
     "learning_rate": 0.0002,
     "head_learning_rate": 0.0001,
-    "epochs": 2,
-    "per_device_train_batch_size": 8,
-    "gradient_accumulation_steps": 4,
-    "max_seq_length": 2048
+    "max_seq_length": 2048,
+    "lead": {
+      "epochs": 2,
+      "per_device_train_batch_size": 8,
+      "gradient_accumulation_steps": 4,
+      "lora_rank": 16,
+      "lora_alpha": 16
+    },
+    "reply": {
+      "epochs": 6,
+      "per_device_train_batch_size": 8,
+      "gradient_accumulation_steps": 1,
+      "lora_rank": 64,
+      "lora_alpha": 64
+    }
   },
   "timings_seconds": {
-    "lead_training": 969.0,
-    "reply_training": 255.7
+    "lead_training": 1005.0,
+    "reply_training": 207.0,
+    "reply_epoch_selection": 711.0
   },
   "peak_vram_gb": {
     "lead": 2.73,
-    "reply": 2.64
+    "reply": 4.6
   },
   "runtime": {
     "python": "3.13.18",

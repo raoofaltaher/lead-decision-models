@@ -34,15 +34,15 @@ Classifies a prospect's reply to a first-touch sales email into one of 11 intent
 
 | Metric | This model | TF-IDF + logistic regression |
 |---|---:|---:|
-| accuracy | 0.7944 | — |
-| ece | 0.1609 | — |
-| loss | 0.5607 | — |
-| record_accuracy | 0.6210 | — |
-| macro_f1 | 0.7782 | 0.7049 |
+| accuracy | 0.9758 | — |
+| ece | 0.0191 | — |
+| loss | 0.0905 | — |
+| record_accuracy | 0.9597 | — |
+| macro_f1 | 0.9746 | 0.7049 |
 
 `accuracy`, `ece`, `loss` and `record_accuracy` cover both questions; `macro_f1` scores the 11-intent question only. Lower is better for `ece`, `loss` and `brier`; higher is better for the others. The baseline column comes from the same run, the same split and the same features.
 
-Peak training VRAM: 2.64 GB.
+Peak training VRAM: 4.6 GB.
 
 ## How to load
 

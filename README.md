@@ -34,31 +34,36 @@ This repository is the companion to a three-part tutorial on [raoofaltaher.com](
 
 | Notebook | Wall time | Training | Peak VRAM | Mean prediction |
 |---|---:|---:|---:|---:|
-| `01-lead-qualification.ipynb` | 1,672 s | 969.0 s | 2.73 GB | 81.1 ms |
-| `02-reply-routing.ipynb` | 700 s | 255.7 s | 2.64 GB | 106.8 ms |
+| `01-lead-qualification.ipynb` | 1,917 s | 1,005.0 s | 2.73 GB | 92.1 ms |
+| `02-reply-routing.ipynb` | 1,962 s | 207.0 s for the chosen setting, 711.0 s for all four candidates | 4.6 GB | 75.6 ms |
 
 Test results from this one run, beside a simple baseline trained on the same split:
 
 | Model | Metric | Fine-tuned LFM3 | Baseline |
 |---|---|---:|---:|
-| Lead, 90-day conversion | ROC-AUC | 0.8604 | 0.8758 (logistic regression) |
-| Lead, 90-day conversion | Average precision | 0.4952 | 0.5495 |
-| Lead, 90-day conversion | Brier score (lower is better) | 0.1092 | 0.1105 |
-| Lead, both questions | ECE (lower is better) | 0.0057 | |
-| Reply, 11 intents | Macro-F1 | 0.7782 | 0.7049 (TF-IDF + logistic regression) |
+| Lead, ICP fit | Accuracy | 1.000 | |
+| Lead, 90-day conversion | ROC-AUC | 0.8692 | 0.8758 (logistic regression) |
+| Lead, 90-day conversion | Average precision | 0.5167 | 0.5495 |
+| Lead, 90-day conversion | Brier score (lower is better) | 0.1091 | 0.1105 |
+| Lead, both questions | ECE (lower is better) | 0.0011 | |
+| Reply, 11 intents | Macro-F1 | 0.9746 | 0.7049 (TF-IDF + logistic regression) |
+| Reply, 11 intents | Accuracy | 0.976 | 0.710 |
+| Reply, both questions | ECE (lower is better) | 0.0191 | |
 
-The fine-tuned lead model ranks conversions below the logistic regression in this run; the reply model beats its baseline. Every number above comes from `outputs/lead-metrics.json`, `outputs/reply-metrics.json` and `outputs/experiment-manifest.json`.
+The fine-tuned lead model ranks conversions slightly below the logistic regression; the reply model beats its baseline by a wide margin. Every number above comes from `outputs/lead-metrics.json`, `outputs/reply-metrics.json` and `outputs/experiment-manifest.json`, and `outputs/figures/` holds the plots of both notebooks.
+
+The reply notebook chooses its training setting on validation data: it trains 3 or 6 epochs at LoRA rank 16 or 64 (batch 8, no accumulation), picks the best validation macro-F1 (6 epochs, rank 64: 0.945), and scores the test set once. The same notebook ran twice with seed 3407; the first run stopped in a cleanup cell after it scored the test set at 0.924, and the recorded second run scored 0.975. GPU kernels are not fully deterministic, so expect a spread of that size on 124 test replies.
 
 To see how much one run says, the lead model was trained three more times with training seeds 1, 2 and 3 on the same splits (`tools/seed_study.py`; the notebooks and metrics are in `outputs/seed-study/`, the summary in `outputs/seed-study.json`). Over the four runs:
 
 | Lead, 90-day conversion | Mean | Range | Logistic regression |
 |---|---:|---:|---:|
-| ROC-AUC | 0.869 | 0.860 to 0.874 | 0.876 |
-| Average precision | 0.525 | 0.495 to 0.548 | 0.550 |
+| ROC-AUC | 0.871 | 0.869 to 0.874 | 0.876 |
+| Average precision | 0.531 | 0.517 to 0.548 | 0.550 |
 | Brier score (lower is better) | 0.1092 | 0.1087 to 0.1099 | 0.1105 |
-| Precision at 100 | 0.515 | 0.45 to 0.55 | 0.54 |
+| Precision at 100 | 0.53 | 0.51 to 0.55 | 0.54 |
 
-Every run ranks conversions slightly below the logistic regression and has a slightly lower Brier score. The published model, seed 3407, is the weakest of the four on ranking.
+Every run ranks conversions slightly below the logistic regression and has a slightly lower Brier score.
 
 The models are on the Hugging Face Hub: [lead qualifier](https://huggingface.co/raoofaltaher/lead-decision-models-lead-qualifier) ([merged](https://huggingface.co/raoofaltaher/lead-decision-models-lead-qualifier-merged)) and [reply router](https://huggingface.co/raoofaltaher/lead-decision-models-reply-router) ([merged](https://huggingface.co/raoofaltaher/lead-decision-models-reply-router-merged)). `outputs/hub-check.json` shows that each Hub copy holds the files of this run and predicts the same classes.
 
@@ -78,7 +83,7 @@ python tools/check_unsloth_pin.py --commit 53eeebdc9be3c3e1a27f891b668a38df0e1ab
 
 `uv pip check` reports four notes, and all four are deliberate: Transformers 5.22.1 and datasets 5.1.0 are above the ranges that Unsloth 2026.10.11 declares. LFM3's own code needs Transformers 5.22.1 (`outputs/lfm3-probe-*.json` records the releases that fail), and datasets 5.1.0 with fsspec 2026.7.0 close two security advisories.
 
-Set `HF_USERNAME` to your Hugging Face account in the first cell of each notebook, or set `PUBLISH = False` to skip the upload. Then run the notebooks in order:
+Set `HF_USERNAME` to your Hugging Face account in the first cell of each notebook, or set `PUBLISH = False` to skip the upload. To publish, log in once with a write token (`hf auth login`). Then run the notebooks in order:
 
 ```bash
 jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=-1 notebooks/01-lead-qualification.ipynb

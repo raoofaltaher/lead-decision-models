@@ -34,14 +34,14 @@ The intermediate tier of the LeadForge synthetic CRM release v0.1.0-alpha (MIT),
 
 | Metric | This model | Logistic regression |
 |---|---:|---:|
-| accuracy | 0.8947 | — |
-| ece | 0.0057 | — |
-| loss | 0.1557 | — |
-| record_accuracy | 0.7894 | — |
-| roc_auc | 0.8604 | 0.8758 |
-| average_precision | 0.4952 | 0.5495 |
-| brier | 0.1092 | 0.1105 |
-| precision_at_100 | 0.4500 | 0.5400 |
+| accuracy | 0.8932 | — |
+| ece | 0.0011 | — |
+| loss | 0.1562 | — |
+| record_accuracy | 0.7864 | — |
+| roc_auc | 0.8692 | 0.8758 |
+| average_precision | 0.5167 | 0.5495 |
+| brier | 0.1091 | 0.1105 |
+| precision_at_100 | 0.5100 | 0.5400 |
 
 `accuracy`, `ece`, `loss` and `record_accuracy` cover both questions; `roc_auc`, `average_precision`, `brier` and `precision_at_100` score the 90-day conversion question only. Lower is better for `ece`, `loss` and `brier`; higher is better for the others. The baseline column comes from the same run, the same split and the same features.
 
