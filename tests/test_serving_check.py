@@ -3,7 +3,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 
-from serving_check import same_classes, summarize_latency
+from serving_check import same_classes, summarize_latency, timed_sequence
+
+
+def test_the_first_request_runs_twice_so_one_request_still_gets_a_warm_time():
+    assert timed_sequence([("uhy-us.com", {"state": "s"})]) == [("uhy-us.com", {"state": "s"}), ("uhy-us.com", {"state": "s"})]
+    assert [name for name, _ in timed_sequence([("a", {}), ("b", {})])] == ["a", "a", "b"]
 
 
 def test_latency_separates_the_loading_call_from_warm_calls():

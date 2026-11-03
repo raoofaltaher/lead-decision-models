@@ -20,6 +20,10 @@ def summarize_latency(seconds: list[float]) -> dict:
     }
 
 
+def timed_sequence(requests: list[tuple[str, dict]]) -> list[tuple[str, dict]]:
+    return requests[:1] + requests
+
+
 def same_classes(served: dict, saved: dict) -> bool:
     saved = saved.get("answers", saved)
     return {name: answer.get("answer") for name, answer in served.items()} == {
@@ -54,7 +58,7 @@ async def _measure(model_folder: Path, requests: list[tuple[str, dict]], case_fo
     )
     seconds, matches = [], {}
     async with Client(params) as client:
-        for name, request in requests:
+        for name, request in timed_sequence(requests):
             started = time.perf_counter()
             result = await client.call_tool("decide", request)
             seconds.append(time.perf_counter() - started)
