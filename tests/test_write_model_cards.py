@@ -121,3 +121,28 @@ def test_card_shows_both_covers_linked_to_their_pages_before_the_intended_use():
 
 def test_card_without_covers_has_no_cover_section():
     assert "<img" not in make_card()
+
+
+REPLY_METRICS = {
+    "test": {"accuracy": 0.97, "ece": 0.02, "loss": 0.09, "record_accuracy": 0.96, "macro_f1": 0.97},
+    "tfidf": {"test_macro_f1": 0.70},
+    "splits": {"test": 124},
+}
+
+
+def test_lead_card_says_the_model_never_learned_insufficient_evidence():
+    limitations = make_card().split("## Limitations")[1]
+    assert "insufficient_evidence" in limitations
+    assert "missing" in limitations
+
+
+def test_reply_card_names_what_its_baseline_sees_and_the_run_spread():
+    text = card(REPLY_METRICS, **{**ARGUMENTS, "task": "reply"})
+    assert "only the reply text" in text
+    assert "same features" not in text
+    assert "0.924" in text.split("## Limitations")[1]
+
+
+def test_lower_is_better_names_only_the_metrics_the_card_shows():
+    text = card(REPLY_METRICS, **{**ARGUMENTS, "task": "reply"})
+    assert "Lower is better for `ece` and `loss`;" in text

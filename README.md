@@ -57,7 +57,7 @@ Test results from this one run, beside a simple baseline trained on the same spl
 | Reply, 11 intents | Accuracy | 0.976 | 0.710 |
 | Reply, both questions | ECE (lower is better) | 0.0191 | |
 
-The fine-tuned lead model ranks conversions slightly below the logistic regression; the reply model beats its baseline by a wide margin. Every number above comes from `outputs/lead-metrics.json`, `outputs/reply-metrics.json` and `outputs/experiment-manifest.json`, and `outputs/figures/` holds the plots of both notebooks.
+The fine-tuned lead model ranks conversions slightly below the logistic regression; the reply model beats its baseline by a wide margin. The metrics come from `outputs/lead-metrics.json`, `outputs/reply-metrics.json` and `outputs/experiment-manifest.json`; the wall times from `outputs/logs/final-run-times.txt` (kept out of git) and the notebooks' timing cells; the TF-IDF accuracy from `outputs/reply-test-predictions.csv`. `outputs/figures/` holds the plots of both notebooks, and `outputs/reply-metrics-first-version.json` holds the metrics of the earlier 20-step reply run.
 
 The reply notebook chooses its training setting on validation data: it trains 3 or 6 epochs at LoRA rank 16 or 64 (batch 8, no accumulation), picks the best validation macro-F1 (6 epochs, rank 64: 0.945), and scores the test set once. The same notebook ran twice with seed 3407; the first run stopped in a cleanup cell after it scored the test set at 0.924, and the recorded second run scored 0.975. GPU kernels are not fully deterministic, so expect a spread of that size on 124 test replies.
 
@@ -70,7 +70,7 @@ To see how much one run says, the lead model was trained three more times with t
 | Brier score (lower is better) | 0.1092 | 0.1087 to 0.1099 | 0.1105 |
 | Precision at 100 | 0.53 | 0.51 to 0.55 | 0.54 |
 
-Every run ranks conversions slightly below the logistic regression and has a slightly lower Brier score.
+By ROC-AUC and average precision, every run ranks conversions slightly below the logistic regression, and every run has a slightly lower Brier score. Precision at 100 moves around the baseline's 0.54.
 
 The models are on the Hugging Face Hub: [lead qualifier](https://huggingface.co/raoofaltaher/lead-decision-models-lead-qualifier) ([merged](https://huggingface.co/raoofaltaher/lead-decision-models-lead-qualifier-merged)) and [reply router](https://huggingface.co/raoofaltaher/lead-decision-models-reply-router) ([merged](https://huggingface.co/raoofaltaher/lead-decision-models-reply-router-merged)). `outputs/hub-check.json` shows that each Hub copy holds the files of this run and predicts the same classes.
 

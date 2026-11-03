@@ -49,7 +49,7 @@ Classifies a prospect's reply to a first-touch sales email into one of 11 intent
 | record_accuracy | 0.9597 | — |
 | macro_f1 | 0.9746 | 0.7049 |
 
-`accuracy`, `ece`, `loss` and `record_accuracy` cover both questions; `macro_f1` scores the 11-intent question only. Lower is better for `ece`, `loss` and `brier`; higher is better for the others. The baseline column comes from the same run, the same split and the same features.
+`accuracy`, `ece`, `loss` and `record_accuracy` cover both questions; `macro_f1` scores the 11-intent question only. Lower is better for `ece` and `loss`; higher is better for the others. The baseline column comes from the same run and the same split; the baseline sees only the reply text, while the model also sees the outreach context.
 
 Peak training VRAM: 4.6 GB.
 
@@ -73,5 +73,7 @@ FastDecisionModel.for_inference(model)
 ## Limitations
 
 The training data is synthetic. These metrics show that the pipeline works; they do not show performance on real CRM records or real sales replies. Probabilities and calibration can shift when the market, the data source or the process changes.
+
+Two runs of the same notebook with seed 3407 scored 0.924 and 0.975 test macro-F1: GPU kernels are not fully deterministic, and the test set holds 124 replies, so read a range, not a point.
 
 LFM3-1.7B is released under the LFM Open License v1.0. Commercial use of the model and of derivatives such as this one is licensed only below the revenue threshold that license defines; read it before any commercial use.

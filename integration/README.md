@@ -1,6 +1,6 @@
 # Integration: Claude Code and the decision models
 
-Part 3 of the tutorial. Claude Code researches prospects with Firecrawl and hands two bounded decisions to the fine-tuned models, served by a small MCP server in this repository. A deterministic gate turns every decision into a queue entry for a person to approve. Nothing here can send a message.
+Page 3 of the tutorial. Claude Code researches prospects with Firecrawl and hands two bounded decisions to the fine-tuned models, served by a small MCP server in this repository. A deterministic gate turns every decision into a queue entry for a person to approve. Nothing here can send a message.
 
 ## 1. Why not Unsloth Studio's Decision API
 
@@ -17,7 +17,7 @@ hf download raoofaltaher/lead-decision-models-reply-router-merged --local-dir ou
 
 `decision_server.py` serves one merged folder over stdio:
 
-- It loads the model on the first `decide` call, with `trust_remote_code=True` in 4-bit, the same call the notebooks use to reload it. On the test machine the first call takes about half a minute.
+- It loads the model on the first `decide` call, with `trust_remote_code=True` in 4-bit, the same call the notebooks use to reload it. On the test machine the first call takes about 20 s (`outputs/serving-check.json`).
 - It serves only a local folder that holds a `config.json`. The LFM3 code in that folder is the code of the pinned revision that the notebooks downloaded.
 - It refuses every request that Studio's Decision API refuses, with Studio's messages, before the model runs.
 - Unsloth's console output goes to stderr, so it cannot break the MCP stream.

@@ -1,0 +1,318 @@
+{
+  "model_id": "LiquidAI/LFM3-1.7B",
+  "model_revision": "ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7",
+  "load_in_4bit": true,
+  "splits": {
+    "optimizer_training": 296,
+    "calibration": 73,
+    "validation": 124,
+    "test": 124
+  },
+  "baseline_untrained": {
+    "accuracy": 0.13306451612903225,
+    "ece": 0.16774805512038932,
+    "loss": 1.5470689388532792,
+    "record_accuracy": 0.0
+  },
+  "tfidf": {
+    "validation_macro_f1": 0.5652430331292474,
+    "test_macro_f1": 0.7048601336254758
+  },
+  "calibration": {
+    "accuracy": 0.8082191780821918,
+    "ece": 0.149264102112757,
+    "loss": 0.53029266798435,
+    "record_accuracy": 0.6301369863013698,
+    "fitted_types": [
+      0,
+      2
+    ]
+  },
+  "validation": {
+    "accuracy": 0.7580645161290323,
+    "ece": 0.14793928832777084,
+    "loss": 0.6858404735478782,
+    "record_accuracy": 0.5887096774193549,
+    "macro_f1": 0.6792259374612315
+  },
+  "test": {
+    "accuracy": 0.7943548387096774,
+    "ece": 0.160946637752556,
+    "loss": 0.5606553069345893,
+    "record_accuracy": 0.6209677419354839,
+    "macro_f1": 0.7781753896727159
+  },
+  "test_report": {
+    "interested": {
+      "precision": 1.0,
+      "recall": 0.5384615384615384,
+      "f1-score": 0.7,
+      "support": 13.0
+    },
+    "meeting_requested": {
+      "precision": 0.8461538461538461,
+      "recall": 1.0,
+      "f1-score": 0.9166666666666666,
+      "support": 11.0
+    },
+    "more_information": {
+      "precision": 1.0,
+      "recall": 0.7,
+      "f1-score": 0.8235294117647058,
+      "support": 10.0
+    },
+    "referral": {
+      "precision": 1.0,
+      "recall": 0.6153846153846154,
+      "f1-score": 0.7619047619047619,
+      "support": 13.0
+    },
+    "not_now": {
+      "precision": 0.7,
+      "recall": 0.7,
+      "f1-score": 0.7,
+      "support": 10.0
+    },
+    "objection": {
+      "precision": 0.6428571428571429,
+      "recall": 0.75,
+      "f1-score": 0.6923076923076923,
+      "support": 12.0
+    },
+    "wrong_person": {
+      "precision": 0.9,
+      "recall": 0.75,
+      "f1-score": 0.8181818181818182,
+      "support": 12.0
+    },
+    "out_of_office": {
+      "precision": 0.9090909090909091,
+      "recall": 1.0,
+      "f1-score": 0.9523809523809523,
+      "support": 10.0
+    },
+    "not_interested": {
+      "precision": 0.7142857142857143,
+      "recall": 0.9090909090909091,
+      "f1-score": 0.8,
+      "support": 11.0
+    },
+    "opt_out": {
+      "precision": 1.0,
+      "recall": 0.7,
+      "f1-score": 0.8235294117647058,
+      "support": 10.0
+    },
+    "ambiguous": {
+      "precision": 0.43478260869565216,
+      "recall": 0.8333333333333334,
+      "f1-score": 0.5714285714285714,
+      "support": 12.0
+    },
+    "accuracy": 0.7661290322580645,
+    "macro avg": {
+      "precision": 0.8315609291893877,
+      "recall": 0.7723882178427633,
+      "f1-score": 0.7781753896727159,
+      "support": 124.0
+    },
+    "weighted avg": {
+      "precision": 0.8305437199546597,
+      "recall": 0.7661290322580645,
+      "f1-score": 0.7731089514533537,
+      "support": 124.0
+    }
+  },
+  "follow_up_report": {
+    "False": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 21.0
+    },
+    "True": {
+      "precision": 0.8306451612903226,
+      "recall": 1.0,
+      "f1-score": 0.9074889867841409,
+      "support": 103.0
+    },
+    "accuracy": 0.8306451612903226,
+    "macro avg": {
+      "precision": 0.4153225806451613,
+      "recall": 0.5,
+      "f1-score": 0.45374449339207046,
+      "support": 124.0
+    },
+    "weighted avg": {
+      "precision": 0.6899713839750261,
+      "recall": 0.8306451612903226,
+      "f1-score": 0.7538013357965041,
+      "support": 124.0
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "interested",
+      "meeting_requested",
+      "more_information",
+      "referral",
+      "not_now",
+      "objection",
+      "wrong_person",
+      "out_of_office",
+      "not_interested",
+      "opt_out",
+      "ambiguous"
+    ],
+    "matrix": [
+      [
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6
+      ],
+      [
+        0,
+        11,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        7,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        8,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        7,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        9,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        10,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10
+      ]
+    ]
+  },
+  "timings_seconds": {
+    "reply_training": 255.7
+  },
+  "peak_vram_gb": 2.64,
+  "mean_predict_ms": 106.8
+}

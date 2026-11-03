@@ -9,6 +9,8 @@ TASKS = {
         "use": "Scores a B2B lead record against an example Ideal Customer Profile (fit, not_fit, insufficient_evidence) and classifies LeadForge's 90-day conversion label.",
         "data": "The intermediate tier of the LeadForge synthetic CRM release v0.1.0-alpha (MIT), split by account so no company appears in two partitions.",
         "scope": "`accuracy`, `ece`, `loss` and `record_accuracy` cover both questions; `roc_auc`, `average_precision`, `brier` and `precision_at_100` score the 90-day conversion question only.",
+        "baseline": "The baseline column comes from the same run, the same split and the same features.",
+        "limit": "The model never saw a record with an empty industry, region or employee band in training, so it does not answer `insufficient_evidence` in practice: for real companies with missing fields it answered `fit` with a probability near 1.0. Check for missing fields in code before you call it, as the gate in the companion repository does.",
     },
     "reply": {
         "title": "reply router",
@@ -16,6 +18,8 @@ TASKS = {
         "use": "Classifies a prospect's reply to a first-touch sales email into one of 11 intents and predicts whether a next step is called for.",
         "data": "617 LLM-generated synthetic replies, checked automatically with a blind relabel and not reviewed by a person (see data/replies/DATASET_CARD.md in the companion repository).",
         "scope": "`accuracy`, `ece`, `loss` and `record_accuracy` cover both questions; `macro_f1` scores the 11-intent question only.",
+        "baseline": "The baseline column comes from the same run and the same split; the baseline sees only the reply text, while the model also sees the outreach context.",
+        "limit": "Two runs of the same notebook with seed 3407 scored 0.924 and 0.975 test macro-F1: GPU kernels are not fully deterministic, and the test set holds 124 replies, so read a range, not a point.",
     },
 }
 LFM_NOTE = (
@@ -92,6 +96,8 @@ def card(
         metric_table = "| Metric | Value |\n|---|---:|\n" + "\n".join(f"| {name} | {value:.4f} |" for name, value in model_metrics.items())
     split_rows = "\n".join(f"| {name} | {value} |" for name, value in metrics.get("splits", {}).items())
     note = f"\n{LFM_NOTE}\n" if license_id == "other" else ""
+    lower_names = [f"`{name}`" for name in ("ece", "loss", "brier") if name in model_metrics]
+    lower = ", ".join(lower_names[:-1]) + " and " + lower_names[-1] if len(lower_names) > 1 else "".join(lower_names)
     return f"""---
 {license_lines}base_model: {base_model}
 library_name: unsloth
@@ -122,7 +128,7 @@ A decision model ({info['title']}) fine-tuned from `{base_model}` (revision `{ba
 
 {metric_table}
 
-{info['scope']} Lower is better for `ece`, `loss` and `brier`; higher is better for the others. The baseline column comes from the same run, the same split and the same features.
+{info['scope']} Lower is better for {lower}; higher is better for the others. {info['baseline']}
 
 Peak training VRAM: {metrics.get('peak_vram_gb')} GB.
 
@@ -139,6 +145,8 @@ FastDecisionModel.for_inference(model)
 ## Limitations
 
 The training data is synthetic. These metrics show that the pipeline works; they do not show performance on real CRM records or real sales replies. Probabilities and calibration can shift when the market, the data source or the process changes.
+
+{info['limit']}
 {note}"""
 
 

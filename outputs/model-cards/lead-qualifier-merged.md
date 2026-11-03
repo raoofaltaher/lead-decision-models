@@ -77,4 +77,6 @@ FastDecisionModel.for_inference(model)
 
 The training data is synthetic. These metrics show that the pipeline works; they do not show performance on real CRM records or real sales replies. Probabilities and calibration can shift when the market, the data source or the process changes.
 
+The model never saw a record with an empty industry, region or employee band in training, so it does not answer `insufficient_evidence` in practice: for real companies with missing fields it answered `fit` with a probability near 1.0. Check for missing fields in code before you call it, as the gate in the companion repository does.
+
 LFM3-1.7B is released under the LFM Open License v1.0. Commercial use of the model and of derivatives such as this one is licensed only below the revenue threshold that license defines; read it before any commercial use.
