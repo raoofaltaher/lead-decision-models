@@ -22,8 +22,25 @@ LFM_NOTE = (
 )
 
 
-def card(metrics: dict, *, repo_id: str, base_model: str, base_revision: str, task: str, license_id: str, tutorial_url: str) -> str:
+def card(
+    metrics: dict,
+    *,
+    repo_id: str,
+    base_model: str,
+    base_revision: str,
+    task: str,
+    license_id: str,
+    tutorial_url: str,
+    trust_remote_code: bool = False,
+) -> str:
     info = TASKS[task]
+    load_arguments = f'"{repo_id}", trust_remote_code=True, load_in_4bit=True' if trust_remote_code else f'"{repo_id}", load_in_4bit=True'
+    remote_code_note = (
+        f"\n`{base_model}` ships custom modeling code, so loading needs `trust_remote_code=True`. "
+        "Read the Python files in this repository before you run it.\n"
+        if trust_remote_code
+        else ""
+    )
     license_lines = f"license: {license_id}\n"
     if license_id == "other":
         license_lines += "license_name: lfm1.0\nlicense_link: https://huggingface.co/LiquidAI/LFM3-1.7B/blob/main/LICENSE\n"
@@ -69,10 +86,10 @@ Peak training VRAM: {metrics.get('peak_vram_gb')} GB.
 ```python
 from unsloth import FastDecisionModel
 
-model, tokenizer = FastDecisionModel.from_pretrained("{repo_id}", load_in_4bit=True)
+model, tokenizer = FastDecisionModel.from_pretrained({load_arguments})
 FastDecisionModel.for_inference(model)
 ```
-
+{remote_code_note}
 ## Limitations
 
 The training data is synthetic. These metrics show that the pipeline works; they do not show performance on real CRM records or real sales replies. Probabilities and calibration can shift when the market, the data source or the process changes.
@@ -88,6 +105,7 @@ def main(argv=None) -> int:
     parser.add_argument("--task", choices=sorted(TASKS), required=True)
     parser.add_argument("--license", dest="license_id", default="apache-2.0")
     parser.add_argument("--tutorial-url", required=True)
+    parser.add_argument("--trust-remote-code", action="store_true")
     parser.add_argument("--out", required=True, type=Path)
     args = parser.parse_args(argv)
 
@@ -101,6 +119,7 @@ def main(argv=None) -> int:
             task=args.task,
             license_id=args.license_id,
             tutorial_url=args.tutorial_url,
+            trust_remote_code=args.trust_remote_code,
         ),
         encoding="utf-8",
     )

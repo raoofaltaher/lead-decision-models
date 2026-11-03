@@ -45,6 +45,20 @@ def test_card_shows_how_to_load_the_model():
     assert 'FastDecisionModel.from_pretrained("raoofaltaher/lead-decision-models-lead-qualifier"' in text
 
 
+def test_card_without_remote_code_loads_plainly():
+    text = make_card()
+    assert "trust_remote_code" not in text
+
+
+def test_lfm3_card_loads_with_remote_code_and_says_why():
+    text = make_card(base_model="LiquidAI/LFM3-1.7B", license_id="other", trust_remote_code=True)
+    assert (
+        'FastDecisionModel.from_pretrained("raoofaltaher/lead-decision-models-lead-qualifier", '
+        "trust_remote_code=True, load_in_4bit=True)"
+    ) in text
+    assert "custom modeling code" in text
+
+
 def test_lfm3_card_carries_license_threshold_note():
     text = make_card(
         repo_id="raoofaltaher/lead-decision-models-lfm3-lead-qualifier",
