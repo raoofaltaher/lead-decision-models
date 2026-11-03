@@ -17,7 +17,7 @@ A decision model (reply router) fine-tuned from `LiquidAI/LFM3-1.7B` (revision `
 
 ## Intended use
 
-Classifies a prospect's reply to a first-touch sales email into one of 11 intents and predicts whether a next step is called for. It is a teaching model from the tutorial at https://raoofaltaher.com/tutorials/fine-tune-decision-models-reply-routing. Deterministic policy code and a person must decide every outreach action; a model probability is not permission to contact anyone.
+Classifies a prospect's reply to a first-touch sales email into one of 11 intents and predicts whether a next step is called for. It is a teaching model from the tutorial at https://raoofaltaher.com/tutorials/fine-tune-lfm3-decision-model-with-unsloth/reply-routing. Deterministic policy code and a person must decide every outreach action; a model probability is not permission to contact anyone.
 
 ## Training data
 
@@ -48,7 +48,7 @@ Peak training VRAM: 4.6 GB.
 
 - Companion repository with the notebook, the data, the plots and the tests: https://github.com/raoofaltaher/lead-decision-models
 - The adapter and decision head of the same run: [raoofaltaher/lead-decision-models-reply-router](https://huggingface.co/raoofaltaher/lead-decision-models-reply-router)
-- The tutorial that trains and uses it: https://raoofaltaher.com/tutorials/fine-tune-decision-models-reply-routing
+- The tutorial that trains and uses it: https://raoofaltaher.com/tutorials/fine-tune-lfm3-decision-model-with-unsloth/reply-routing
 
 ## How to load
 

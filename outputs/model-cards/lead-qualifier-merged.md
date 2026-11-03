@@ -17,7 +17,7 @@ A decision model (lead qualifier) fine-tuned from `LiquidAI/LFM3-1.7B` (revision
 
 ## Intended use
 
-Scores a B2B lead record against an example Ideal Customer Profile (fit, not_fit, insufficient_evidence) and classifies LeadForge's 90-day conversion label. It is a teaching model from the tutorial at https://raoofaltaher.com/tutorials/fine-tune-decision-models-lead-qualification. Deterministic policy code and a person must decide every outreach action; a model probability is not permission to contact anyone.
+Scores a B2B lead record against an example Ideal Customer Profile (fit, not_fit, insufficient_evidence) and classifies LeadForge's 90-day conversion label. It is a teaching model from the tutorial at https://raoofaltaher.com/tutorials/fine-tune-lfm3-decision-model-with-unsloth. Deterministic policy code and a person must decide every outreach action; a model probability is not permission to contact anyone.
 
 ## Training data
 
@@ -51,7 +51,7 @@ Peak training VRAM: 2.73 GB.
 
 - Companion repository with the notebook, the data, the plots and the tests: https://github.com/raoofaltaher/lead-decision-models
 - The adapter and decision head of the same run: [raoofaltaher/lead-decision-models-lead-qualifier](https://huggingface.co/raoofaltaher/lead-decision-models-lead-qualifier)
-- The tutorial that trains and uses it: https://raoofaltaher.com/tutorials/fine-tune-decision-models-lead-qualification
+- The tutorial that trains and uses it: https://raoofaltaher.com/tutorials/fine-tune-lfm3-decision-model-with-unsloth
 
 ## How to load
 

@@ -18,7 +18,7 @@ ARGUMENTS = {
     "base_revision": "3764fa359b90",
     "task": "lead",
     "license_id": "apache-2.0",
-    "tutorial_url": "https://raoofaltaher.com/tutorials/fine-tune-decision-models-lead-qualification",
+    "tutorial_url": "https://raoofaltaher.com/tutorials/fine-tune-lfm3-decision-model-with-unsloth",
 }
 
 
