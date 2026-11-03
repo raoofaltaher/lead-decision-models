@@ -1,0 +1,7 @@
+{
+  "domain": "hemisphere-freight.com",
+  "evidence": [
+    {"field": "industry", "value": "logistics", "sentence": "With over three decades in logistics, we are industry specialists with wide-ranging experience across international freight transportation, customs clearance, warehousing, fulfilment and distribution of every imaginable kind of product or cargo.", "url": "https://www.hemisphere-freight.com/about/"}
+  ],
+  "omitted": "region and employee_band omitted: no sentence states the base location (the site lists UK warehouses but also links an AU/NZ arm), and no headcount is stated."
+}

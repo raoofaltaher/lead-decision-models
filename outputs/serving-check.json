@@ -1,0 +1,27 @@
+{
+  "lead": {
+    "calls": 2,
+    "first_call_s": 24.17,
+    "warm_median_ms": 60.5,
+    "warm_max_ms": 60.5,
+    "matches_session": {
+      "uhy-us.com": true
+    }
+  },
+  "reply": {
+    "calls": 9,
+    "first_call_s": 20.98,
+    "warm_median_ms": 55.9,
+    "warm_max_ms": 442.5,
+    "matches_session": {
+      "case-01": true,
+      "case-02": true,
+      "case-03": true,
+      "case-04": true,
+      "case-05": true,
+      "case-06": true,
+      "case-07": true,
+      "case-08": true
+    }
+  }
+}

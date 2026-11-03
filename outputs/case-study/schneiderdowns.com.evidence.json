@@ -1,0 +1,7 @@
+{
+  "domain": "schneiderdowns.com",
+  "evidence": [
+    {"field": "industry", "value": "professional_services", "sentence": "Since 1956, Schneider Downs & Co., Inc. has been providing accounting, tax, consulting and business advisory services through innovative thought leaders who deliver their expertise to meet the individual needs of each client.", "url": "https://schneiderdowns.com/about-us/"}
+  ],
+  "omitted": "region and employee_band omitted: the scraped pages (about-us, careers, contact-us) state no base location in a sentence and no headcount. A search snippet says 'more than 580 professionals', a lower bound that supports no band."
+}

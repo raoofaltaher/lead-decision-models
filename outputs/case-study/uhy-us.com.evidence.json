@@ -1,0 +1,8 @@
+{
+  "domain": "uhy-us.com",
+  "evidence": [
+    {"field": "industry", "value": "professional_services", "sentence": "As one of the largest accounting firms in the U.S., we translate our experience from working within numerous industries for our clients to provide them with a 360-degree view of their businesses.", "url": "https://uhy-us.com/about-uhy"},
+    {"field": "region", "value": "US", "sentence": "TOP30 Largest U.S. Accounting Firm", "url": "https://uhy-us.com/about-uhy"},
+    {"field": "employee_band", "value": "2000+", "sentence": "2000+ Employees", "url": "https://uhy-us.com/about-uhy"}
+  ]
+}

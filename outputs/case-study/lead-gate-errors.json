@@ -1,0 +1,9 @@
+{
+  "schneiderdowns.com": {"exit_code": 2, "error": "missing ICP evidence: region; missing ICP evidence: employee_band", "next_action": "research_missing_account_evidence", "send": false},
+  "saffery.com": {"exit_code": 2, "error": "missing ICP evidence: employee_band", "next_action": "research_missing_account_evidence", "send": false},
+  "ielfreight.com": {"exit_code": 2, "error": "missing ICP evidence: employee_band", "next_action": "research_missing_account_evidence", "send": false},
+  "premier-logistics.co.uk": {"exit_code": 2, "error": "missing ICP evidence: employee_band", "next_action": "research_missing_account_evidence", "send": false},
+  "hemisphere-freight.com": {"exit_code": 2, "error": "missing ICP evidence: region; missing ICP evidence: employee_band", "next_action": "research_missing_account_evidence", "send": false},
+  "addisongroup.uk": {"exit_code": 2, "error": "missing ICP evidence: employee_band", "next_action": "research_missing_account_evidence", "send": false},
+  "greenheck.com": {"exit_code": 2, "error": "missing ICP evidence: employee_band", "next_action": "research_missing_account_evidence", "send": false}
+}

@@ -1,0 +1,8 @@
+{
+  "domain": "saffery.com",
+  "evidence": [
+    {"field": "industry", "value": "professional_services", "sentence": "Partner-led and people-focused, Saffery is a firm of accountants, providing tax and business advice to companies, partnerships, individuals, and not-for-profit organisations.", "url": "https://www.saffery.com/"},
+    {"field": "region", "value": "UK", "sentence": "Saffery is a leading UK accountancy firm offering expert audit, tax and advisory services to businesses, individuals and charities. (page meta description)", "url": "https://www.saffery.com/"}
+  ],
+  "omitted": "employee_band omitted: no headcount on the about-us page or homepage."
+}

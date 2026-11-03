@@ -1,0 +1,8 @@
+{
+  "domain": "premier-logistics.co.uk",
+  "evidence": [
+    {"field": "industry", "value": "logistics", "sentence": "Based in Leicestershire, we offer palletised distribution, contract logistics, warehousing and transportation service through the UK.", "url": "https://premier-logistics.co.uk/about-us/"},
+    {"field": "region", "value": "UK", "sentence": "Based in Leicestershire, we offer palletised distribution, contract logistics, warehousing and transportation service through the UK.", "url": "https://premier-logistics.co.uk/about-us/"}
+  ],
+  "omitted": "employee_band omitted: no headcount stated."
+}

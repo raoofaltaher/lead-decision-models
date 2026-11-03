@@ -48,10 +48,14 @@ Every result carries `"send": false`. A person reviews `outputs/approval-queue.j
 
 ## 5. The recorded case study
 
-`case_study_prompt.md` is the prompt of the recorded session. It ran headless:
+`case_study_prompt.md` is the prompt of the recorded session. `record_case_study.sh` runs it headless and renders the result:
 
 ```bash
-claude -p "$(cat integration/case_study_prompt.md)" --mcp-config .mcp.json --strict-mcp-config --output-format stream-json --verbose > outputs/case-study-session.jsonl
+./integration/record_case_study.sh
 ```
+
+The script loads only the three servers of `.mcp.json` (`--strict-mcp-config`) and no user settings (`--setting-sources project`), and it allows only the Firecrawl search and scrape tools, the two `decide` tools, the gate command, writes under `outputs/case-study/` and reads of the case-study files. Claude Code refuses every other call, and the transcript shows each refusal. The raw stream stays in `outputs/logs/`; `tools/render_session.py` writes `outputs/case-study-session.jsonl` and `.md`, which keep only known-safe fields and cut scraped page text to 600 characters. `tools/serving_check.py` then times both servers over MCP stdio and checks their answers against the session (`outputs/serving-check.json`).
+
+The first recording, in `outputs/case-study-first-run/`, found that the lead model answered `fit` for companies with missing fields. The gate now refuses such records, and `outputs/case-study-session.md` is the recording after that fix.
 
 The lead model learned from synthetic LeadForge records. Its answers about real companies demonstrate the integration; they are not validated predictions.
