@@ -1,0 +1,8 @@
+{
+  "domain": "wagnerlogistics.com",
+  "evidence": [
+    {"field": "industry", "value": "logistics", "sentence": "Founded on the idea that warehousing drives growth and success, we have been empowering companies to navigate the complexities of supply chains with confidence since 1946.", "url": "https://wagnerlogistics.com/about-us/"},
+    {"field": "region", "value": "US", "sentence": "He oversees sales and business development from our corporate headquarters in Kansas City, Missouri.", "url": "https://wagnerlogistics.com/about-us/"}
+  ],
+  "omitted": "employee_band omitted: neither the About page nor the careers page states a headcount (the 3,000+ figure on the About page belongs to one executive's prior employer)."
+}

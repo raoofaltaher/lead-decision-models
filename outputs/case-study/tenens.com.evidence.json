@@ -1,0 +1,8 @@
+{
+  "domain": "tenens.com",
+  "evidence": [
+    {"field": "industry", "value": "logistics", "sentence": "Established in 1953, today Howard Tenens has grown into one of the largest independently owned and operated logistics companies in the UK.", "url": "https://www.tenens.com/about"},
+    {"field": "region", "value": "UK", "sentence": "Established in 1953, today Howard Tenens has grown into one of the largest independently owned and operated logistics companies in the UK.", "url": "https://www.tenens.com/about"}
+  ],
+  "omitted": "employee_band omitted: neither the About page nor the homepage states a headcount (a social post seen in search said '800+ colleagues', a lower bound that supports no band)."
+}

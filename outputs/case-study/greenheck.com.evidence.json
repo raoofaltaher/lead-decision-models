@@ -1,8 +1,0 @@
-{
-  "domain": "greenheck.com",
-  "evidence": [
-    {"field": "industry", "value": "manufacturing", "sentence": "Greenheck has come a long way since 1947 when it began business as a tiny sheet metal shop in Schofield, Wisconsin.", "url": "https://www.greenheck.com/about-us/overview"},
-    {"field": "region", "value": "US", "sentence": "Greenheck’s own development and testing facilities at its U.S. headquarters are acknowledged as the industry’s best.", "url": "https://www.greenheck.com/about-us/overview"}
-  ],
-  "omitted": "employee_band omitted: no headcount on the about page, and the careers page returned 404. A third-party list figure is not the company's own page."
-}

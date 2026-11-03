@@ -105,7 +105,7 @@ def test_markdown_shows_the_not_validated_label():
     text = render_markdown(events, prompt="PROMPT TEXT", queue=[])
     assert "claude-opus-5-5" in text
     assert "PROMPT TEXT" in text
-    assert "Result:\n" in text
+    assert "Result of step 1:\n" in text
     assert "> Not validated: trained on synthetic LeadForge data." in text
     assert "12 turns in 61.0 s" in text
 
@@ -130,6 +130,37 @@ def test_markdown_shows_refused_calls_and_the_queue():
         {"kind": "reply", "reply_text": "Please unsubscribe me.", "answers": {"reply_intent": {"answer": "opt_out", "probabilities": {"opt_out": 0.97}}}, "action": "suppress_marketing", "result": {"send": False}},
     ]
     text = render_markdown(events, prompt="P", queue=queue)
-    assert "Refused or failed:\n" in text
+    assert "Step 1 refused or failed:\n" in text
     assert "| 1 | lead | example.com | fit (0.91) | human_review_outreach | false |" in text
     assert "| 2 | reply | Please unsubscribe me. | opt_out (0.97) | suppress_marketing | false |" in text
+
+
+def test_results_of_parallel_calls_name_their_own_step():
+    parallel = {
+        "type": "assistant",
+        "timestamp": "2026-11-03T13:00:00.000Z",
+        "request_id": "request-parallel",
+        "session_id": "abc",
+        "wire_tool_inputs": {},
+        "message": {
+            "content": [
+                {"type": "tool_use", "id": "a", "name": "mcp__lead-decisions__decide", "input": {"state": "big", "questions": {}}, "caller": {}},
+                {"type": "tool_use", "id": "b", "name": "mcp__lead-decisions__decide", "input": {"state": "small", "questions": {}}, "caller": {}},
+            ]
+        },
+    }
+    results = {
+        "type": "user",
+        "timestamp": "2026-11-03T13:00:02.000Z",
+        "tool_use_result": {},
+        "tool_result_meta": {},
+        "message": {
+            "content": [
+                {"type": "tool_result", "tool_use_id": "b", "content": "SMALL-ANSWER", "is_error": False},
+                {"type": "tool_result", "tool_use_id": "a", "content": "BIG-ANSWER", "is_error": True},
+            ]
+        },
+    }
+    text = render_markdown(sanitize_events([parallel, results]), prompt="P", queue=[])
+    assert "Result of step 2:\n\n```text\nSMALL-ANSWER" in text
+    assert "Step 1 refused or failed:\n\n```text\nBIG-ANSWER" in text

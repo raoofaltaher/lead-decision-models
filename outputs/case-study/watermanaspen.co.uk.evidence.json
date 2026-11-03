@@ -1,0 +1,8 @@
+{
+  "domain": "watermanaspen.co.uk",
+  "evidence": [
+    {"field": "industry", "value": "professional_services", "sentence": "What started as supplying skilled people to the Channel Tunnel project in 1988 has grown into the UK's leading secondment provider. (page title: Technical Engineering Services & Secondment Company)", "url": "https://watermanaspen.co.uk/about/"},
+    {"field": "region", "value": "UK", "sentence": "We employ more than 850 people, working on projects across the UK, improving the country's infrastructure and leaving a legacy to be proud of.", "url": "https://watermanaspen.co.uk/about/"}
+  ],
+  "omitted": "employee_band omitted: 'We employ more than 850 people' is a lower bound that supports no band."
+}

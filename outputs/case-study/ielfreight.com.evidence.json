@@ -1,8 +1,0 @@
-{
-  "domain": "ielfreight.com",
-  "evidence": [
-    {"field": "industry", "value": "logistics", "sentence": "Founded in 2007, IEL is a family owned company with over 30 years of logistics experience.", "url": "https://ielfreight.com/about/"},
-    {"field": "region", "value": "US", "sentence": "The company moves into its first office space “warehouse” located in Blue Ash, OH.", "url": "https://ielfreight.com/about/"}
-  ],
-  "omitted": "employee_band omitted: the only figure is a 2021 timeline entry ('total employee count growing to 550 across the US'), followed by 2023 acquisitions in Mexico and Canada, so it does not establish current headcount. The careers page returned 404."
-}

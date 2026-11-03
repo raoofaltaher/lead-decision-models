@@ -1,0 +1,7 @@
+{
+  "domain": "stanleyconsultants.com",
+  "evidence": [
+    {"field": "industry", "value": "professional_services", "sentence": "Founded in 1913, Stanley Consultants is an employee-owned engineering and consulting firm with a rich history of helping clients across the globe solve complex engineering, architecture and design challenges.", "url": "https://www.stanleyconsultants.com/about"}
+  ],
+  "omitted": "region omitted: the pages say the firm was founded in Muscatine, Iowa and has worked in 'all 50 states and more than 120 countries', but no scraped page states where it is based today (the contact page returned 404). employee_band omitted: '1,000+ Employees' is a lower bound that does not guarantee 1000-1999."
+}

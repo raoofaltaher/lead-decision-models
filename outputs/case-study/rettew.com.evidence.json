@@ -1,0 +1,8 @@
+{
+  "domain": "rettew.com",
+  "evidence": [
+    {"field": "industry", "value": "professional_services", "sentence": "Our long list of technical expertise includes civil, transportation, environmental, and geotechnical; site planning and design; surveying; safety consulting; subsurface utility engineering; and construction services.", "url": "https://www.rettew.com/about/"},
+    {"field": "region", "value": "US", "sentence": "RETTEW Headquarters, 3020 Columbia Avenue, Lancaster, PA 17603", "url": "https://www.rettew.com/about/locations/"}
+  ],
+  "omitted": "employee_band omitted: 'employ more than 300 professionals across 10 offices' is a lower bound that supports no band."
+}

@@ -86,7 +86,7 @@ def render_markdown(events: list[dict], *, prompt: str, queue: list[dict]) -> st
         "The stream's timestamps can lag a call's start by about a second, too coarse to time a decision, so decision latency is measured directly in `outputs/serving-check.json`.",
         "",
     ]
-    calls: dict[str, str] = {}
+    calls: dict[str, tuple[int, str]] = {}
     step = 0
     for event in events:
         if event["type"] == "assistant":
@@ -95,12 +95,12 @@ def render_markdown(events: list[dict], *, prompt: str, queue: list[dict]) -> st
                     lines += [block["text"].strip(), ""]
                     continue
                 step += 1
-                calls[block["id"]] = block["name"]
+                calls[block["id"]] = (step, block["name"])
                 lines += [f"### {step}. `{block['name']}`", "", "```json", json.dumps(block["input"], indent=2, ensure_ascii=False), "```", ""]
         elif event["type"] == "user":
             for block in event["message"]["content"]:
-                name = calls.get(block["tool_use_id"], "")
-                label = "Refused or failed:" if block["is_error"] else "Result:"
+                call_step, name = calls.get(block["tool_use_id"], (0, ""))
+                label = f"Step {call_step} refused or failed:" if block["is_error"] else f"Result of step {call_step}:"
                 lines += [label, "", "```text", block["content"].strip(), "```", ""]
                 if name == "mcp__lead-decisions__decide" and not block["is_error"]:
                     lines += [NOT_VALIDATED, ""]

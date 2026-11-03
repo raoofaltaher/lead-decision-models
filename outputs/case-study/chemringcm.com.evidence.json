@@ -1,0 +1,9 @@
+{
+  "domain": "chemringcm.com",
+  "evidence": [
+    {"field": "industry", "value": "manufacturing", "sentence": "Chemring Countermeasures Limited designs and manufactures RF and IR countermeasures that are devised to protect air and naval platforms from missile threats.", "url": "https://www.chemring.com/about-us/our-business/chemring-countermeasures-uk"},
+    {"field": "region", "value": "UK", "sentence": "Chemring Countermeasures Ltd, High Post, Salisbury, Wiltshire, SP4 6AS", "url": "https://www.chemring.com/about-us/our-business/chemring-countermeasures-uk"},
+    {"field": "employee_band", "value": "200-499", "sentence": "Located on the edge of Salisbury Plain and about eight miles from the cathedral city, we employ 400 people with a wide variety of skills and capabilities.", "url": "https://www.chemring.com/about-us/our-business/chemring-countermeasures-uk"}
+  ],
+  "note": "The entity is Chemring Countermeasures Ltd, a UK subsidiary of Chemring Group PLC. chemring.co.uk redirects to the group site chemring.com, so the record uses the unit's own contact domain (info@chemringcm.com on the same page). The 400 figure is the unit's own headcount, not the group's."
+}

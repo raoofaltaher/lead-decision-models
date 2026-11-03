@@ -1,0 +1,8 @@
+{
+  "domain": "hcrlaw.com",
+  "evidence": [
+    {"field": "industry", "value": "professional_services", "sentence": "As an award winning Top 50 UK law firm we provide the full range of legal services to organisations, business leaders and individuals.", "url": "https://www.hcrlaw.com/about/"},
+    {"field": "region", "value": "UK", "sentence": "As an award winning Top 50 UK law firm we provide the full range of legal services to organisations, business leaders and individuals.", "url": "https://www.hcrlaw.com/about/"}
+  ],
+  "omitted": "employee_band omitted: 'With more than 1,000 people across 13 locations' is a lower bound that does not guarantee 1000-1999."
+}
