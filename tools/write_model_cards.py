@@ -45,8 +45,24 @@ def card(
     repository_url: str | None = None,
     sibling_repo_id: str | None = None,
     sibling_kind: str | None = None,
+    tutorial_title: str | None = None,
+    tutorial_cover_url: str | None = None,
+    article_title: str | None = None,
+    article_url: str | None = None,
+    article_cover_url: str | None = None,
 ) -> str:
     info = TASKS[task]
+    showcase = ""
+    if tutorial_title and tutorial_cover_url and article_title and article_url and article_cover_url:
+        showcase = (
+            "## Read the tutorial\n\n"
+            "<p>\n"
+            f'<a href="{tutorial_url}"><img src="{tutorial_cover_url}" alt="{tutorial_title}" width="49%"></a>\n'
+            f'<a href="{article_url}"><img src="{article_cover_url}" alt="{article_title}" width="49%"></a>\n'
+            "</p>\n\n"
+            f"The tutorial [{tutorial_title}]({tutorial_url}) trains and uses this model step by step, "
+            f"and the article [{article_title}]({article_url}) explains decision models. Both are on raoofaltaher.com.\n\n"
+        )
     links = []
     if repository_url:
         links.append(f"- Companion repository with the notebook, the data, the plots and the tests: {repository_url}")
@@ -90,7 +106,7 @@ tags:
 
 A decision model ({info['title']}) fine-tuned from `{base_model}` (revision `{base_revision}`) with Unsloth's `FastDecisionModel` and a Clef decision head. It scores the options it is given and returns probabilities; it never generates text and never sends a message.
 
-## Intended use
+{showcase}## Intended use
 
 {info['use']} It is a teaching model from the tutorial at {tutorial_url}. Deterministic policy code and a person must decide every outreach action; a model probability is not permission to contact anyone.
 
@@ -139,6 +155,11 @@ def main(argv=None) -> int:
     parser.add_argument("--repository-url")
     parser.add_argument("--sibling-repo-id")
     parser.add_argument("--sibling-kind")
+    parser.add_argument("--tutorial-title")
+    parser.add_argument("--tutorial-cover-url")
+    parser.add_argument("--article-title")
+    parser.add_argument("--article-url")
+    parser.add_argument("--article-cover-url")
     parser.add_argument("--out", required=True, type=Path)
     args = parser.parse_args(argv)
 
@@ -156,6 +177,11 @@ def main(argv=None) -> int:
             repository_url=args.repository_url,
             sibling_repo_id=args.sibling_repo_id,
             sibling_kind=args.sibling_kind,
+            tutorial_title=args.tutorial_title,
+            tutorial_cover_url=args.tutorial_cover_url,
+            article_title=args.article_title,
+            article_url=args.article_url,
+            article_cover_url=args.article_cover_url,
         ),
         encoding="utf-8",
     )

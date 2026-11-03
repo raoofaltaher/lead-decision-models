@@ -15,6 +15,15 @@ tags:
 
 A decision model (lead qualifier) fine-tuned from `LiquidAI/LFM3-1.7B` (revision `ac2586a34f1a1c03329dbdcdefabd8b6478ddaa7`) with Unsloth's `FastDecisionModel` and a Clef decision head. It scores the options it is given and returns probabilities; it never generates text and never sends a message.
 
+## Read the tutorial
+
+<p>
+<a href="https://raoofaltaher.com/tutorials/fine-tune-lfm3-decision-model-with-unsloth"><img src="https://raw.githubusercontent.com/raoofaltaher/lead-decision-models/main/assets/tutorial-cover.jpg" alt="Fine-Tune LFM3, a Large Language Model, into a Decision Model with Unsloth: Lead Qualification with Claude Code over MCP" width="49%"></a>
+<a href="https://raoofaltaher.com/blog/decision-models-with-unsloth"><img src="https://raw.githubusercontent.com/raoofaltaher/lead-decision-models/main/assets/article-cover.jpg" alt="Decision Models: Fine-Tuning LLMs for Structured Decisions" width="49%"></a>
+</p>
+
+The tutorial [Fine-Tune LFM3, a Large Language Model, into a Decision Model with Unsloth: Lead Qualification with Claude Code over MCP](https://raoofaltaher.com/tutorials/fine-tune-lfm3-decision-model-with-unsloth) trains and uses this model step by step, and the article [Decision Models: Fine-Tuning LLMs for Structured Decisions](https://raoofaltaher.com/blog/decision-models-with-unsloth) explains decision models. Both are on raoofaltaher.com.
+
 ## Intended use
 
 Scores a B2B lead record against an example Ideal Customer Profile (fit, not_fit, insufficient_evidence) and classifies LeadForge's 90-day conversion label. It is a teaching model from the tutorial at https://raoofaltaher.com/tutorials/fine-tune-lfm3-decision-model-with-unsloth. Deterministic policy code and a person must decide every outreach action; a model probability is not permission to contact anyone.

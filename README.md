@@ -7,7 +7,14 @@ Fine-tuned [Unsloth](https://unsloth.ai/docs/basics/train-your-own-decision-mode
 
 The models never send a message. Deterministic policy code decides what is allowed, and a person approves every outreach.
 
-This repository is the companion to the tutorial [Fine-Tune LFM3, a Large Language Model, into a Decision Model with Unsloth: Lead Qualification with Claude Code over MCP](https://raoofaltaher.com/tutorials/fine-tune-lfm3-decision-model-with-unsloth) on raoofaltaher.com. Page 1 trains the lead model, page 2 the reply model, and page 3 connects both to Claude Code.
+## Read the tutorial
+
+<p>
+<a href="https://raoofaltaher.com/tutorials/fine-tune-lfm3-decision-model-with-unsloth"><img src="assets/tutorial-cover.jpg" alt="Fine-Tune LFM3, a Large Language Model, into a Decision Model with Unsloth: Lead Qualification with Claude Code over MCP" width="49%"></a>
+<a href="https://raoofaltaher.com/blog/decision-models-with-unsloth"><img src="assets/article-cover.jpg" alt="Decision Models: Fine-Tuning LLMs for Structured Decisions" width="49%"></a>
+</p>
+
+This repository is the companion to the tutorial [Fine-Tune LFM3, a Large Language Model, into a Decision Model with Unsloth: Lead Qualification with Claude Code over MCP](https://raoofaltaher.com/tutorials/fine-tune-lfm3-decision-model-with-unsloth) on raoofaltaher.com. Page 1 trains the lead model, page 2 the reply model, and page 3 connects both to Claude Code. The article [Decision Models: Fine-Tuning LLMs for Structured Decisions](https://raoofaltaher.com/blog/decision-models-with-unsloth) explains decision models in general.
 
 ## Contents
 

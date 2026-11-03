@@ -98,3 +98,26 @@ def test_card_links_the_repository_and_the_sibling_model():
     assert "https://github.com/raoofaltaher/lead-decision-models" in text
     assert "[raoofaltaher/lead-decision-models-lead-qualifier-merged](https://huggingface.co/raoofaltaher/lead-decision-models-lead-qualifier-merged)" in text
     assert "merged 16-bit model" in text
+
+
+SHOWCASE = {
+    "tutorial_title": "Fine-Tune LFM3 into a Decision Model",
+    "tutorial_cover_url": "https://raw.githubusercontent.com/raoofaltaher/lead-decision-models/main/assets/tutorial-cover.jpg",
+    "article_title": "Decision Models",
+    "article_url": "https://raoofaltaher.com/blog/decision-models-with-unsloth",
+    "article_cover_url": "https://raw.githubusercontent.com/raoofaltaher/lead-decision-models/main/assets/article-cover.jpg",
+}
+
+
+def test_card_shows_both_covers_linked_to_their_pages_before_the_intended_use():
+    text = make_card(**SHOWCASE)
+    tutorial = f'<a href="{ARGUMENTS["tutorial_url"]}"><img src="{SHOWCASE["tutorial_cover_url"]}" alt="{SHOWCASE["tutorial_title"]}" width="49%"></a>'
+    article = f'<a href="{SHOWCASE["article_url"]}"><img src="{SHOWCASE["article_cover_url"]}" alt="{SHOWCASE["article_title"]}" width="49%"></a>'
+    assert tutorial in text and article in text
+    assert f'[{SHOWCASE["tutorial_title"]}]({ARGUMENTS["tutorial_url"]})' in text
+    assert f'[{SHOWCASE["article_title"]}]({SHOWCASE["article_url"]})' in text
+    assert text.index(tutorial) < text.index("## Intended use")
+
+
+def test_card_without_covers_has_no_cover_section():
+    assert "<img" not in make_card()
